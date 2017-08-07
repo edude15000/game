@@ -1,0 +1,348 @@
+{
+  "totalHealth": 100,
+  "currentHealth": 23,
+  "userName": "E",
+  "userClass": "Chicken Tender",
+  "money": 87,
+  "attack": 20,
+  "defense": 6,
+  "monstersKilled": 5,
+  "itemList": [
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 2,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Steel boots",
+        "itemType": "boots",
+        "itemRequiredLevel": 10,
+        "itemValue": 200
+      }
+    },
+    {
+      "type": "miniRPG.Cookable",
+      "data": {
+        "cookableName": "Raw Fish",
+        "cookableXP": 75,
+        "cookableLevelRequired": 1,
+        "chanceToCook": 70,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 10,
+            "consumableValue": 0,
+            "itemName": "Fish",
+            "itemType": "Fish",
+            "itemRequiredLevel": 1,
+            "itemValue": 15
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 100,
+        "itemName": "Raw Fish",
+        "itemType": "Raw Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 5
+      }
+    },
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 1,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Iron platebody",
+        "itemType": "platebody",
+        "itemRequiredLevel": 5,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 10,
+        "consumableValue": 0,
+        "itemName": "Small Potion",
+        "itemType": "Small Potion",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 2,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Mithril shield",
+        "itemType": "shield",
+        "itemRequiredLevel": 15,
+        "itemValue": 350
+      }
+    },
+    {
+      "type": "miniRPG.Cookable",
+      "data": {
+        "cookableName": "Raw Fish",
+        "cookableXP": 75,
+        "cookableLevelRequired": 1,
+        "chanceToCook": 70,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 10,
+            "consumableValue": 0,
+            "itemName": "Fish",
+            "itemType": "Fish",
+            "itemRequiredLevel": 1,
+            "itemValue": 15
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 100,
+        "itemName": "Raw Fish",
+        "itemType": "Raw Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 5
+      }
+    },
+    {
+      "type": "miniRPG.Cookable",
+      "data": {
+        "cookableName": "Raw Fish",
+        "cookableXP": 75,
+        "cookableLevelRequired": 1,
+        "chanceToCook": 70,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 10,
+            "consumableValue": 0,
+            "itemName": "Fish",
+            "itemType": "Fish",
+            "itemRequiredLevel": 1,
+            "itemValue": 15
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 100,
+        "itemName": "Raw Fish",
+        "itemType": "Raw Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 5
+      }
+    }
+  ],
+  "equippedItems": [
+    {
+      "type": "miniRPG.Weapon",
+      "data": {
+        "attackBoost": 1,
+        "weaponRequiredLevel": 0,
+        "weaponValue": 0,
+        "itemName": "Bronze sword",
+        "itemType": "sword",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    }
+  ],
+  "levelList": [
+    {
+      "xpList": [
+        0,
+        0,
+        200,
+        600,
+        1200,
+        2000,
+        3050,
+        4350,
+        5950,
+        7800,
+        9950,
+        12400,
+        15150,
+        18200,
+        21600,
+        25350,
+        29400,
+        33800,
+        38550,
+        43650,
+        49100,
+        54950,
+        61150,
+        67750,
+        74700,
+        82050,
+        89800,
+        97950,
+        106500,
+        115450,
+        124800,
+        2147483647
+      ],
+      "levelXp": 74,
+      "levelName": "Combat",
+      "levelBeforeLevelingUp": 1
+    },
+    {
+      "xpList": [
+        0,
+        0,
+        200,
+        600,
+        1200,
+        2000,
+        3050,
+        4350,
+        5950,
+        7800,
+        9950,
+        12400,
+        15150,
+        18200,
+        21600,
+        25350,
+        29400,
+        33800,
+        38550,
+        43650,
+        49100,
+        54950,
+        61150,
+        67750,
+        74700,
+        82050,
+        89800,
+        97950,
+        106500,
+        115450,
+        124800,
+        2147483647
+      ],
+      "levelXp": 0,
+      "levelName": "Mining",
+      "levelBeforeLevelingUp": 1
+    },
+    {
+      "xpList": [
+        0,
+        0,
+        200,
+        600,
+        1200,
+        2000,
+        3050,
+        4350,
+        5950,
+        7800,
+        9950,
+        12400,
+        15150,
+        18200,
+        21600,
+        25350,
+        29400,
+        33800,
+        38550,
+        43650,
+        49100,
+        54950,
+        61150,
+        67750,
+        74700,
+        82050,
+        89800,
+        97950,
+        106500,
+        115450,
+        124800,
+        2147483647
+      ],
+      "levelXp": 0,
+      "levelName": "Smithing",
+      "levelBeforeLevelingUp": 1
+    },
+    {
+      "xpList": [
+        0,
+        0,
+        200,
+        600,
+        1200,
+        2000,
+        3050,
+        4350,
+        5950,
+        7800,
+        9950,
+        12400,
+        15150,
+        18200,
+        21600,
+        25350,
+        29400,
+        33800,
+        38550,
+        43650,
+        49100,
+        54950,
+        61150,
+        67750,
+        74700,
+        82050,
+        89800,
+        97950,
+        106500,
+        115450,
+        124800,
+        2147483647
+      ],
+      "levelXp": 0,
+      "levelName": "Cooking",
+      "levelBeforeLevelingUp": 1
+    },
+    {
+      "xpList": [
+        0,
+        0,
+        200,
+        600,
+        1200,
+        2000,
+        3050,
+        4350,
+        5950,
+        7800,
+        9950,
+        12400,
+        15150,
+        18200,
+        21600,
+        25350,
+        29400,
+        33800,
+        38550,
+        43650,
+        49100,
+        54950,
+        61150,
+        67750,
+        74700,
+        82050,
+        89800,
+        97950,
+        106500,
+        115450,
+        124800,
+        2147483647
+      ],
+      "levelXp": 0,
+      "levelName": "Fishing",
+      "levelBeforeLevelingUp": 1
+    }
+  ]
+}
