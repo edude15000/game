@@ -1,140 +1,240 @@
 {
-  "totalHealth": 100,
-  "currentHealth": 23,
-  "userName": "E",
+  "totalHealth": 1335,
+  "currentHealth": 1335,
+  "userName": "e",
   "userClass": "Chicken Tender",
-  "money": 87,
-  "attack": 20,
-  "defense": 6,
-  "monstersKilled": 5,
+  "money": 116,
+  "attack": 43,
+  "defense": 69,
+  "monstersKilled": 47,
   "itemList": [
-    {
-      "type": "miniRPG.Armor",
-      "data": {
-        "defenseBoost": 2,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Steel boots",
-        "itemType": "boots",
-        "itemRequiredLevel": 10,
-        "itemValue": 200
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 10,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 100,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Armor",
-      "data": {
-        "defenseBoost": 1,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Iron platebody",
-        "itemType": "platebody",
-        "itemRequiredLevel": 5,
-        "itemValue": 100
-      }
-    },
     {
       "type": "miniRPG.Consumable",
       "data": {
-        "healAmount": 10,
+        "healAmount": 28,
         "consumableValue": 0,
-        "itemName": "Small Potion",
-        "itemType": "Small Potion",
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
         "itemRequiredLevel": 1,
         "itemValue": 10
       }
     },
     {
-      "type": "miniRPG.Armor",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "defenseBoost": 2,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Mithril shield",
-        "itemType": "shield",
-        "itemRequiredLevel": 15,
-        "itemValue": 350
+        "name": "Ruby",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Ruby",
+        "itemType": "Ruby",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
       }
     },
     {
-      "type": "miniRPG.Cookable",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 10,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 100,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
+        "name": "Diamond",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Diamond",
+        "itemType": "Diamond",
         "itemRequiredLevel": 1,
-        "itemValue": 5
+        "itemValue": 1
       }
     },
     {
-      "type": "miniRPG.Cookable",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 10,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 100,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
         "itemRequiredLevel": 1,
-        "itemValue": 5
+        "itemValue": 1
       }
-    }
-  ],
-  "equippedItems": [
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
     {
       "type": "miniRPG.Weapon",
       "data": {
@@ -143,6 +243,1634 @@
         "weaponValue": 0,
         "itemName": "Bronze sword",
         "itemType": "sword",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 57,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 57,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 57,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Cookable",
+      "data": {
+        "cookableName": "Raw Chicken",
+        "cookableXP": 150,
+        "cookableLevelRequired": 5,
+        "chanceToCook": 80,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 158,
+            "consumableValue": 0,
+            "itemName": "Chicken",
+            "itemType": "Chicken",
+            "itemRequiredLevel": 1,
+            "itemValue": 20
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 793,
+        "itemName": "Raw Chicken",
+        "itemType": "Raw Chicken",
+        "itemRequiredLevel": 5,
+        "itemValue": 5
+      }
+    },
+    {
+      "type": "miniRPG.Cookable",
+      "data": {
+        "cookableName": "Raw Chicken",
+        "cookableXP": 150,
+        "cookableLevelRequired": 5,
+        "chanceToCook": 80,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 158,
+            "consumableValue": 0,
+            "itemName": "Chicken",
+            "itemType": "Chicken",
+            "itemRequiredLevel": 1,
+            "itemValue": 20
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 793,
+        "itemName": "Raw Chicken",
+        "itemType": "Raw Chicken",
+        "itemRequiredLevel": 5,
+        "itemValue": 5
+      }
+    },
+    {
+      "type": "miniRPG.Cookable",
+      "data": {
+        "cookableName": "Raw Chicken",
+        "cookableXP": 150,
+        "cookableLevelRequired": 5,
+        "chanceToCook": 80,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 158,
+            "consumableValue": 0,
+            "itemName": "Chicken",
+            "itemType": "Chicken",
+            "itemRequiredLevel": 1,
+            "itemValue": 20
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 793,
+        "itemName": "Raw Chicken",
+        "itemType": "Raw Chicken",
+        "itemRequiredLevel": 5,
+        "itemValue": 5
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Ruby",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Ruby",
+        "itemType": "Ruby",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Cookable",
+      "data": {
+        "cookableName": "Raw Beef",
+        "cookableXP": 600,
+        "cookableLevelRequired": 15,
+        "chanceToCook": 0,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 333,
+            "consumableValue": 0,
+            "itemName": "Beef",
+            "itemType": "Beef",
+            "itemRequiredLevel": 1,
+            "itemValue": 30
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 1110,
+        "itemName": "Raw Beef",
+        "itemType": "Raw Beef",
+        "itemRequiredLevel": 15,
+        "itemValue": 5
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 79,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 55,
+        "consumableValue": 0,
+        "itemName": "Potato",
+        "itemType": "Potato",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 333,
+        "consumableValue": 0,
+        "itemName": "Lobster",
+        "itemType": "Lobster",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 333,
+        "consumableValue": 0,
+        "itemName": "Lobster",
+        "itemType": "Lobster",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 333,
+        "consumableValue": 0,
+        "itemName": "Lobster",
+        "itemType": "Lobster",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 333,
+        "consumableValue": 0,
+        "itemName": "Lobster",
+        "itemType": "Lobster",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 333,
+        "consumableValue": 0,
+        "itemName": "Lobster",
+        "itemType": "Lobster",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 333,
+        "consumableValue": 0,
+        "itemName": "Lobster",
+        "itemType": "Lobster",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 333,
+        "consumableValue": 0,
+        "itemName": "Lobster",
+        "itemType": "Lobster",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 333,
+        "consumableValue": 0,
+        "itemName": "Lobster",
+        "itemType": "Lobster",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 333,
+        "consumableValue": 0,
+        "itemName": "Lobster",
+        "itemType": "Lobster",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 333,
+        "consumableValue": 0,
+        "itemName": "Lobster",
+        "itemType": "Lobster",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 333,
+        "consumableValue": 0,
+        "itemName": "Lobster",
+        "itemType": "Lobster",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Emerald",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Emerald",
+        "itemType": "Emerald",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Ruby",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Ruby",
+        "itemType": "Ruby",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze bar",
+        "itemType": "Bronze bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Iron bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Iron bar",
+        "itemType": "Iron bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Gold bar",
+        "itemType": "Gold bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Iron bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Iron bar",
+        "itemType": "Iron bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Iron bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Iron bar",
+        "itemType": "Iron bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 111,
+        "consumableValue": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Jewelry",
+      "data": {
+        "name": "Sapphire Ring",
+        "hpBoost": 0,
+        "attackBoost": 0,
+        "defenseBoost": 3,
+        "value": 50,
+        "itemName": "Sapphire Ring",
+        "itemType": "jewelry",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    }
+  ],
+  "equippedItems": [
+    {
+      "type": "miniRPG.Weapon",
+      "data": {
+        "attackBoost": 3,
+        "weaponRequiredLevel": 0,
+        "weaponValue": 0,
+        "itemName": "Bronze sword",
+        "itemType": "sword",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 4,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Bronze helmet",
+        "itemType": "helmet",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 4,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Bronze platelegs",
+        "itemType": "platelegs",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 7,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Iron platebody",
+        "itemType": "platebody",
+        "itemRequiredLevel": 3,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Jewelry",
+      "data": {
+        "name": "Sapphire Ring",
+        "hpBoost": 0,
+        "attackBoost": 0,
+        "defenseBoost": 3,
+        "value": 50,
+        "itemName": "Sapphire Ring",
+        "itemType": "Sapphire Ring",
         "itemRequiredLevel": 1,
         "itemValue": 50
       }
@@ -184,9 +1912,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 74,
+      "levelXp": 3106,
       "levelName": "Combat",
-      "levelBeforeLevelingUp": 1
+      "levelBeforeLevelingUp": 6
     },
     {
       "xpList": [
@@ -223,9 +1951,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 0,
+      "levelXp": 5810,
       "levelName": "Mining",
-      "levelBeforeLevelingUp": 1
+      "levelBeforeLevelingUp": 7
     },
     {
       "xpList": [
@@ -262,9 +1990,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 0,
+      "levelXp": 4510,
       "levelName": "Smithing",
-      "levelBeforeLevelingUp": 1
+      "levelBeforeLevelingUp": 7
     },
     {
       "xpList": [
@@ -301,9 +2029,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 0,
+      "levelXp": 13375,
       "levelName": "Cooking",
-      "levelBeforeLevelingUp": 1
+      "levelBeforeLevelingUp": 11
     },
     {
       "xpList": [
@@ -340,9 +2068,10 @@
         124800,
         2147483647
       ],
-      "levelXp": 0,
+      "levelXp": 18080,
       "levelName": "Fishing",
-      "levelBeforeLevelingUp": 1
+      "levelBeforeLevelingUp": 12
     }
-  ]
+  ],
+  "bankedItemList": []
 }

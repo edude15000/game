@@ -8,8 +8,10 @@ public class Enemy {
 	int enemyAttack, enemyDefense, enemyLevel;
 	int enemyXp, enemyMoney, enemyHp;
 	ArrayList<Item> lootlist = new ArrayList<>();
+	int userHealth;
 
 	public Enemy(int enemyLevel, User user) {
+		userHealth = user.getTotalHealth();
 		this.enemyLevel = enemyLevel;
 		getName();
 		randomlyCreateHP(enemyLevel);
@@ -62,7 +64,7 @@ public class Enemy {
 	}
 
 	private void randomlyCreateXP(int level) {
-		this.enemyXp = new Random().nextInt(15 * level) + (level * 10);
+		this.enemyXp = new Random().nextInt(35 * level) + (level * 20);
 	}
 
 	void randomlyCreateStats(int level) {
@@ -75,89 +77,98 @@ public class Enemy {
 		if ((new Random().nextInt(100) + 1) < 5) {
 			int chance2 = new Random().nextInt(100) + 1;
 			if (chance2 < 50) {
-				user.itemList.add(new Smeltable("Sapphire", 1, 1));
-				System.out.println(" You find a sapphire!");
+				lootlist.add(new Smeltable("Sapphire", 1, 1));
 			} else if (chance2 < 80) {
-				user.itemList.add(new Smeltable("Emerald", 1, 1));
-				System.out.println(" You find a emerald!");
+				lootlist.add(new Smeltable("Emerald", 1, 1));
 			} else if (chance2 < 95) {
-				user.itemList.add(new Smeltable("Ruby", 1, 1));
-				System.out.println(" You find a ruby!");
+				lootlist.add(new Smeltable("Ruby", 1, 1));
 			} else {
-				user.itemList.add(new Smeltable("Diamond", 1, 1));
-				System.out.println(" You find a diamond!");
+				lootlist.add(new Smeltable("Diamond", 1, 1));
 			}
+
 		}
 		int chance;
 		if ((new Random().nextInt(100) + 1) > 80) {
 			Item item;
 			chance = new Random().nextInt(100) + 1;
 			if (chance > 75) {
-				item = new Weapon("sword", 0, "sword", 1, 10000);
+				item = new Weapon("sword", 0, "sword", 1, 1);
 			} else if (chance > 60) {
-				item = new Armor("shield", 0, "shield", 1, 10000);
+				item = new Armor("shield", 0, "shield", 1, 1);
 			} else if (chance > 45) {
-				item = new Armor("helmet", 0, "helmet", 1, 10000);
+				item = new Armor("helmet", 0, "helmet", 1, 1);
 			} else if (chance > 30) {
-				item = new Armor("platebody", 0, "platebody", 1, 10000);
+				item = new Armor("platebody", 0, "platebody", 1, 1);
 			} else if (chance > 15) {
-				item = new Armor("platelegs", 0, "platelegs", 1, 10000);
+				item = new Armor("platelegs", 0, "platelegs", 1, 1);
 			} else {
-				item = new Armor("boots", 0, "boots", 1, 10000);
+				item = new Armor("boots", 0, "boots", 1, 1);
 			}
 			if (level < 5) {
 				item.setName("Bronze " + item.getName());
 				item.setRequiredLevel(1);
-				item.setItemValue(100);
+				item.setItemValue(50);
 				if (item.itemName.contains("sword")) {
-					((Weapon) item).setAttackBoost(10);
+					((Weapon) item).setAttackBoost(((int) Math.ceil(user
+							.getAttack() * .05)));
 				} else {
-					((Armor) item).setDefenseBoost(10);
+					((Armor) item).setDefenseBoost(((int) Math.ceil(user
+							.getDefense() * .05)));
 				}
 			} else if (level < 10) {
 				item.setName("Iron " + item.getName());
 				item.setRequiredLevel(3);
-				item.setItemValue(250);
+				item.setItemValue(100);
 				if (item.itemName.contains("sword")) {
-					((Weapon) item).setAttackBoost(18);
+					((Weapon) item).setAttackBoost(((int) Math.ceil(user
+							.getAttack() * .1)));
 				} else {
-					((Armor) item).setDefenseBoost(18);
+					((Armor) item).setDefenseBoost(((int) Math.ceil(user
+							.getDefense() * .1)));
 				}
 			} else if (level < 15) {
 				item.setName("Steel " + item.getName());
 				item.setRequiredLevel(1);
-				item.setItemValue(750);
+				item.setItemValue(200);
 				if (item.itemName.contains("sword")) {
-					((Weapon) item).setAttackBoost(32);
+					((Weapon) item).setAttackBoost(((int) Math.ceil(user
+							.getAttack() * .2)));
 				} else {
-					((Armor) item).setDefenseBoost(32);
+					((Armor) item).setDefenseBoost(((int) Math.ceil(user
+							.getDefense() * .15)));
 				}
 			} else if (level < 20) {
 				item.setName("Mithril " + item.getName());
 				item.setRequiredLevel(1);
-				item.setItemValue(2000);
+				item.setItemValue(350);
 				if (item.itemName.contains("sword")) {
-					((Weapon) item).setAttackBoost(58);
+					((Weapon) item).setAttackBoost(((int) Math.ceil(user
+							.getAttack() * .25)));
 				} else {
-					((Armor) item).setDefenseBoost(58);
+					((Armor) item).setDefenseBoost(((int) Math.ceil(user
+							.getDefense() * .175)));
 				}
 			} else if (level < 25) {
 				item.setName("Adamantite " + item.getName());
 				item.setRequiredLevel(1);
-				item.setItemValue(5000);
+				item.setItemValue(500);
 				if (item.itemName.contains("sword")) {
-					((Weapon) item).setAttackBoost(104);
+					((Weapon) item).setAttackBoost(((int) Math.ceil(user
+							.getAttack() * .3)));
 				} else {
-					((Armor) item).setDefenseBoost(104);
+					((Armor) item).setDefenseBoost(((int) Math.ceil(user
+							.getDefense() * .2)));
 				}
 			} else if (level >= 25) {
 				item.setName("Rune " + item.getName());
 				item.setRequiredLevel(1);
-				item.setItemValue(25000);
+				item.setItemValue(1000);
 				if (item.itemName.contains("sword")) {
-					((Weapon) item).setAttackBoost(200);
+					((Weapon) item).setAttackBoost(((int) Math.ceil(user
+							.getAttack() * .35)));
 				} else {
-					((Armor) item).setDefenseBoost(200);
+					((Armor) item).setDefenseBoost(((int) Math.ceil(user
+							.getDefense() * .25)));
 				}
 			}
 			lootlist.add(item);
@@ -174,24 +185,29 @@ public class Enemy {
 		if (new Random().nextInt(100) + 1 > 75) {
 			chance = new Random().nextInt(100) + 1;
 			if (chance > 75) {
-				lootlist.add(new Consumable("Potato", 5, "consumable", 1));
+				lootlist.add(new Consumable("Potato",
+						((int) (userHealth * .05)), "consumable", 1));
 			} else if (chance > 50) {
-				lootlist.add(new Consumable("Small Potion", 10, "consumable",
-						10));
+				lootlist.add(new Consumable("Small Potion",
+						((int) (userHealth * .1)), "consumable", 10));
 			} else if (chance > 40) {
-				lootlist.add(new Consumable("Fish", 15, "consumable", 15));
+				lootlist.add(new Consumable("Fish", ((int) (userHealth * .15)),
+						"consumable", 15));
 			} else if (chance > 30) {
-				lootlist.add(new Consumable("Chicken", 20, "consumable", 20));
+				lootlist.add(new Consumable("Chicken",
+						((int) (userHealth * .2)), "consumable", 20));
 			} else if (chance > 20) {
-				lootlist.add(new Consumable("Turkey Leg", 25, "consumable", 25));
+				lootlist.add(new Consumable("Turkey Leg",
+						((int) (userHealth * .25)), "consumable", 25));
 			} else if (chance > 10) {
-				lootlist.add(new Consumable("Beef", 30, "consumable", 30));
+				lootlist.add(new Consumable("Beef", ((int) (userHealth * .3)),
+						"consumable", 30));
 			} else if (chance > 2) {
-				lootlist.add(new Consumable("Large Potion", 50, "consumable",
-						50));
+				lootlist.add(new Consumable("Large Potion",
+						((int) (userHealth * .5)), "consumable", 50));
 			} else {
-				lootlist.add(new Consumable("Max Potion", 10000, "consumable",
-						100));
+				lootlist.add(new Consumable("Max Potion", userHealth,
+						"consumable", 100));
 			}
 		}
 	}

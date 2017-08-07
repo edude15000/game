@@ -23,14 +23,18 @@ public class Play {
 		sc.close();
 	}
 
-	public static User startUser() throws IOException {
-		user = loadData();
-		if (user == null) {
-			user = new User(100, 100, 0, 10, 10);
-			setUpUserInfo();
-		}
-		if (user.getCurrentHealth() < 1) {
-			user.setCurrentHealth(user.getTotalHealth());
+	public static User startUser() {
+		user = null;
+		try {
+			user = loadData();
+			if (user == null) {
+				user = new User(100, 100, 0, 10, 10);
+				setUpUserInfo();
+			}
+			if (user.getCurrentHealth() < 1) {
+				user.setCurrentHealth(user.getTotalHealth());
+			}
+		} catch (IOException e) {
 		}
 		return user;
 	}
@@ -108,37 +112,90 @@ public class Play {
 		}
 	}
 
+	public static void smeltList(Smeltable item) {
+		Item item1 = null, item2 = null;
+		if (item.itemName.toLowerCase().contains("sapphire")) {
+			System.out.println("1 Sapphire Ring (1 gold bar, 1 sapphire)");
+			System.out.println("2 Sapphire Necklace (2 gold bars, 1 sapphire)");
+			item1 = new Jewelry("Sapphire Ring", 0, 0,
+					(int) (user.getDefense() * .05), 50);
+			item2 = new Jewelry("Sapphire Necklace", 0, 0,
+					(int) (user.getDefense() * .05), 50);
+		} else if (item.itemName.toLowerCase().contains("emerald")) {
+			System.out.println("1 Emerald Ring (1 gold bar, 1 emerald)");
+			System.out.println("2 Emerald Necklace (2 gold bars, 1 emerald)");
+			item1 = new Jewelry("Emerald Ring",
+					(int) (user.getTotalHealth() * .05), 0, 0, 50);
+			item2 = new Jewelry("Emerald Necklace",
+					(int) (user.getTotalHealth() * .05), 0, 0, 50);
+		} else if (item.itemName.toLowerCase().contains("ruby")) {
+			System.out.println("1 Ruby Ring (1 gold bar, 1 ruby)");
+			System.out.println("2 Ruby Necklace (2 gold bars, 1 ruby)");
+			item1 = new Jewelry("Ruby Ring", 0, (int) (user.getAttack() * .05),
+					0, 50);
+			item2 = new Jewelry("Ruby Necklace", 0,
+					(int) (user.getAttack() * .05), 0, 50);
+		} else if (item.itemName.toLowerCase().contains("diamond")) {
+			System.out.println("1 Diamond Ring (1 gold bar, 1 diamond)");
+			System.out.println("2 Diamond Necklace (2 gold bars, 1 diamond)");
+			item1 = new Jewelry("Diamond Ring",
+					(int) (user.getTotalHealth() * .03),
+					(int) (user.getAttack() * .03),
+					(int) (user.getDefense() * .03), 50);
+			item2 = new Jewelry("Diamond Necklace",
+					(int) (user.getTotalHealth() * .03),
+					(int) (user.getAttack() * .03),
+					(int) (user.getDefense() * .03), 50);
+		} else if (item.itemName.toLowerCase().contains("bronze")) {
+			System.out.println("1 Bronze Helmet (1 gold bar, 1 diamond)");
+		}
+
+		// TODO : ARMOR / WEPS
+		int choice = 0;
+		choice = sc.nextInt();
+		if (choice == 1) {
+			if (item1 != null) {
+				smelt(item1);
+			}
+		} else if (choice == 2) {
+			if (item2 != null) {
+				smelt(item2);
+			}
+		}
+		return;
+	}
+
 	public static void smelt(Item i) {
 		if (i.itemName.equalsIgnoreCase("Gold bar")) {
 			System.out.println("Please choose a gem to make jewelry!");
 			return;
 		}
-		// Sapphire
+		if (i.itemName.toLowerCase().contains("sapphire ring")
+				&& getNumberOfItemByName("Gold Bar") >= 1) {
+			user.itemList.remove(getItemByName("Sapphire"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a Sapphire Ring!");
+			user.getLevelObject("Smithing").gainXp(200);
+			// TODO everything else!
+		} else {
+			System.out
+					.println("You do not have enough required items to craft this!");
+		}
 
-		// Emerald
+	}
 
-		// Ruby
-
-		// Diamond
-
-		// Bronze
-
-		// Iron
-
-		// Steel
-
-		// Mithril
-
-		// Adamantite
-
-		// Rune
-
-		// TODO
+	public static Item getItemByName(String name) {
+		for (Item i : user.itemList) {
+			if (i.itemName.equalsIgnoreCase(name)) {
+				return i;
+			}
+		}
+		return null;
 	}
 
 	public static void loopActions(User user) throws IOException {
 		while (true) {
-
 			String choice = null;
 			user.displayStats();
 			System.out.println("What would you like to do?");
@@ -159,7 +216,7 @@ public class Play {
 			} else if (choice.startsWith("i")) {
 				inventory();
 			} else if (choice.startsWith("s")) {
-				market();
+				shop();
 			} else if (choice.startsWith("h")) {
 				hospital();
 			} else if (choice.startsWith("f")) {
@@ -232,10 +289,10 @@ public class Play {
 		}
 	}
 
-	public static int getNumberOfItem(Item i) {
+	public static int getNumberOfItemByName(String name) {
 		int num = 0;
 		for (Item item : user.getItemList()) {
-			if (item.itemName.equals(i.itemName)) {
+			if (item.itemName.equalsIgnoreCase(name)) {
 				num++;
 			}
 		}
@@ -256,6 +313,11 @@ public class Play {
 			} else if (i instanceof Weapon) {
 				System.out.println(count + "\t" + i.getName()
 						+ "\tATTACK BONUS: " + ((Weapon) i).getAttackBoost());
+			} else if (i instanceof Jewelry) {
+				System.out.println(count + "\t" + i.getName() + "\tHP BONUS: "
+						+ ((Jewelry) i).getHpBoost() + "\tATTACK BONUS: "
+						+ ((Jewelry) i).getAttackBoost() + "\tDEFENSE BONUS: "
+						+ ((Jewelry) i).getDefenseBoost());
 			}
 			count++;
 		}
@@ -269,9 +331,9 @@ public class Play {
 		}
 	}
 
-	public static void market() {
+	public static void shop() {
 		System.out.println("Would you like to buy or sell an item? (buy/sell)");
-		String choice = sc.nextLine();
+		String choice = sc.next();
 		if (choice.toLowerCase().startsWith("s")) {
 			if (user.itemList.isEmpty()) {
 				System.out.println("You have no items!\n");
@@ -352,8 +414,10 @@ public class Play {
 				System.out.println(count + "\t" + c.getName() + "\tHeals: "
 						+ c.getHealAmount());
 			} else if (i instanceof Weapon || i instanceof Armor
+					|| i instanceof Jewelry
 					|| i.itemType.toLowerCase().equals("armor")
-					|| i.itemType.toLowerCase().equals("weapon")) {
+					|| i.itemType.toLowerCase().equals("weapon")
+					|| i.itemType.toLowerCase().equals("jewelry")) {
 				System.out.println(count + "\t" + i.getName()
 						+ "\tRequired Level To EQUIP: " + i.getRequiredLevel());
 			} else if (i instanceof Ore) {
@@ -425,7 +489,7 @@ public class Play {
 				System.out.println(enemy.enemyName + " HP: " + enemy.enemyHp);
 				System.out.println("Your HP: " + user.getCurrentHealth());
 				System.out
-						.println("Use an item or run away? (yes / no / run): ");
+						.println("Use an item, run away, or autofight? (yes / no / run / af): ");
 				String choice = sc.next();
 				if (choice == null || choice.isEmpty()) {
 					choice = sc.nextLine();
@@ -443,10 +507,24 @@ public class Play {
 					} else {
 						System.out.println("You fail to run away!");
 					}
+				} else if (choice.toLowerCase().startsWith("a")) {
+					while (user.getCurrentHealth() > user.getTotalHealth() * .10
+							&& enemy.enemyHp >= 0) {
+						damage = damage(user.getAttack(), enemy.enemyDefense);
+						enemy.enemyHp -= damage;
+						System.out.println("You do " + damage + " damage!");
+						damage = damage(enemy.enemyAttack, user.getDefense());
+						user.setCurrentHealth(user.getCurrentHealth() - damage);
+						System.out.println(enemy.enemyName + " does " + damage
+								+ " damage!");
+					}
 				}
-				damage = damage(user.getAttack(), enemy.enemyDefense);
-				enemy.enemyHp -= damage;
-				System.out.println("You do " + damage + " damage!");
+				if (!choice.toLowerCase().startsWith("a")
+						&& !choice.toLowerCase().startsWith("y")) {
+					damage = damage(user.getAttack(), enemy.enemyDefense);
+					enemy.enemyHp -= damage;
+					System.out.println("You do " + damage + " damage!");
+				}
 			} else {
 				damage = damage(enemy.enemyAttack, user.getDefense());
 				user.setCurrentHealth(user.getCurrentHealth() - damage);

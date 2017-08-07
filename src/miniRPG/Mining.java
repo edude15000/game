@@ -96,7 +96,7 @@ public class Mining {
 					result += "You mine mithril ore and gain 400 XP!";
 				}
 			}
-		} else if (new Random().nextInt(100) + 1 < 5) {
+		} else if (new Random().nextInt(100) + 1 < 20) {
 			user.itemList.add(new Ore("Gold Ore", 1, 100, 250));
 			user.getLevelObject("Mining").gainXp(250);
 			result += "You mine gold ore and gain 250 XP!";
