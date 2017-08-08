@@ -37,7 +37,7 @@ public class User {
 		Item item = itemList.get(spotInInventory);
 		String name = item.itemName;
 		if (item instanceof Cookable) {
-			if (getLevel("Cooking") < item.getRequiredLevel()) {
+			if (getLevel("Cooking") < ((Cookable) item).getRequiredLevel()) {
 				System.out.println("You need level " + item.itemRequiredLevel
 						+ " cooking to cook this item.");
 				return;
@@ -75,7 +75,8 @@ public class User {
 			System.out.println("You consume the " + item.getName()
 					+ ", healing you by " + ((Consumable) item).healAmount
 					+ " HP!");
-		} else if (item instanceof Weapon || item instanceof Armor) {
+		} else if (item instanceof Weapon || item instanceof Armor
+				|| item instanceof Jewelry) {
 			if (getLevel("Combat") < item.getRequiredLevel()) {
 				System.out.println("You need level " + item.itemRequiredLevel
 						+ " combat to equip this item.");
@@ -85,7 +86,6 @@ public class User {
 			for (Item i : equippedItems) {
 				if (i.itemType.toLowerCase().equals(type)) {
 					removeEquippedItem(i);
-					itemList.add(i);
 					break;
 				}
 			}
@@ -122,6 +122,10 @@ public class User {
 			for (int i = 0; i < addIndexes.size(); i++) {
 				itemList.add(addIndexes.get(i));
 			}
+
+		} else if (item instanceof Smeltable) {
+			Play.smeltList((Smeltable) item);
+			return;
 		}
 		removeItem(spotInInventory);
 	}
@@ -136,6 +140,11 @@ public class User {
 		if (item instanceof Armor) {
 			setDefense(getDefense() - ((Armor) item).getDefenseBoost());
 		}
+		if (item instanceof Jewelry) {
+			setAttack(getAttack() - ((Jewelry) item).getAttackBoost());
+			setDefense(getDefense() - ((Jewelry) item).getDefenseBoost());
+			setTotalHealth(getTotalHealth() - ((Jewelry) item).getHpBoost());
+		}
 	}
 
 	public void removeEquippedItem(Item item) {
@@ -147,6 +156,11 @@ public class User {
 		if (item instanceof Armor) {
 			setDefense(getDefense() - ((Armor) item).getDefenseBoost());
 		}
+		if (item instanceof Jewelry) {
+			setAttack(getAttack() - ((Jewelry) item).getAttackBoost());
+			setDefense(getDefense() - ((Jewelry) item).getDefenseBoost());
+			setTotalHealth(getTotalHealth() - ((Jewelry) item).getHpBoost());
+		}
 	}
 
 	public void equipBonus(Item item) {
@@ -156,6 +170,11 @@ public class User {
 		}
 		if (item instanceof Armor) {
 			setDefense(getDefense() + ((Armor) item).getDefenseBoost());
+		}
+		if (item instanceof Jewelry) {
+			setAttack(getAttack() + ((Jewelry) item).getAttackBoost());
+			setDefense(getDefense() + ((Jewelry) item).getDefenseBoost());
+			setTotalHealth(getTotalHealth() + ((Jewelry) item).getHpBoost());
 		}
 	}
 
@@ -291,7 +310,7 @@ public class User {
 									.getXp()) + 1) + "\t");
 		}
 		System.out.println();
-		String sword = null, shield = null, platebody = null, platelegs = null, helmet = null, boots = null;
+		String sword = null, shield = null, platebody = null, platelegs = null, helmet = null, boots = null, ring = null, necklace = null;
 		for (Item i : equippedItems) {
 			if (i.itemType.equals("sword")) {
 				sword = i.itemName + " (+" + ((Weapon) i).attackBoost + ")";
@@ -305,6 +324,35 @@ public class User {
 				helmet = i.itemName + " (+" + ((Armor) i).defenseBoost + ")";
 			} else if (i.itemType.equals("boots")) {
 				boots = i.itemName + " (+" + ((Armor) i).defenseBoost + ")";
+			} else if (i.itemType.toLowerCase().contains("ring")) {
+				if (i.itemName.toLowerCase().contains("sapphire")) {
+					ring = i.itemName + " (+" + ((Jewelry) i).defenseBoost
+							+ " DEF)";
+				} else if (i.itemName.toLowerCase().contains("emerald")) {
+					ring = i.itemName + " (+" + ((Jewelry) i).hpBoost + " HP)";
+				} else if (i.itemName.toLowerCase().contains("ruby")) {
+					ring = i.itemName + " (+" + ((Jewelry) i).attackBoost
+							+ " ATT)";
+				} else {
+					ring = i.itemName + " (+" + ((Jewelry) i).attackBoost
+							+ " ATT, +" + ((Jewelry) i).defenseBoost
+							+ " DEF, +" + ((Jewelry) i).hpBoost + " HP";
+				}
+			} else if (i.itemType.toLowerCase().contains("necklace")) {
+				if (i.itemName.toLowerCase().contains("sapphire")) {
+					necklace = i.itemName + " (+" + ((Jewelry) i).defenseBoost
+							+ " DEF)";
+				} else if (i.itemName.toLowerCase().contains("emerald")) {
+					necklace = i.itemName + " (+" + ((Jewelry) i).hpBoost
+							+ " HP)";
+				} else if (i.itemName.toLowerCase().contains("ruby")) {
+					necklace = i.itemName + " (+" + ((Jewelry) i).attackBoost
+							+ " ATT)";
+				} else {
+					necklace = i.itemName + " (+" + ((Jewelry) i).attackBoost
+							+ " ATT, +" + ((Jewelry) i).defenseBoost
+							+ " DEF, +" + ((Jewelry) i).hpBoost + " HP";
+				}
 			}
 		}
 		if (sword == null) {
@@ -325,8 +373,16 @@ public class User {
 		if (boots == null) {
 			boots = "N/A";
 		}
-		System.out.println("Sword: " + sword + "\tHelmet: " + helmet
-				+ "\tPlatebody: " + platebody + "\tPlatelegs: " + platelegs
-				+ "\tShield: " + shield + "\tBoots: " + boots);
+		if (ring == null) {
+			ring = "N/A";
+		}
+		if (necklace == null) {
+			necklace = "N/A";
+		}
+		System.out.println("Sword: " + sword + "\tShield: " + shield
+				+ "\tBoots: " + boots);
+		System.out.println("Helmet: " + helmet + "\tPlatebody: " + platebody
+				+ "\tPlatelegs: " + platelegs);
+		System.out.println("Ring: " + ring + "\tNecklace: " + necklace);
 	}
 }
