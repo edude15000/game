@@ -23,14 +23,20 @@ public class Play {
 		sc.close();
 	}
 
-	public static User startUser() throws IOException {
-		user = loadData();
-		if (user == null) {
-			user = new User(100, 100, 0, 10, 10);
-			setUpUserInfo();
-		}
-		if (user.getCurrentHealth() < 1) {
-			user.setCurrentHealth(user.getTotalHealth());
+	public static User startUser() {
+		try {
+				user = loadData();
+	
+			if (user == null) {
+				user = new User(100, 100, 0, 10, 10);
+				setUpUserInfo();
+			}
+			if (user.getCurrentHealth() < 1) {
+				user.setCurrentHealth(user.getTotalHealth());
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return user;
 	}

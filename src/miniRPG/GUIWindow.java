@@ -188,6 +188,9 @@ public class GUIWindow extends Frame
     		status = Fishing.fishing(user);
     		messages.setText(status);
     		messages.validate();
+    		fishingLabel.setText("Fishing Lvl:" + user.getLevel("Fishing")); 
+        	fishingXpLabel.setText("Fishing XP:" + user.getLevelObject("Fishing").getXp()); 
+    		
     	}
     }
     
