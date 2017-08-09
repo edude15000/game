@@ -13,11 +13,17 @@ public class Enemy {
 	public Enemy(int enemyLevel, User user) {
 		userHealth = user.getTotalHealth();
 		this.enemyLevel = enemyLevel;
+		setBaseStats();
 		getName();
 		randomlyCreateHP(enemyLevel);
 		randomlyCreateXP(enemyLevel);
 		randomlyCreateLootList(enemyLevel, user);
-		randomlyCreateStats(enemyLevel);
+		randomlyCreateStats(enemyLevel, user);
+	}
+
+	private void setBaseStats() {
+		this.enemyAttack = 10;
+		this.enemyDefense = 10;
 	}
 
 	private void getName() {
@@ -67,9 +73,14 @@ public class Enemy {
 		this.enemyXp = new Random().nextInt(35 * level) + (level * 20);
 	}
 
-	void randomlyCreateStats(int level) {
-		this.enemyAttack = new Random().nextInt(12 * level) + (level / 2);
-		this.enemyDefense = new Random().nextInt(12 * level) + (level / 2);
+	void randomlyCreateStats(int level, User user) {
+		for (int i = 0; i < level - 1; i++) {
+			this.enemyAttack = this.enemyAttack + (int) Math.pow(level, 1.05)
+					+ (int) (new Random().nextDouble() * Math.pow(level, 1.05));
+			this.enemyDefense = this.enemyDefense
+					+ (int) Math.pow(level, 1.005)
+					+ (int) (new Random().nextDouble() * Math.pow(level, 1.005));
+		}
 	}
 
 	void randomlyCreateLootList(int level, User user) {
