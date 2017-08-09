@@ -117,7 +117,7 @@ public class Enemy {
 				}
 			} else if (level < 10) {
 				item.setName("Iron " + item.getName());
-				item.setRequiredLevel(3);
+				item.setRequiredLevel(5);
 				item.setItemValue(100);
 				if (item.itemName.contains("sword")) {
 					((Weapon) item).setAttackBoost(((int) Math.ceil(user
@@ -128,7 +128,7 @@ public class Enemy {
 				}
 			} else if (level < 15) {
 				item.setName("Steel " + item.getName());
-				item.setRequiredLevel(1);
+				item.setRequiredLevel(10);
 				item.setItemValue(200);
 				if (item.itemName.contains("sword")) {
 					((Weapon) item).setAttackBoost(((int) Math.ceil(user
@@ -139,7 +139,7 @@ public class Enemy {
 				}
 			} else if (level < 20) {
 				item.setName("Mithril " + item.getName());
-				item.setRequiredLevel(1);
+				item.setRequiredLevel(15);
 				item.setItemValue(350);
 				if (item.itemName.contains("sword")) {
 					((Weapon) item).setAttackBoost(((int) Math.ceil(user
@@ -150,7 +150,7 @@ public class Enemy {
 				}
 			} else if (level < 25) {
 				item.setName("Adamantite " + item.getName());
-				item.setRequiredLevel(1);
+				item.setRequiredLevel(20);
 				item.setItemValue(500);
 				if (item.itemName.contains("sword")) {
 					((Weapon) item).setAttackBoost(((int) Math.ceil(user
@@ -161,7 +161,7 @@ public class Enemy {
 				}
 			} else if (level >= 25) {
 				item.setName("Rune " + item.getName());
-				item.setRequiredLevel(1);
+				item.setRequiredLevel(25);
 				item.setItemValue(1000);
 				if (item.itemName.contains("sword")) {
 					((Weapon) item).setAttackBoost(((int) Math.ceil(user
