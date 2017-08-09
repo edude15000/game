@@ -6,15 +6,23 @@ public class Jewelry extends Item {
 	int attackBoost;
 	int defenseBoost;
 	int value;
+	String type;
 
-	public Jewelry(String name, int hpBoost, int attackBoost, int defenseBoost,
-			int value) {
-		super(name, "jewelry", 1, value);
+	public Jewelry(String name, int hpBoost, int attackBoost, int defenseBoost, int value, String type) {
+		super(name, type, 1, value);
 		this.attackBoost = attackBoost;
 		this.hpBoost = hpBoost;
 		this.defenseBoost = defenseBoost;
 		this.value = value;
 		this.name = name;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getName() {

@@ -12,5 +12,4 @@ public class Smeltable extends Item {
 		this.value = value;
 	}
 	
-	// TODO : Logic to make armor / weps
 }
