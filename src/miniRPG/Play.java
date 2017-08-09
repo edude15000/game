@@ -28,7 +28,7 @@ public class Play {
 		try {
 			user = loadData();
 			if (user == null) {
-				user = new User(100, 100, 0, 10, 10);
+				user = new User(100, 100, 0, 10, 10, 10);
 				setUpUserInfo();
 			}
 			if (user.getCurrentHealth() < 1) {
@@ -113,7 +113,7 @@ public class Play {
 	}
 
 	public static void smeltList(Smeltable item) {
-		Item item1 = null, item2 = null;
+		Item item1 = null, item2 = null, item3 = null, item4 = null, item5 = null, item6 = null;
 		if (item.itemName.toLowerCase().contains("sapphire")) {
 			System.out.println("1 Sapphire Ring (1 gold bar, 1 sapphire)");
 			System.out.println("2 Sapphire Necklace (2 gold bars, 1 sapphire)");
@@ -147,10 +147,123 @@ public class Play {
 					(int) (user.getAttack() * .03),
 					(int) (user.getDefense() * .03), 50, "necklace");
 		} else if (item.itemName.toLowerCase().contains("bronze")) {
-			System.out.println("1 Bronze Helmet (1 gold bar, 1 diamond)");
+			System.out.println("1 Bronze Boots (3 bronze bars)");
+			System.out.println("2 Bronze Helmet (3 bronze bars)");
+			System.out.println("3 Bronze Shield (3 bronze bars)");
+			System.out.println("4 Bronze Sword (5 bronze bars)");
+			System.out.println("5 Bronze Platebody (5 bronze bars)");
+			System.out.println("6 Bronze Platelegs (5 bronze bars)");
+			item1 = new Armor("Bronze Boots",
+					(int) Math.ceil(user.getDefense() * .05), "boots", 1, 50);
+			item2 = new Armor("Bronze Helmet", (int) Math.ceil(user
+					.getDefense() * .05), "helmet", 1, 50);
+			item3 = new Armor("Bronze Shield", (int) Math.ceil(user
+					.getDefense() * .05), "shield", 1, 50);
+			item4 = new Weapon("Bronze Sword",
+					(int) Math.ceil(user.getAttack() * .05), "sword", 1, 50);
+			item5 = new Armor("Bronze Platebody", (int) Math.ceil(user
+					.getDefense() * .05), "platebody", 1, 50);
+			item6 = new Armor("Bronze Platelegs", (int) Math.ceil(user
+					.getDefense() * .05), "platelegs", 1, 50);
+		} else if (item.itemName.toLowerCase().contains("iron")) {
+			System.out.println("1 Iron Boots (3 iron bars)");
+			System.out.println("2 Iron Helmet (3 iron bars)");
+			System.out.println("3 Iron Shield (3 iron bars)");
+			System.out.println("4 Iron Sword (5 iron bars)");
+			System.out.println("5 Iron Platebody (5 iron bars)");
+			System.out.println("6 Iron Platelegs (5 iron bars)");
+			item1 = new Armor("Iron Boots",
+					(int) Math.ceil(user.getDefense() * .1), "boots", 5, 100);
+			item2 = new Armor("Iron Helmet",
+					(int) Math.ceil(user.getDefense() * .1), "helmet", 5, 100);
+			item3 = new Armor("Iron Shield",
+					(int) Math.ceil(user.getDefense() * .1), "shield", 5, 100);
+			item4 = new Weapon("Iron Sword",
+					(int) Math.ceil(user.getAttack() * .1), "sword", 5, 100);
+			item5 = new Armor("Iron Platebody", (int) Math.ceil(user
+					.getDefense() * .1), "platebody", 5, 100);
+			item6 = new Armor("Iron Platelegs", (int) Math.ceil(user
+					.getDefense() * .1), "platelegs", 5, 100);
+		} else if (item.itemName.toLowerCase().contains("steel")) {
+			System.out.println("1 Steel Boots (3 steel bars)");
+			System.out.println("2 Steel Helmet (3 steel bars)");
+			System.out.println("3 Steel Shield (3 steel bars)");
+			System.out.println("4 Steel Sword (5 steel bars)");
+			System.out.println("5 Steel Platebody (5 steel bars)");
+			System.out.println("6 Steel Platelegs (5 steel bars)");
+			item1 = new Armor("Steel Boots",
+					(int) Math.ceil(user.getDefense() * .05), "boots", 10, 200);
+			item2 = new Armor("Steel Helmet",
+					(int) Math.ceil(user.getDefense() * .15), "helmet", 10, 200);
+			item3 = new Armor("Steel Shield",
+					(int) Math.ceil(user.getDefense() * .15), "shield", 10, 200);
+			item4 = new Weapon("Steel Sword",
+					(int) Math.ceil(user.getAttack() * .2), "sword", 10, 200);
+			item5 = new Armor("Steel Platebody", (int) Math.ceil(user
+					.getDefense() * .15), "platebody", 10, 200);
+			item6 = new Armor("Steel Platelegs", (int) Math.ceil(user
+					.getDefense() * .15), "platelegs", 10, 200);
+		} else if (item.itemName.toLowerCase().contains("mithril")) {
+			System.out.println("1 Mithril Boots (3 mithril bars)");
+			System.out.println("2 Mithril Helmet (3 mithril bars)");
+			System.out.println("3 Mithril Shield (3 mithril bars)");
+			System.out.println("4 Mithril Sword (5 mithril bars)");
+			System.out.println("5 Mithril Platebody (5 mithril bars)");
+			System.out.println("6 Mithril Platelegs (5 mithril bars)");
+			item1 = new Armor("Mithril Boots", (int) Math.ceil(user
+					.getDefense() * .175), "boots", 15, 350);
+			item2 = new Armor("Mithril Helmet", (int) Math.ceil(user
+					.getDefense() * .175), "helmet", 15, 350);
+			item3 = new Armor("Mithril Shield", (int) Math.ceil(user
+					.getDefense() * .175), "shield", 15, 350);
+			item4 = new Weapon("Mithril Sword", (int) Math.ceil(user
+					.getAttack() * .25), "sword", 15, 350);
+			item5 = new Armor("Mithril Platebody", (int) Math.ceil(user
+					.getDefense() * .175), "platebody", 15, 350);
+			item6 = new Armor("Mithril Platelegs", (int) Math.ceil(user
+					.getDefense() * .175), "platelegs", 15, 350);
+		} else if (item.itemName.toLowerCase().contains("adamantite")) {
+			System.out.println("1 Adamantite Boots (3 adamantite bars)");
+			System.out.println("2 Adamantite Helmet (3 adamantite bars)");
+			System.out.println("3 Adamantite Shield (3 adamantite bars)");
+			System.out.println("4 Adamantite Sword (5 adamantite bars)");
+			System.out.println("5 Adamantite Platebody (5 adamantite bars)");
+			System.out.println("6 Adamantite Platelegs (5 adamantite bars)");
+			item1 = new Armor("Adamantite Boots", (int) Math.ceil(user
+					.getDefense() * .2), "boots", 20, 500);
+			item2 = new Armor("Adamantite Helmet", (int) Math.ceil(user
+					.getDefense() * .2), "helmet", 20, 500);
+			item3 = new Armor("Adamantite Shield", (int) Math.ceil(user
+					.getDefense() * .2), "shield", 20, 500);
+			item4 = new Weapon("Adamantite Sword", (int) Math.ceil(user
+					.getAttack() * .3), "sword", 20, 500);
+			item5 = new Armor("Adamantite Platebody", (int) Math.ceil(user
+					.getDefense() * .2), "platebody", 20, 500);
+			item6 = new Armor("Adamantite Platelegs", (int) Math.ceil(user
+					.getDefense() * .2), "platelegs", 20, 500);
+		} else if (item.itemName.toLowerCase().contains("rune")) {
+			System.out.println("1 Rune Boots (3 rune bars)");
+			System.out.println("2 Rune Helmet (3 rune bars)");
+			System.out.println("3 Rune Shield (3 rune bars)");
+			System.out.println("4 Rune Sword (5 rune bars)");
+			System.out.println("5 Rune Platebody (5 rune bars)");
+			System.out.println("6 Rune Platelegs (5 rune bars)");
+			item1 = new Armor("Rune Boots",
+					(int) Math.ceil(user.getDefense() * .25), "boots", 25, 1000);
+			item2 = new Armor("Rune Helmet",
+					(int) Math.ceil(user.getDefense() * .25), "helmet", 25,
+					1000);
+			item3 = new Armor("Rune Shield",
+					(int) Math.ceil(user.getDefense() * .25), "shield", 25,
+					1000);
+			item4 = new Weapon("Rune Sword",
+					(int) Math.ceil(user.getAttack() * .35), "sword", 25, 1000);
+			item5 = new Armor("Rune Platebody", (int) Math.ceil(user
+					.getDefense() * .25), "platebody", 25, 1000);
+			item6 = new Armor("Rune Platelegs", (int) Math.ceil(user
+					.getDefense() * .25), "platelegs", 25, 1000);
 		}
 
-		// TODO : ARMOR / WEPS
 		int choice = 0;
 		choice = sc.nextInt();
 		if (choice == 1) {
@@ -160,6 +273,22 @@ public class Play {
 		} else if (choice == 2) {
 			if (item2 != null) {
 				smelt(item2);
+			}
+		} else if (choice == 3) {
+			if (item3 != null) {
+				smelt(item3);
+			}
+		} else if (choice == 4) {
+			if (item4 != null) {
+				smelt(item4);
+			}
+		} else if (choice == 5) {
+			if (item5 != null) {
+				smelt(item5);
+			}
+		} else if (choice == 6) {
+			if (item6 != null) {
+				smelt(item6);
 			}
 		}
 		return;
@@ -171,18 +300,174 @@ public class Play {
 			return;
 		}
 		if (i.itemName.toLowerCase().contains("sapphire ring")
-				&& getNumberOfItemByName("Gold Bar") >= 1) {
+				&& getNumberOfItemByName("Gold Bar") >= 1
+				&& user.getLevel("Smithing") >= 1) {
 			user.itemList.remove(getItemByName("Sapphire"));
 			user.itemList.remove(getItemByName("Gold Bar"));
 			user.itemList.add(i);
 			System.out.println("You successfully craft a Sapphire Ring!");
 			user.getLevelObject("Smithing").gainXp(200);
-			// TODO everything else!
+		} else if (i.itemName.toLowerCase().contains("sapphire necklace")
+				&& getNumberOfItemByName("Gold Bar") >= 2
+				&& user.getLevel("Smithing") >= 3) {
+			user.itemList.remove(getItemByName("Sapphire"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a Sapphire Necklace!");
+			user.getLevelObject("Smithing").gainXp(250);
+		} else if (i.itemName.toLowerCase().contains("emerald ring")
+				&& getNumberOfItemByName("Gold Bar") >= 1
+				&& user.getLevel("Smithing") >= 6) {
+			user.itemList.remove(getItemByName("Emerald"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a Emerald Ring!");
+			user.getLevelObject("Smithing").gainXp(400);
+		} else if (i.itemName.toLowerCase().contains("emerald necklace")
+				&& getNumberOfItemByName("Gold Bar") >= 2
+				&& user.getLevel("Smithing") >= 9) {
+			user.itemList.remove(getItemByName("Emerald"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a Emerald Necklace!");
+			user.getLevelObject("Smithing").gainXp(450);
+		} else if (i.itemName.toLowerCase().contains("ruby ring")
+				&& getNumberOfItemByName("Gold Bar") >= 1
+				&& user.getLevel("Smithing") >= 12) {
+			user.itemList.remove(getItemByName("Ruby"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a Ruby Ring!");
+			user.getLevelObject("Smithing").gainXp(750);
+		} else if (i.itemName.toLowerCase().contains("ruby necklace")
+				&& getNumberOfItemByName("Gold Bar") >= 2
+				&& user.getLevel("Smithing") >= 15) {
+			user.itemList.remove(getItemByName("Ruby"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a Ruby Necklace!");
+			user.getLevelObject("Smithing").gainXp(800);
+		} else if (i.itemName.toLowerCase().contains("diamond ring")
+				&& getNumberOfItemByName("Gold Bar") >= 1
+				&& user.getLevel("Smithing") >= 18) {
+			user.itemList.remove(getItemByName("Diamond"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a Diamond Ring!");
+			user.getLevelObject("Smithing").gainXp(1000);
+		} else if (i.itemName.toLowerCase().contains("diamond necklace")
+				&& getNumberOfItemByName("Gold Bar") >= 2
+				&& user.getLevel("Smithing") >= 21) {
+			user.itemList.remove(getItemByName("Diamond"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.remove(getItemByName("Gold Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a Diamond Necklace!");
+			user.getLevelObject("Smithing").gainXp(1100);
 		} else {
-			System.out
-					.println("You do not have enough required items to craft this!");
+			String type = i.getName().substring(0, i.getName().indexOf(" "))
+					.trim();
+			if (!checkIfCanMakeArmor(i, type)) {
+				System.out
+						.println("You either do not have a high enough level or do not have enough required items to craft this!");
+			}
 		}
+	}
 
+	public static int getRightXP(String type) {
+		int xp = 0;
+		if (type.equalsIgnoreCase("bronze")) {
+			xp = 75;
+		} else if (type.equalsIgnoreCase("iron")) {
+			xp = 150;
+		} else if (type.equalsIgnoreCase("steel")) {
+			xp = 350;
+		} else if (type.equalsIgnoreCase("mithril")) {
+			xp = 750;
+		} else if (type.equalsIgnoreCase("adamantite")) {
+			xp = 1000;
+		} else if (type.equalsIgnoreCase("rune")) {
+			xp = 1500;
+		}
+		return xp;
+	}
+
+	public static boolean checkIfCanMakeArmor(Item i, String type) {
+		if (i.itemName.toLowerCase().contains("boots")
+				&& getNumberOfItemByName(type + " Bar") >= 3
+				&& user.getLevel("Smithing") >= (getItemByName(type + " Bar").itemRequiredLevel)) {
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft " + type + " Boots!");
+
+			user.getLevelObject("Smithing").gainXp(getRightXP(type));
+			return true;
+		} else if (i.itemName.toLowerCase().contains("helmet")
+				&& getNumberOfItemByName(type + " Bar") >= 3
+				&& user.getLevel("Smithing") >= (getItemByName(type + " Bar").itemRequiredLevel)) {
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a " + type + " Helmet!");
+			user.getLevelObject("Smithing").gainXp(getRightXP(type));
+			return true;
+		} else if (i.itemName.toLowerCase().contains("shield")
+				&& getNumberOfItemByName(type + " Bar") >= 3
+				&& user.getLevel("Smithing") >= (getItemByName(type + " Bar").itemRequiredLevel)) {
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a " + type + " Shield!");
+			user.getLevelObject("Smithing").gainXp(getRightXP(type));
+			return true;
+		} else if (i.itemName.toLowerCase().contains("sword")
+				&& getNumberOfItemByName(type + " Bar") >= 5
+				&& user.getLevel("Smithing") >= (getItemByName(type + " Bar").itemRequiredLevel)) {
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a " + type + " Sword!");
+			user.getLevelObject("Smithing").gainXp(getRightXP(type));
+			return true;
+		} else if (i.itemName.toLowerCase().contains("platebody")
+				&& getNumberOfItemByName(type + " Bar") >= 5
+				&& user.getLevel("Smithing") >= (getItemByName(type + " Bar").itemRequiredLevel)) {
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.add(i);
+			System.out.println("You successfully craft a " + type
+					+ " Platebody!");
+			user.getLevelObject("Smithing").gainXp(getRightXP(type));
+			return true;
+		} else if (i.itemName.toLowerCase().contains("platelegs")
+				&& getNumberOfItemByName(type + " Bar") >= 5
+				&& user.getLevel("Smithing") >= (getItemByName(type + " Bar").itemRequiredLevel)) {
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.remove(getItemByName(type + " Bar"));
+			user.itemList.add(i);
+			System.out
+					.println("You successfully craft " + type + " Platelegs!");
+			user.getLevelObject("Smithing").gainXp(getRightXP(type));
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public static Item getItemByName(String name) {
@@ -196,14 +481,6 @@ public class Play {
 
 	public static void loopActions(User user) throws IOException {
 		while (true) {
-
-			if (user.getLevel("Combat") == 1) {
-				for (int i = 0; i < 29; i++) {
-					user.getLevelObject("Combat").updateLevel();
-					user.levelUp(user.getLevelObject("Combat"));
-				}
-			}
-
 			String choice = null;
 			user.displayStats();
 			System.out.println("What would you like to do?");
@@ -307,7 +584,51 @@ public class Play {
 			} catch (Exception e) {
 			}
 		} else if (choice.toLowerCase().startsWith("b")) {
-			// TODO : buy
+			System.out.println("1	Vial				50 Gold");
+			System.out.println("2	Red Syrum			50 Gold");
+			System.out.println("3	Blue Syrum			100 Gold");
+			System.out.println("4	Green Syrum			200 Gold");
+			System.out.println("5	White Syrum			250 Gold");
+			System.out.println("6	Small Potion		100 Gold");
+			System.out.println("7	Medium Potion		250 Gold");
+			System.out.println("8	Large Potion		500 Gold");
+			Item i = null;
+			int choice2 = 0;
+			choice2 = sc.nextInt();
+			if (choice2 == 1) {
+				i = new Ingredient("Vial", "ingredient", 1, 50);
+			} else if (choice2 == 2) {
+				i = new Ingredient("Red Syrum", "ingredient", 5, 50);
+			} else if (choice2 == 3) {
+				i = new Ingredient("Blue Syrum", "ingredient", 10, 100);
+			} else if (choice2 == 4) {
+				i = new Ingredient("Green Syrum", "ingredient", 15, 200);
+			} else if (choice2 == 5) {
+				i = new Ingredient("White Syrum", "ingredient", 20, 250);
+			} else if (choice2 == 6) {
+				i = new Consumable("Small Potion",
+						((int) (user.getTotalHealth() * .1)), "consumable", 100);
+			} else if (choice2 == 7) {
+				i = new Consumable("Medium Potion",
+						((int) (user.getTotalHealth() * .25)), "consumable",
+						250);
+			} else if (choice2 == 7) {
+				i = new Consumable("Large Potion",
+						((int) (user.getTotalHealth() * .5)), "consumable", 500);
+			}
+			System.out.println("How many do you want to buy?");
+			choice2 = 0;
+			choice2 = sc.nextInt();
+			if (user.getMoney() < i.getItemValue() * choice2) {
+				System.out
+						.println("You do not have enough money to purchase this item!");
+				return;
+			}
+			for (int j = 0; j < choice2; j++) {
+				user.setMoney(user.getMoney() - (i.getItemValue()));
+				user.itemList.add(i);
+				// TODO : FIX THIS!
+			}
 		}
 	}
 
@@ -405,9 +726,19 @@ public class Play {
 		return true;
 	}
 
+	public static int determineFirst(int enemySpeed, int userSpeed) {
+		double result = ((double) userSpeed / (double) enemySpeed);
+		result += new Random().nextDouble() - new Random().nextDouble();
+		if (result < 1) {
+			return 1;
+		}
+		return 0;
+	}
+
 	public static void fight(Enemy enemy) {
 		int count = 0;
 		int damage;
+		count = determineFirst(enemy.enemySpeed, user.getSpeed());
 		while (true) {
 			if (enemy.enemyHp <= 0) {
 				System.out.println(enemy.enemyName

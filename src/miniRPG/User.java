@@ -11,6 +11,7 @@ public class User {
 	public int money;
 	public int attack;
 	public int defense;
+	public int speed;
 	public int monstersKilled;
 	public ArrayList<Item> itemList = new ArrayList<>();
 	public ArrayList<Item> equippedItems = new ArrayList<>();
@@ -18,12 +19,13 @@ public class User {
 	public ArrayList<Item> bankedItemList = new ArrayList<>();
 
 	public User(int totalHealth, int currentHealth, int money, int attack,
-			int defense) {
+			int defense, int speed) {
 		this.totalHealth = totalHealth;
 		this.currentHealth = currentHealth;
 		this.money = money;
 		this.attack = attack;
 		this.defense = defense;
+		this.speed = speed;
 		monstersKilled = 0;
 		levelList.add(new Level(0, "Combat", 1));
 		levelList.add(new Level(0, "Mining", 1));
@@ -259,12 +261,21 @@ public class User {
 					+ (int) Math.pow(getLevel("Combat"), 1.0005)
 					+ (int) (new Random().nextDouble() * Math.pow(
 							getLevel("Combat"), 1.0005)));
+			setSpeed(getSpeed() + new Random().nextInt(10) + 5);
 			setTotalHealth((int) ((getTotalHealth() + 163) + ((new Random()
 					.nextInt(163) + 163) * (new Random().nextDouble()))));
 			setCurrentHealth(getTotalHealth());
 		}
 		System.out.println("You have leveled up! You are now level "
 				+ l.getLevelFromXP(l.getXp()) + " " + l.getName());
+	}
+
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
 	}
 
 	public void checkForLevelUp() {
@@ -300,7 +311,8 @@ public class User {
 				+ userClass.toUpperCase());
 		System.out.println("Health: " + getCurrentHealth() + "/"
 				+ getTotalHealth() + "\tMoney: " + getMoney() + "\tAttack: "
-				+ getAttack() + "\tDefense: " + getDefense());
+				+ getAttack() + "\tDefense: " + getDefense() + "\tSpeed: "
+				+ getSpeed());
 		for (Level level : this.levelList) {
 			System.out
 					.print(level.levelName

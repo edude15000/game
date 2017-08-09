@@ -6,7 +6,7 @@ import java.util.Random;
 public class Enemy {
 	String enemyName;
 	int enemyAttack, enemyDefense, enemyLevel;
-	int enemyXp, enemyMoney, enemyHp;
+	int enemyXp, enemyMoney, enemyHp, enemySpeed;
 	ArrayList<Item> lootlist = new ArrayList<>();
 	int userHealth;
 
@@ -80,6 +80,8 @@ public class Enemy {
 			this.enemyDefense = this.enemyDefense
 					+ (int) Math.pow(level, 1.005)
 					+ (int) (new Random().nextDouble() * Math.pow(level, 1.005));
+			this.enemySpeed = this.enemyLevel * 5
+					+ new Random().nextInt(enemyLevel * 5);
 		}
 	}
 
@@ -90,11 +92,11 @@ public class Enemy {
 			if (chance2 < 50) {
 				lootlist.add(new Smeltable("Sapphire", 1, 1));
 			} else if (chance2 < 80) {
-				lootlist.add(new Smeltable("Emerald", 1, 1));
+				lootlist.add(new Smeltable("Emerald", 6, 1));
 			} else if (chance2 < 95) {
-				lootlist.add(new Smeltable("Ruby", 1, 1));
+				lootlist.add(new Smeltable("Ruby", 12, 1));
 			} else {
-				lootlist.add(new Smeltable("Diamond", 1, 1));
+				lootlist.add(new Smeltable("Diamond", 20, 1));
 			}
 
 		}

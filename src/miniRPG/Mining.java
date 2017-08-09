@@ -12,13 +12,13 @@ public class Mining {
 				user.itemList.add(new Smeltable("Sapphire", 1, 1));
 				result += " You find a sapphire!";
 			} else if (chance < 80) {
-				user.itemList.add(new Smeltable("Emerald", 1, 1));
+				user.itemList.add(new Smeltable("Emerald", 6, 1));
 				result += " You find a emerald!";
 			} else if (chance < 95) {
-				user.itemList.add(new Smeltable("Ruby", 1, 1));
+				user.itemList.add(new Smeltable("Ruby", 12, 1));
 				result += " You find a ruby!";
 			} else {
-				user.itemList.add(new Smeltable("Diamond", 1, 1));
+				user.itemList.add(new Smeltable("Diamond", 20, 1));
 				result += " You find a diamond!";
 			}
 		}
