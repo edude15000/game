@@ -28,7 +28,7 @@ public class Play {
 		try {
 			user = loadData();
 			if (user == null) {
-				user = new User(100, 100, 0, 10, 10, 10);
+				user = new User(100, 100, 10000, 10, 10, 10);
 				setUpUserInfo();
 			}
 			if (user.getCurrentHealth() < 1) {
@@ -584,14 +584,14 @@ public class Play {
 			} catch (Exception e) {
 			}
 		} else if (choice.toLowerCase().startsWith("b")) {
-			System.out.println("1	Vial				50 Gold");
-			System.out.println("2	Red Syrum			50 Gold");
-			System.out.println("3	Blue Syrum			100 Gold");
-			System.out.println("4	Green Syrum			200 Gold");
-			System.out.println("5	White Syrum			250 Gold");
-			System.out.println("6	Small Potion		100 Gold");
-			System.out.println("7	Medium Potion		250 Gold");
-			System.out.println("8	Large Potion		500 Gold");
+			System.out.println("1	Vial\t\t\t50 Gold");
+			System.out.println("2	Red Syrum\t\t50 Gold");
+			System.out.println("3	Blue Syrum\t\t100 Gold");
+			System.out.println("4	Green Syrum\t\t200 Gold");
+			System.out.println("5	White Syrum\t\t500 Gold");
+			System.out.println("6	Small Potion\t\t100 Gold");
+			System.out.println("7	Medium Potion\t\t250 Gold");
+			System.out.println("8	Large Potion\t\t500 Gold");
 			Item i = null;
 			int choice2 = 0;
 			choice2 = sc.nextInt();
@@ -612,7 +612,7 @@ public class Play {
 				i = new Consumable("Medium Potion",
 						((int) (user.getTotalHealth() * .25)), "consumable",
 						250);
-			} else if (choice2 == 7) {
+			} else if (choice2 == 8) {
 				i = new Consumable("Large Potion",
 						((int) (user.getTotalHealth() * .5)), "consumable", 500);
 			}
@@ -698,6 +698,8 @@ public class Play {
 				System.out.println(count + "\t" + i.getName()
 						+ "\tRequired Level to SMITH:" + i.getRequiredLevel());
 			} else if (i instanceof Smeltable) {
+				System.out.println(count + "\t" + i.getName());
+			} else if (i instanceof Ingredient) {
 				System.out.println(count + "\t" + i.getName());
 			}
 			count++;

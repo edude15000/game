@@ -1,45 +1,1404 @@
 {
-  "totalHealth": 422,
-  "currentHealth": 422,
-  "userName": "E",
+  "totalHealth": 100,
+  "currentHealth": 100,
+  "userName": "e",
   "userClass": "Warrior",
-  "money": 25,
-  "attack": 23,
-  "defense": 23,
-  "speed": 19,
-  "monstersKilled": 6,
+  "money": 2250,
+  "attack": 20,
+  "defense": 20,
+  "speed": 10,
+  "monstersKilled": 0,
   "itemList": [
     {
-      "type": "miniRPG.Smeltable",
+      "type": "miniRPG.Ingredient",
       "data": {
-        "name": "Emerald",
-        "requiredLevelToSmith": 6,
-        "value": 1,
-        "itemName": "Emerald",
-        "itemType": "Emerald",
-        "itemRequiredLevel": 6,
-        "itemValue": 1
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
       }
     },
     {
       "type": "miniRPG.Consumable",
       "data": {
-        "healAmount": 5,
+        "healAmount": 50,
         "consumableValue": 0,
-        "itemName": "Potato",
-        "itemType": "Potato",
+        "itemName": "Large Potion",
+        "itemType": "Large Potion",
         "itemRequiredLevel": 1,
-        "itemValue": 1
+        "itemValue": 500
       }
     },
     {
-      "type": "miniRPG.Weapon",
+      "type": "miniRPG.Consumable",
       "data": {
-        "attackBoost": 2,
-        "weaponRequiredLevel": 0,
-        "weaponValue": 0,
-        "itemName": "Bronze sword",
-        "itemType": "sword",
+        "healAmount": 50,
+        "consumableValue": 0,
+        "itemName": "Large Potion",
+        "itemType": "Large Potion",
+        "itemRequiredLevel": 1,
+        "itemValue": 500
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 50,
+        "consumableValue": 0,
+        "itemName": "Large Potion",
+        "itemType": "Large Potion",
+        "itemRequiredLevel": 1,
+        "itemValue": 500
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 50,
+        "consumableValue": 0,
+        "itemName": "Large Potion",
+        "itemType": "Large Potion",
+        "itemRequiredLevel": 1,
+        "itemValue": 500
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 50,
+        "consumableValue": 0,
+        "itemName": "Large Potion",
+        "itemType": "Large Potion",
+        "itemRequiredLevel": 1,
+        "itemValue": 500
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "ingredient",
         "itemRequiredLevel": 1,
         "itemValue": 50
       }
@@ -71,20 +1430,7 @@
       }
     }
   ],
-  "equippedItems": [
-    {
-      "type": "miniRPG.Weapon",
-      "data": {
-        "attackBoost": 1,
-        "weaponRequiredLevel": 0,
-        "weaponValue": 0,
-        "itemName": "Bronze sword",
-        "itemType": "sword",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    }
-  ],
+  "equippedItems": [],
   "levelList": [
     {
       "xpList": [
@@ -121,9 +1467,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 251,
+      "levelXp": 0,
       "levelName": "Combat",
-      "levelBeforeLevelingUp": 2
+      "levelBeforeLevelingUp": 1
     },
     {
       "xpList": [
