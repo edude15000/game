@@ -13,6 +13,9 @@ public class User {
 	public int defense;
 	public int speed;
 	public int monstersKilled;
+	public boolean hardcoreMode;
+	public boolean statPotionUsed;
+	public int preAttack, preDefense;
 	public ArrayList<Item> itemList = new ArrayList<>();
 	public ArrayList<Item> equippedItems = new ArrayList<>();
 	public ArrayList<Level> levelList = new ArrayList<>();
@@ -27,6 +30,7 @@ public class User {
 		this.defense = defense;
 		this.speed = speed;
 		monstersKilled = 0;
+		statPotionUsed = false;
 		levelList.add(new Level(0, "Combat", 1));
 		levelList.add(new Level(0, "Mining", 1));
 		levelList.add(new Level(0, "Smithing", 1));
@@ -71,7 +75,22 @@ public class User {
 			return;
 		} else if (item instanceof Consumable) {
 			heal(((Consumable) item).getHealAmount());
-			if (((Consumable) item).getHealAmount() > (getTotalHealth() - getCurrentHealth())) {
+			if (((Consumable) item).herbColor != null
+					&& !((Consumable) item).herbColor.toLowerCase().equals(
+							"red")) {
+				if (statPotionUsed) {
+					System.out
+							.println("You have already used a stat boosting potion for this battle!");
+					return;
+				}
+				preAttack = getAttack();
+				preDefense = getDefense();
+				heal(((Consumable) item).getHealAmount());
+				setAttack(getAttack() + ((Consumable) item).attackBoost);
+				setDefense(getDefense() + ((Consumable) item).defenseBoost);
+				statPotionUsed = true;
+				System.out.println("You consume the potion!");
+			} else if (((Consumable) item).getHealAmount() > (getTotalHealth() - getCurrentHealth())) {
 				System.out.println("You consume the " + item.getName()
 						+ ", healing your HP fully!");
 			} else {
@@ -129,7 +148,7 @@ public class User {
 			for (int i = 0; i < addIndexes.size(); i++) {
 				itemList.add(addIndexes.get(i));
 			}
-
+			return;
 		} else if (item instanceof Smeltable) {
 			Play.smeltList((Smeltable) item);
 			return;

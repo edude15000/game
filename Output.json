@@ -1,78 +1,45 @@
 {
-  "totalHealth": 1993,
-  "currentHealth": 1993,
-  "userName": "Evan",
+  "totalHealth": 1141,
+  "currentHealth": 241,
+  "userName": "e",
   "userClass": "Chicken Tender",
-  "money": 1997,
-  "attack": 53,
-  "defense": 74,
-  "speed": 70,
-  "monstersKilled": 68,
+  "money": 804,
+  "attack": 32,
+  "defense": 47,
+  "speed": 40,
+  "monstersKilled": 32,
+  "hardcoreMode": false,
+  "statPotionUsed": true,
+  "preAttack": 32,
+  "preDefense": 47,
   "itemList": [
     {
-      "type": "miniRPG.Consumable",
+      "type": "miniRPG.Cookable",
       "data": {
-        "healAmount": 7,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Fish",
-        "itemType": "Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 15
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 2,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Potato",
-        "itemType": "Potato",
-        "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 10,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Chicken",
-        "itemType": "Chicken",
-        "itemRequiredLevel": 1,
-        "itemValue": 20
-      }
-    },
-    {
-      "type": "miniRPG.Smeltable",
-      "data": {
-        "name": "Ruby",
-        "requiredLevelToSmith": 12,
-        "value": 1,
-        "itemName": "Ruby",
-        "itemType": "Ruby",
-        "itemRequiredLevel": 12,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Smeltable",
-      "data": {
-        "name": "Diamond",
-        "requiredLevelToSmith": 20,
-        "value": 1,
-        "itemName": "Diamond",
-        "itemType": "Diamond",
-        "itemRequiredLevel": 20,
-        "itemValue": 1
+        "cookableName": "Raw Beef",
+        "cookableXP": 600,
+        "cookableLevelRequired": 15,
+        "chanceToCook": 0,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 342,
+            "attackBoost": 0,
+            "defenseBoost": 0,
+            "consumableValue": 0,
+            "potionRequiredLevel": 0,
+            "itemName": "Beef",
+            "itemType": "Beef",
+            "itemRequiredLevel": 1,
+            "itemValue": 30
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 1141,
+        "itemName": "Raw Beef",
+        "itemType": "Raw Beef",
+        "itemRequiredLevel": 15,
+        "itemValue": 5
       }
     },
     {
@@ -90,72 +57,12 @@
     {
       "type": "miniRPG.Smeltable",
       "data": {
-        "name": "Iron Bar",
-        "requiredLevelToSmith": 5,
-        "value": 1,
-        "itemName": "Iron Bar",
-        "itemType": "Iron Bar",
-        "itemRequiredLevel": 5,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Smeltable",
-      "data": {
-        "name": "Emerald",
-        "requiredLevelToSmith": 6,
-        "value": 1,
-        "itemName": "Emerald",
-        "itemType": "Emerald",
-        "itemRequiredLevel": 6,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Smeltable",
-      "data": {
         "name": "Gold Bar",
         "requiredLevelToSmith": 1,
         "value": 1,
         "itemName": "Gold Bar",
         "itemType": "Gold Bar",
         "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Smeltable",
-      "data": {
-        "name": "Iron Bar",
-        "requiredLevelToSmith": 5,
-        "value": 1,
-        "itemName": "Iron Bar",
-        "itemType": "Iron Bar",
-        "itemRequiredLevel": 5,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Smeltable",
-      "data": {
-        "name": "Sapphire",
-        "requiredLevelToSmith": 1,
-        "value": 1,
-        "itemName": "Sapphire",
-        "itemType": "Sapphire",
-        "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Smeltable",
-      "data": {
-        "name": "Iron Bar",
-        "requiredLevelToSmith": 5,
-        "value": 1,
-        "itemName": "Iron Bar",
-        "itemType": "Iron Bar",
-        "itemRequiredLevel": 5,
         "itemValue": 1
       }
     },
@@ -186,23 +93,11 @@
     {
       "type": "miniRPG.Smeltable",
       "data": {
-        "name": "Gold Bar",
+        "name": "Bronze Bar",
         "requiredLevelToSmith": 1,
         "value": 1,
-        "itemName": "Gold Bar",
-        "itemType": "Gold Bar",
-        "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Smeltable",
-      "data": {
-        "name": "Sapphire",
-        "requiredLevelToSmith": 1,
-        "value": 1,
-        "itemName": "Sapphire",
-        "itemType": "Sapphire",
+        "itemName": "Bronze Bar",
+        "itemType": "Bronze Bar",
         "itemRequiredLevel": 1,
         "itemValue": 1
       }
@@ -210,27 +105,13 @@
     {
       "type": "miniRPG.Consumable",
       "data": {
-        "healAmount": 86,
+        "healAmount": 114,
         "attackBoost": 0,
         "defenseBoost": 0,
         "consumableValue": 0,
         "potionRequiredLevel": 0,
-        "itemName": "Small HP Potion",
-        "itemType": "Small HP Potion",
-        "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 86,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Small HP Potion",
-        "itemType": "Small HP Potion",
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
         "itemRequiredLevel": 1,
         "itemValue": 10
       }
@@ -238,15 +119,113 @@
     {
       "type": "miniRPG.Consumable",
       "data": {
-        "healAmount": 260,
+        "healAmount": 114,
         "attackBoost": 0,
         "defenseBoost": 0,
         "consumableValue": 0,
         "potionRequiredLevel": 0,
-        "itemName": "Beef",
-        "itemType": "Beef",
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
         "itemRequiredLevel": 1,
-        "itemValue": 30
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 114,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 114,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 114,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 114,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 114,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 114,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 114,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Shrimp",
+        "itemType": "Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
       }
     },
     {
@@ -259,7 +238,7 @@
         "newItem": {
           "type": "miniRPG.Consumable",
           "data": {
-            "healAmount": 374,
+            "healAmount": 342,
             "attackBoost": 0,
             "defenseBoost": 0,
             "consumableValue": 0,
@@ -271,7 +250,7 @@
           }
         },
         "cookableValue": 5,
-        "userHealth": 1248,
+        "userHealth": 1141,
         "itemName": "Raw Beef",
         "itemType": "Raw Beef",
         "itemRequiredLevel": 15,
@@ -279,194 +258,591 @@
       }
     },
     {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Chicken",
-        "cookableXP": 150,
-        "cookableLevelRequired": 5,
-        "chanceToCook": 75,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 249,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "potionRequiredLevel": 0,
-            "itemName": "Chicken",
-            "itemType": "Chicken",
-            "itemRequiredLevel": 1,
-            "itemValue": 20
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 1248,
-        "itemName": "Raw Chicken",
-        "itemType": "Raw Chicken",
-        "itemRequiredLevel": 5,
-        "itemValue": 5
-      }
-    },
-    {
       "type": "miniRPG.Consumable",
       "data": {
-        "healAmount": 62,
+        "healAmount": 0,
         "attackBoost": 0,
         "defenseBoost": 0,
         "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Potato",
-        "itemType": "Potato",
+        "potionSize": "small",
+        "potionType": "defence",
+        "potionRequiredLevel": 2,
+        "herbColor": "blue",
+        "syrumColor": "red",
+        "itemName": "Small Defence Potion",
+        "itemType": "Small Defence Potion",
         "itemRequiredLevel": 1,
         "itemValue": 1
       }
     },
     {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "vial",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "vial",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Vial",
+        "ingredientType": "vial",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Vial",
+        "itemType": "vial",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Red Syrum",
+        "ingredientType": "ingredient",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 50,
+        "itemName": "Red Syrum",
+        "itemType": "ingredient",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
       "type": "miniRPG.Consumable",
       "data": {
-        "healAmount": 785,
+        "healAmount": 0,
         "attackBoost": 0,
         "defenseBoost": 0,
         "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Large HP Potion",
-        "itemType": "Large HP Potion",
+        "potionSize": "small",
+        "potionType": "defence",
+        "potionRequiredLevel": 2,
+        "herbColor": "blue",
+        "syrumColor": "red",
+        "itemName": "Small Defence Potion",
+        "itemType": "Small Defence Potion",
         "itemRequiredLevel": 1,
-        "itemValue": 50
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Cookable",
+      "data": {
+        "cookableName": "Raw Shrimp",
+        "cookableXP": 100,
+        "cookableLevelRequired": 1,
+        "chanceToCook": 90,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 114,
+            "attackBoost": 0,
+            "defenseBoost": 0,
+            "consumableValue": 0,
+            "potionRequiredLevel": 0,
+            "itemName": "Shrimp",
+            "itemType": "Shrimp",
+            "itemRequiredLevel": 1,
+            "itemValue": 10
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 1141,
+        "itemName": "Raw Shrimp",
+        "itemType": "Raw Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 5
+      }
+    },
+    {
+      "type": "miniRPG.Cookable",
+      "data": {
+        "cookableName": "Raw Shrimp",
+        "cookableXP": 100,
+        "cookableLevelRequired": 1,
+        "chanceToCook": 90,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 114,
+            "attackBoost": 0,
+            "defenseBoost": 0,
+            "consumableValue": 0,
+            "potionRequiredLevel": 0,
+            "itemName": "Shrimp",
+            "itemType": "Shrimp",
+            "itemRequiredLevel": 1,
+            "itemValue": 10
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 1141,
+        "itemName": "Raw Shrimp",
+        "itemType": "Raw Shrimp",
+        "itemRequiredLevel": 1,
+        "itemValue": 5
       }
     },
     {
       "type": "miniRPG.Smeltable",
       "data": {
-        "name": "Ruby",
-        "requiredLevelToSmith": 12,
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
         "value": 1,
-        "itemName": "Ruby",
-        "itemType": "Ruby",
-        "itemRequiredLevel": 12,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Armor",
-      "data": {
-        "defenseBoost": 3,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze boots",
-        "itemType": "boots",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 78,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Potato",
-        "itemType": "Potato",
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
         "itemRequiredLevel": 1,
         "itemValue": 1
       }
     },
     {
-      "type": "miniRPG.Consumable",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "healAmount": 471,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Beef",
-        "itemType": "Beef",
+        "name": "Bronze Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze Bar",
+        "itemType": "Bronze Bar",
         "itemRequiredLevel": 1,
-        "itemValue": 30
+        "itemValue": 1
       }
     },
     {
-      "type": "miniRPG.Consumable",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "healAmount": 86,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Fish",
-        "itemType": "Fish",
+        "name": "Bronze Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze Bar",
+        "itemType": "Bronze Bar",
         "itemRequiredLevel": 1,
-        "itemValue": 15
+        "itemValue": 1
       }
     },
     {
-      "type": "miniRPG.Consumable",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "healAmount": 157,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Fish",
-        "itemType": "Fish",
+        "name": "Bronze Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze Bar",
+        "itemType": "Bronze Bar",
         "itemRequiredLevel": 1,
-        "itemValue": 15
+        "itemValue": 1
       }
     },
     {
-      "type": "miniRPG.Consumable",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "healAmount": 157,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Fish",
-        "itemType": "Fish",
+        "name": "Bronze Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze Bar",
+        "itemType": "Bronze Bar",
         "itemRequiredLevel": 1,
-        "itemValue": 15
+        "itemValue": 1
       }
     },
     {
-      "type": "miniRPG.Consumable",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "healAmount": 157,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Fish",
-        "itemType": "Fish",
+        "name": "Bronze Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze Bar",
+        "itemType": "Bronze Bar",
         "itemRequiredLevel": 1,
-        "itemValue": 15
+        "itemValue": 1
       }
     },
     {
-      "type": "miniRPG.Consumable",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "healAmount": 157,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Fish",
-        "itemType": "Fish",
+        "name": "Gold Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Gold Bar",
+        "itemType": "Gold Bar",
         "itemRequiredLevel": 1,
-        "itemValue": 15
+        "itemValue": 1
       }
     },
     {
-      "type": "miniRPG.Consumable",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "healAmount": 78,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Potato",
-        "itemType": "Potato",
+        "name": "Gold Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Gold Bar",
+        "itemType": "Gold Bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Gold Bar",
+        "itemType": "Gold Bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Gold Bar",
+        "itemType": "Gold Bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Gold Bar",
+        "itemType": "Gold Bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
         "itemRequiredLevel": 1,
         "itemValue": 1
       }
@@ -484,15 +860,526 @@
       }
     },
     {
-      "type": "miniRPG.Ingredient",
+      "type": "miniRPG.Ore",
       "data": {
-        "ingredientName": "Blue Herb",
-        "ingredientType": "herb",
-        "ingredientRequiredLevel": 1,
-        "ingredientValue": 1,
-        "itemName": "Blue Herb",
-        "itemType": "herb",
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
         "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Iron Ore",
+        "levelRequiredToSmith": 5,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Iron Bar",
+            "requiredLevelToSmith": 5,
+            "value": 1,
+            "itemName": "Iron Bar",
+            "itemType": "Iron Bar",
+            "itemRequiredLevel": 5,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 100,
+        "itemName": "Iron Ore",
+        "itemType": "Iron Ore",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Iron Ore",
+        "levelRequiredToSmith": 5,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Iron Bar",
+            "requiredLevelToSmith": 5,
+            "value": 1,
+            "itemName": "Iron Bar",
+            "itemType": "Iron Bar",
+            "itemRequiredLevel": 5,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 100,
+        "itemName": "Iron Ore",
+        "itemType": "Iron Ore",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Iron Ore",
+        "levelRequiredToSmith": 5,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Iron Bar",
+            "requiredLevelToSmith": 5,
+            "value": 1,
+            "itemName": "Iron Bar",
+            "itemType": "Iron Bar",
+            "itemRequiredLevel": 5,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 100,
+        "itemName": "Iron Ore",
+        "itemType": "Iron Ore",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Iron Ore",
+        "levelRequiredToSmith": 5,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Iron Bar",
+            "requiredLevelToSmith": 5,
+            "value": 1,
+            "itemName": "Iron Bar",
+            "itemType": "Iron Bar",
+            "itemRequiredLevel": 5,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 100,
+        "itemName": "Iron Ore",
+        "itemType": "Iron Ore",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Iron Ore",
+        "levelRequiredToSmith": 5,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Iron Bar",
+            "requiredLevelToSmith": 5,
+            "value": 1,
+            "itemName": "Iron Bar",
+            "itemType": "Iron Bar",
+            "itemRequiredLevel": 5,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 100,
+        "itemName": "Iron Ore",
+        "itemType": "Iron Ore",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Iron Ore",
+        "levelRequiredToSmith": 5,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Iron Bar",
+            "requiredLevelToSmith": 5,
+            "value": 1,
+            "itemName": "Iron Bar",
+            "itemType": "Iron Bar",
+            "itemRequiredLevel": 5,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 100,
+        "itemName": "Iron Ore",
+        "itemType": "Iron Ore",
+        "itemRequiredLevel": 5,
         "itemValue": 1
       }
     },
@@ -509,253 +1396,52 @@
       }
     },
     {
-      "type": "miniRPG.Cookable",
+      "type": "miniRPG.Ore",
       "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 95,
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
         "newItem": {
-          "type": "miniRPG.Consumable",
+          "type": "miniRPG.Smeltable",
           "data": {
-            "healAmount": 199,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "potionRequiredLevel": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
             "itemRequiredLevel": 1,
-            "itemValue": 15
+            "itemValue": 1
           }
         },
-        "cookableValue": 5,
-        "userHealth": 1993,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
         "itemRequiredLevel": 1,
-        "itemValue": 5
+        "itemValue": 1
       }
     },
     {
-      "type": "miniRPG.Cookable",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 95,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 199,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "potionRequiredLevel": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 1993,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 199,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Small HP Potion",
-        "itemType": "Small HP Potion",
-        "itemRequiredLevel": 1,
-        "itemValue": 10
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 95,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 199,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "potionRequiredLevel": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 1993,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 398,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Chicken",
-        "itemType": "Chicken",
-        "itemRequiredLevel": 1,
-        "itemValue": 20
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 95,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 199,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "potionRequiredLevel": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 1993,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 199,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "potionRequiredLevel": 0,
-        "itemName": "Small HP Potion",
-        "itemType": "Small HP Potion",
-        "itemRequiredLevel": 1,
-        "itemValue": 10
-      }
-    },
-    {
-      "type": "miniRPG.Ingredient",
-      "data": {
-        "ingredientName": "Vial",
-        "ingredientType": "vial",
-        "ingredientRequiredLevel": 1,
-        "ingredientValue": 50,
-        "itemName": "Vial",
-        "itemType": "vial",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Ingredient",
-      "data": {
-        "ingredientName": "Vial",
-        "ingredientType": "vial",
-        "ingredientRequiredLevel": 1,
-        "ingredientValue": 50,
-        "itemName": "Vial",
-        "itemType": "vial",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Ingredient",
-      "data": {
-        "ingredientName": "Red Syrum",
-        "ingredientType": "ingredient",
-        "ingredientRequiredLevel": 1,
-        "ingredientValue": 50,
-        "itemName": "Red Syrum",
-        "itemType": "ingredient",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Ingredient",
-      "data": {
-        "ingredientName": "Red Syrum",
-        "ingredientType": "ingredient",
-        "ingredientRequiredLevel": 1,
-        "ingredientValue": 50,
-        "itemName": "Red Syrum",
-        "itemType": "ingredient",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
+        "name": "Ruby",
+        "requiredLevelToSmith": 12,
+        "value": 1,
+        "itemName": "Ruby",
+        "itemType": "Ruby",
+        "itemRequiredLevel": 12,
+        "itemValue": 1
       }
     }
   ],
   "equippedItems": [
     {
-      "type": "miniRPG.Jewelry",
-      "data": {
-        "name": "Sapphire Necklace",
-        "hpBoost": 0,
-        "attackBoost": 0,
-        "defenseBoost": 1,
-        "value": 50,
-        "itemName": "Sapphire Necklace",
-        "itemType": "necklace",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Jewelry",
-      "data": {
-        "name": "Sapphire Ring",
-        "hpBoost": 0,
-        "attackBoost": 0,
-        "defenseBoost": 1,
-        "value": 50,
-        "itemName": "Sapphire Ring",
-        "itemType": "ring",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
       "type": "miniRPG.Armor",
       "data": {
-        "defenseBoost": 2,
+        "defenseBoost": 1,
         "armorRequiredLevel": 0,
         "armorValue": 0,
-        "itemName": "Bronze Platelegs",
-        "itemType": "platelegs",
+        "itemName": "Bronze helmet",
+        "itemType": "helmet",
         "itemRequiredLevel": 1,
         "itemValue": 50
       }
@@ -763,7 +1449,7 @@
     {
       "type": "miniRPG.Weapon",
       "data": {
-        "attackBoost": 3,
+        "attackBoost": 1,
         "weaponRequiredLevel": 0,
         "weaponValue": 0,
         "itemName": "Bronze sword",
@@ -775,11 +1461,11 @@
     {
       "type": "miniRPG.Armor",
       "data": {
-        "defenseBoost": 3,
+        "defenseBoost": 2,
         "armorRequiredLevel": 0,
         "armorValue": 0,
-        "itemName": "Bronze shield",
-        "itemType": "shield",
+        "itemName": "Bronze platelegs",
+        "itemType": "platelegs",
         "itemRequiredLevel": 1,
         "itemValue": 50
       }
@@ -787,7 +1473,19 @@
     {
       "type": "miniRPG.Armor",
       "data": {
-        "defenseBoost": 4,
+        "defenseBoost": 2,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Bronze platebody",
+        "itemType": "platebody",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 2,
         "armorRequiredLevel": 0,
         "armorValue": 0,
         "itemName": "Bronze boots",
@@ -797,13 +1495,15 @@
       }
     },
     {
-      "type": "miniRPG.Armor",
+      "type": "miniRPG.Jewelry",
       "data": {
-        "defenseBoost": 4,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze helmet",
-        "itemType": "helmet",
+        "name": "Sapphire Ring",
+        "hpBoost": 0,
+        "attackBoost": 0,
+        "defenseBoost": 2,
+        "value": 50,
+        "itemName": "Sapphire Ring",
+        "itemType": "ring",
         "itemRequiredLevel": 1,
         "itemValue": 50
       }
@@ -811,11 +1511,11 @@
     {
       "type": "miniRPG.Armor",
       "data": {
-        "defenseBoost": 4,
+        "defenseBoost": 3,
         "armorRequiredLevel": 0,
         "armorValue": 0,
-        "itemName": "Bronze platebody",
-        "itemType": "platebody",
+        "itemName": "Bronze Shield",
+        "itemType": "shield",
         "itemRequiredLevel": 1,
         "itemValue": 50
       }
@@ -857,9 +1557,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 4940,
+      "levelXp": 2627,
       "levelName": "Combat",
-      "levelBeforeLevelingUp": 7
+      "levelBeforeLevelingUp": 5
     },
     {
       "xpList": [
@@ -896,7 +1596,7 @@
         124800,
         2147483647
       ],
-      "levelXp": 4970,
+      "levelXp": 5365,
       "levelName": "Mining",
       "levelBeforeLevelingUp": 7
     },
@@ -935,9 +1635,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 3615,
+      "levelXp": 2090,
       "levelName": "Smithing",
-      "levelBeforeLevelingUp": 6
+      "levelBeforeLevelingUp": 5
     },
     {
       "xpList": [
@@ -974,9 +1674,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 3475,
+      "levelXp": 2400,
       "levelName": "Cooking",
-      "levelBeforeLevelingUp": 6
+      "levelBeforeLevelingUp": 5
     },
     {
       "xpList": [
@@ -1013,7 +1713,7 @@
         124800,
         2147483647
       ],
-      "levelXp": 2980,
+      "levelXp": 2160,
       "levelName": "Fishing",
       "levelBeforeLevelingUp": 5
     },
@@ -1052,9 +1752,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 900,
+      "levelXp": 1200,
       "levelName": "Herblore",
-      "levelBeforeLevelingUp": 3
+      "levelBeforeLevelingUp": 4
     }
   ],
   "bankedItemList": []

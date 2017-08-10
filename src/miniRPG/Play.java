@@ -31,21 +31,37 @@ public class Play {
 				user = new User(100, 100, 0, 10, 10, 10);
 				setUpUserInfo();
 			}
-			if (user.getCurrentHealth() < 1) {
-				user.setCurrentHealth(user.getTotalHealth());
-			}
 		} catch (IOException e) {
 		}
 		return user;
 	}
 
+	public static void deleteUser() throws IOException {
+		user = null;
+		saveData(user);
+		System.exit(0);
+	}
+
 	public static void setUpUserInfo() {
+		if (user.getCurrentHealth() < 1) {
+			user.setCurrentHealth(user.getTotalHealth());
+		}
 		String choice = null;
 		while (choice == null || choice.isEmpty()) {
 			System.out.println("What is your name?");
 			choice = sc.nextLine();
 		}
 		user.userName = choice;
+		choice = null;
+		while (choice == null || choice.isEmpty()) {
+			System.out.println("Hardcore mode? (y/n)");
+			choice = sc.nextLine();
+		}
+		if (choice.toLowerCase().startsWith("y")) {
+			user.hardcoreMode = true;
+		} else {
+			user.hardcoreMode = false;
+		}
 		int choice2 = 0;
 		while (choice2 != 1 && choice2 != 2 && choice2 != 3 && choice2 != 4
 				&& choice2 != 5) {
@@ -80,9 +96,9 @@ public class Play {
 			user.setDefense(user.getDefense() + 10);
 		} else if (choice2 == 5) {
 			user.userClass = "Chicken Tender";
-			user.setAttack(new Random().nextInt(21));
-			user.setDefense(new Random().nextInt(21));
-			user.setTotalHealth(new Random().nextInt(201));
+			user.setAttack(new Random().nextInt(21) + 5);
+			user.setDefense(new Random().nextInt(21) + 5);
+			user.setTotalHealth(new Random().nextInt(151) + 50);
 			user.setCurrentHealth(user.getTotalHealth());
 		}
 	}
@@ -750,7 +766,7 @@ public class Play {
 			user.displayStats();
 			System.out.println("What would you like to do?");
 			System.out
-					.println("Combat (c)\tInventory (i)\tEquipped Items (e)\tShop (s)\tHospital (h)\tFishing (f)\tMining (m)\tQuit (q)");
+					.println("Combat (c)\tInventory (i)\tEquipped Items (e)\tShop (s)\tHospital (h)\tFishing (f)\tMining (m)\tQuit (q)\tDelete User (d)");
 			choice = sc.next();
 			if (choice == null) {
 				choice = sc.nextLine().toLowerCase();
@@ -778,6 +794,17 @@ public class Play {
 			} else if (choice.startsWith("q")) {
 				saveData(user);
 				System.exit(0);
+			} else if (choice.startsWith("d")) {
+				System.out
+						.println("Are you sure you want to delete your account? (y/n)");
+				sc = new Scanner(System.in);
+				choice = sc.next();
+				if (choice.startsWith("y")) {
+					deleteUser();
+				}
+			}
+			if (user.getCurrentHealth() < 1) {
+				user.setCurrentHealth(user.getTotalHealth());
 			}
 			user.checkForLevelUp();
 			saveData(user);
@@ -1045,6 +1072,9 @@ public class Play {
 	}
 
 	public static int determineFirst(int enemySpeed, int userSpeed) {
+		if (enemySpeed == 0) {
+			enemySpeed = 1;
+		}
 		double result = ((double) userSpeed / (double) enemySpeed);
 		result += new Random().nextDouble() - new Random().nextDouble();
 		if (result < 1) {
@@ -1053,7 +1083,7 @@ public class Play {
 		return 0;
 	}
 
-	public static void fight(Enemy enemy) {
+	public static void fight(Enemy enemy) throws IOException {
 		int count = 0;
 		int damage;
 		count = determineFirst(enemy.enemySpeed, user.getSpeed());
@@ -1077,15 +1107,23 @@ public class Play {
 					user.itemList.add(i);
 				}
 				user.monstersKilled++;
+				revertStats();
 				return;
 			}
 			if (user.getCurrentHealth() <= 0) {
-				int amountGold = (int) (user.getMoney() * 0.5);
-				user.setMoney(user.getMoney() - amountGold);
-				System.out.println("You have died! You lost " + amountGold
-						+ " gold!");
-				user.setCurrentHealth(user.getTotalHealth());
-				return;
+				if (!user.hardcoreMode) {
+					int amountGold = (int) (user.getMoney() * 0.5);
+					user.setMoney(user.getMoney() - amountGold);
+					System.out.println("You have died! You lost " + amountGold
+							+ " gold!");
+					user.setCurrentHealth(user.getTotalHealth());
+					revertStats();
+					return;
+				} else {
+					System.out.println("You have died! AYYYY LMAO! (RIP)");
+					deleteUser();
+					return;
+				}
 			}
 			if (count % 2 == 0) {
 				System.out.println(enemy.enemyName + " HP: " + enemy.enemyHp);
@@ -1105,6 +1143,7 @@ public class Play {
 									user.getLevelObject("Combat").getXp()),
 							enemy.enemyLevel)) {
 						System.out.println("You successfully ran away!");
+						revertStats();
 						return;
 					} else {
 						System.out.println("You fail to run away!");
@@ -1142,6 +1181,18 @@ public class Play {
 		}
 	}
 
+	public static void revertStats() {
+		user.statPotionUsed = false;
+		if (user.preAttack != 0) {
+			user.setAttack(user.preAttack);
+		}
+		if (user.preDefense != 0) {
+			user.setDefense(user.preDefense);
+		}
+		user.preAttack = 0;
+		user.preDefense = 0;
+	}
+
 	public static boolean runAway(int userLevel, int enemyLevel) {
 		if (userLevel + 3 > enemyLevel) {
 			return true;
@@ -1168,6 +1219,9 @@ public class Play {
 	}
 
 	public static int damage(int attackerAtt, int defenderDef) {
+		if (defenderDef == 0) {
+			defenderDef = 1;
+		}
 		double totalAttackPower = (attackerAtt / defenderDef)
 				+ new Random().nextDouble() - .5;
 		double result = (Math.abs(totalAttackPower) * attackerAtt);
