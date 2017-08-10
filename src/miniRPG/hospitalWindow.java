@@ -76,6 +76,10 @@ implements ActionListener, WindowListener {
 		add(question);
 		add(healAmountPanel);
 		add(buttons);
+		
+		if(user.getCurrentHealth()==user.getTotalHealth()){
+			confirmButton.setEnabled(false);
+		}
 	}
 	
 	
@@ -101,6 +105,9 @@ implements ActionListener, WindowListener {
 				    	healthbar.setStringPainted(true);
 				    	healthbar.setString(user.getCurrentHealth()+"/"+user.getTotalHealth()+" HP");
 				    	healQuestion.setText("Healed up! Heal for more?");
+						if(user.getCurrentHealth()==user.getTotalHealth()){
+							confirmButton.setEnabled(false);
+						}
 					}
 					else{
 						healQuestion.setText("Not enough money!");

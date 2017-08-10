@@ -32,7 +32,8 @@ implements ActionListener, WindowListener {
 	
 		Panel inventory = new Panel();
 		Panel money = new Panel();
-		money.setSize(100, 30);
+		Panel textbox = new Panel();
+		Panel buttons = new Panel();
 	
 		// Define elements
 		// Establish button
@@ -40,7 +41,7 @@ implements ActionListener, WindowListener {
 		confirmInventoryButton = new Button("Use");		
 		inventoryList = new java.awt.List(8);// init the list gui object to scroll, but only display 8 rows at a time
 		
-		messages = new TextField("Select an item, then click \"Use\".", 35);
+		messages = new TextField("Select an item, then click \"Use\".", 30);
 		messages.setEditable(false);
 		
 		// add items to list
@@ -57,9 +58,9 @@ implements ActionListener, WindowListener {
 		
 		// Display UI elements
 		inventory.add(inventoryList);
-		inventory.add(cancelInventoryButton);
-		inventory.add(confirmInventoryButton);
-		add(messages);
+		buttons.add(cancelInventoryButton);
+		buttons.add(confirmInventoryButton);
+		textbox.add(messages);
     	moneyLabel = new Label ("$" + user.getMoney());
     	money.add(moneyLabel);  
 	
@@ -69,10 +70,16 @@ implements ActionListener, WindowListener {
 		
 		/* Window Configurations!*/
 		setTitle("Inventory");
-		setSize(350, 225);		
+		setSize(280, 280);		
 		setVisible(true);// Inventory window shows
-		add(money);
+		add(textbox);
 		add(inventory);// add panel with list
+		add(money);
+		add(buttons);
+	
+		if(user.getItemList().size()==0){
+			confirmInventoryButton.setEnabled(false);
+		}
 	}
 	
 	public void consumeItem(User user, int itemIndex){
@@ -90,7 +97,14 @@ implements ActionListener, WindowListener {
 			this.dispose();
 		}
 		if(evt.getSource() == confirmInventoryButton){
-			consumeItem(this.user, this.selection);
+			try{
+				consumeItem(this.user, this.selection);
+				if(user.getItemList().size()==0){
+					confirmInventoryButton.setEnabled(false);
+				}
+			}
+			catch(IndexOutOfBoundsException e){
+			}
 		}
 	}
 	

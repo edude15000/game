@@ -43,6 +43,19 @@ public class GUIWindow extends Frame
 	private Button QuitSelectButton;
 	private Button combatStatsSelectButton;
 	
+	public void updateLevels() {
+		fishingLabel.setText(Integer.toString(user.getLevel("Fishing")));
+		fishingXpLabel.setText(Integer.toString(user.getLevelObject("Fishing").getXp()));
+		cookingLabel.setText(Integer.toString(user.getLevel("Cooking")));
+		cookingXpLabel.setText(Integer.toString(user.getLevelObject("Cooking").getXp()));
+		miningLabel.setText(Integer.toString(user.getLevel("Mining")));
+		miningXpLabel.setText(Integer.toString(user.getLevelObject("Mining").getXp()));
+		smithingLabel.setText(Integer.toString(user.getLevel("Smithing")));
+		smithingXpLabel.setText(Integer.toString(user.getLevelObject("Smithing").getXp()));
+		herbloreLabel.setText(Integer.toString(user.getLevel("Herblore")));
+		herbloreXpLabel.setText(Integer.toString(user.getLevelObject("Herblore").getXp()));
+	}
+	
     // Constructor to setup the GUI components
     public GUIWindow(String userName, String userClass) {
     	user = Play.startUser(userName, userClass, false);
@@ -169,11 +182,16 @@ public class GUIWindow extends Frame
     		//TODO: Remove the following line and make real combat
     		user.setCurrentHealth(user.getCurrentHealth()-5);
     	}
+    	if(evt.getSource() == ShopSelectButton){
+    		//TODO: Remove the following line and make real shop
+    		user.setMoney(user.getMoney()+5);
+    	}
     	if(evt.getSource() == QuitSelectButton){
     		System.exit(0);
     	}
     }
-    /* WindowEvent handlers */
+
+	/* WindowEvent handlers */
     // Called back upon clicking close-window button
     @Override
     public void windowClosing(WindowEvent evt) {
