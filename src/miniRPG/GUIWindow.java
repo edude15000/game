@@ -17,11 +17,6 @@ public class GUIWindow extends Frame
 	protected User user;
 	
 	// Declare Label components for home menu
-	private Label healthLabel;
-	private Label currHealthLabel;
-	private Label attackLabel;
-	private Label defenseLabel;
-	
 	private Label fishingLabel;
 	private Label fishingXpLabel; 
 	private Label cookingLabel;
@@ -32,9 +27,6 @@ public class GUIWindow extends Frame
 	private Label smithingXpLabel;
 	private Label herbloreXpLabel;
 	private Label herbloreLabel;
-	private Label combatLabel;
-	private Label combatXpLabel;
-
 
 	// Declare console output
 	private TextField messages;
@@ -66,30 +58,36 @@ public class GUIWindow extends Frame
     	
     	
     	// Main menu elements
-    	fishingLabel = new Label ("Fishing Lvl:" + user.getLevel("Fishing")); 
+    	fishingLabel = new Label ("Fishing Lvl:" + user.getLevel("Fishing")+"      "); 
     	stats.add(fishingLabel); 
-    	fishingXpLabel = new Label ("Fishing XP:" + user.getLevelObject("Fishing").getXp()); 
+    	fishingXpLabel = new Label ("Fishing XP:" + user.getLevelObject("Fishing").getXp()+"      "); 
     	exp.add(fishingXpLabel);
-    	cookingLabel = new Label ("Cooking Lvl:" + user.getLevel("Cooking")); 
+    	cookingLabel = new Label ("Cooking Lvl:" + user.getLevel("Cooking")+"      "); 
     	stats.add(cookingLabel); 
-    	cookingXpLabel = new Label ("Cooking XP:" + user.getLevelObject("Cooking").getXp()); 
+    	cookingXpLabel = new Label ("Cooking XP:" + user.getLevelObject("Cooking").getXp()+"      "); 
     	exp.add(cookingXpLabel);
-    	miningLabel = new Label ("Mining Lvl:" + user.getLevel("Mining")); 
+    	miningLabel = new Label ("Mining Lvl:" + user.getLevel("Mining")+"      "); 
     	stats.add(miningLabel);  
-    	miningXpLabel = new Label ("Mining XP:" + user.getLevelObject("Mining").getXp()); 
+    	miningXpLabel = new Label ("Mining XP:" + user.getLevelObject("Mining").getXp()+"      "); 
     	exp.add(miningXpLabel);
-    	smithingLabel = new Label ("Smithing Lvl:" + user.getLevel("Smithing")); 
+    	smithingLabel = new Label ("Smithing Lvl:" + user.getLevel("Smithing")+"      "); 
     	stats.add(smithingLabel);
-    	smithingXpLabel = new Label ("Smithing XP:" + user.getLevelObject("Smithing").getXp()); 
+    	smithingXpLabel = new Label ("Smithing XP:" + user.getLevelObject("Smithing").getXp()+"      "); 
     	exp.add(smithingXpLabel);
-    	herbloreLabel = new Label ("Herblore Lvl:" + user.getLevel("Herblore")); 
+    	herbloreLabel = new Label ("Herblore Lvl:" + user.getLevel("Herblore")+"      "); 
     	stats.add(herbloreLabel);
-    	herbloreXpLabel = new Label ("Herblore XP:" + user.getLevelObject("Herblore").getXp()); 
+    	herbloreXpLabel = new Label ("Herblore XP:"+ user.getLevelObject("Herblore").getXp()+"      "); 
     	exp.add(herbloreXpLabel);
-   
+
     	
     	//Console window
-    	messages = new TextField("Welcome to miniRPG, "+user.userName+"!", 55); // construct the TextField component
+    	if(!user.userName.isEmpty()){
+    		messages = new TextField("Welcome to miniRPG, "+user.userName+"!", 55); // construct the TextField component
+    	}
+    	else{
+    		messages = new TextField("Welcome to miniRPG! You didn't introduce yourself; I'll call you Bobbert.",55);
+    		user.userName = "Bobbert";
+    	}
         messages.setEditable(false);       // set to read-only
         output.add(messages);              // "super" Frame container adds TextField component
         
@@ -102,7 +100,7 @@ public class GUIWindow extends Frame
         FishingSelectButton = new Button("Fish");  
         MiningSelectButton = new Button("Mine");    
         QuitSelectButton  = new Button("Quit");
-        combatStatsSelectButton = new Button("Combat Stats");
+        combatStatsSelectButton = new Button(user.userClass+" Stats");
         options.add(combatSelectButton);
         options.add(combatStatsSelectButton);
         options.add(InventorySelectButton);
@@ -127,7 +125,7 @@ public class GUIWindow extends Frame
         // "super" Frame adds "this" object as a WindowEvent listener.
         
         setTitle("miniRPG");  // "super" Frame sets its title
-        setSize(600, 200);    // "super" Frame sets its initial window size
+        setSize(650, 200);    // "super" Frame sets its initial window size
         
         setVisible(true); //"super" Frame shows
         
@@ -153,7 +151,7 @@ public class GUIWindow extends Frame
     		messages.setText(status);
     		messages.validate();
     		miningLabel.setText("Mining Lvl:" + user.getLevel("Mining"));
-    		miningXpLabel.setText("Fishing XP:" + user.getLevelObject("Mining").getXp());
+    		miningXpLabel.setText("Mining XP:" + user.getLevelObject("Mining").getXp());
     	}
     	if(evt.getSource() == InventorySelectButton){
     		inventoryWindow frame = new inventoryWindow(user);

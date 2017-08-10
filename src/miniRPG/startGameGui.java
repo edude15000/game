@@ -35,6 +35,8 @@ implements ActionListener, WindowListener {
 			classList.add("Thief (+10 ATK; +5% GP Gain");
 			classList.add("Warrior (+10 ATK; +10 DEF");
 			classList.add("Chicken Tender (Random Stats)");
+			classList.select(0);
+			userClass = "Barbarian";
 		cancelButton = new Button("Quit");
 		confirmButton = new Button("Start!");
 		
@@ -46,7 +48,24 @@ implements ActionListener, WindowListener {
 		// classList Listener definition
 		classList.addItemListener(new ItemListener(){
 			public void itemStateChanged(ItemEvent ievt){
-			userClass = classList.getSelectedItem();
+				if(classList.getSelectedIndex()==0){
+					userClass = "Barbarian";
+				}
+				else if(classList.getSelectedIndex()==1){
+					userClass = "Knight";
+				}
+				else if(classList.getSelectedIndex()==2){
+					userClass = "Thief";
+				}
+				else if(classList.getSelectedIndex()==3){
+					userClass = "Warrior";
+				}
+				else if(classList.getSelectedIndex()==4){
+					userClass = "Chicken Tender";
+				}
+				else{
+					userClass = "Barbarian"; // error handling
+				}
 			}
 		});
 		

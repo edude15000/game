@@ -31,6 +31,8 @@ implements ActionListener, WindowListener {
 		// top-to-bottom.
 	
 		Panel inventory = new Panel();
+		Panel money = new Panel();
+		money.setSize(100, 30);
 	
 		// Define elements
 		// Establish button
@@ -57,9 +59,9 @@ implements ActionListener, WindowListener {
 		inventory.add(inventoryList);
 		inventory.add(cancelInventoryButton);
 		inventory.add(confirmInventoryButton);
-		this.add(messages);
+		add(messages);
     	moneyLabel = new Label ("$" + user.getMoney());
-    	this.add(moneyLabel);  
+    	money.add(moneyLabel);  
 	
 		inventoryList.addActionListener(this);
 		cancelInventoryButton.addActionListener(this);
@@ -69,6 +71,7 @@ implements ActionListener, WindowListener {
 		setTitle("Inventory");
 		setSize(350, 225);		
 		setVisible(true);// Inventory window shows
+		add(money);
 		add(inventory);// add panel with list
 	}
 	
