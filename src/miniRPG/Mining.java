@@ -97,9 +97,9 @@ public class Mining {
 				}
 			}
 		} else if (new Random().nextInt(100) + 1 < 20) {
-			user.itemList.add(new Ore("Gold Ore", 1, 100, 250));
-			user.getLevelObject("Mining").gainXp(250);
-			result += " You mine gold ore and gain 250 XP!";
+			user.itemList.add(new Ore("Gold Ore", 1, 100, 75));
+			user.getLevelObject("Mining").gainXp(75);
+			result += " You mine gold ore and gain 75 XP!";
 		} else {
 			user.getLevelObject("Mining").gainXp(10);
 			result += " You fail to mine anything!";

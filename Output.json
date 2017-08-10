@@ -1,108 +1,40 @@
 {
-  "totalHealth": 1143,
-  "currentHealth": 1143,
-  "userName": "E",
-  "userClass": "Warrior",
-  "money": 5611,
-  "attack": 45,
-  "defense": 46,
-  "speed": 42,
-  "monstersKilled": 55,
+  "totalHealth": 1993,
+  "currentHealth": 1993,
+  "userName": "Evan",
+  "userClass": "Chicken Tender",
+  "money": 1997,
+  "attack": 53,
+  "defense": 74,
+  "speed": 70,
+  "monstersKilled": 68,
   "itemList": [
     {
-      "type": "miniRPG.Cookable",
+      "type": "miniRPG.Consumable",
       "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 10,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 100,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
+        "healAmount": 7,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
         "itemRequiredLevel": 1,
-        "itemValue": 5
+        "itemValue": 15
       }
     },
     {
-      "type": "miniRPG.Armor",
+      "type": "miniRPG.Consumable",
       "data": {
-        "defenseBoost": 1,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze helmet",
-        "itemType": "helmet",
+        "healAmount": 2,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Potato",
+        "itemType": "Potato",
         "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 10,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 100,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 10,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 100,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
+        "itemValue": 1
       }
     },
     {
@@ -112,76 +44,23 @@
         "attackBoost": 0,
         "defenseBoost": 0,
         "consumableValue": 0,
-        "itemName": "Small HP Potion",
-        "itemType": "Small HP Potion",
+        "potionRequiredLevel": 0,
+        "itemName": "Chicken",
+        "itemType": "Chicken",
         "itemRequiredLevel": 1,
-        "itemValue": 10
+        "itemValue": 20
       }
     },
     {
-      "type": "miniRPG.Armor",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "defenseBoost": 1,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze shield",
-        "itemType": "shield",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 30,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "itemName": "Beef",
-        "itemType": "Beef",
-        "itemRequiredLevel": 1,
-        "itemValue": 30
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 10,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 100,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 10,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "itemName": "Small HP Potion",
-        "itemType": "Small HP Potion",
-        "itemRequiredLevel": 1,
-        "itemValue": 10
+        "name": "Ruby",
+        "requiredLevelToSmith": 12,
+        "value": 1,
+        "itemName": "Ruby",
+        "itemType": "Ruby",
+        "itemRequiredLevel": 12,
+        "itemValue": 1
       }
     },
     {
@@ -197,24 +76,245 @@
       }
     },
     {
-      "type": "miniRPG.Armor",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "defenseBoost": 2,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze platebody",
-        "itemType": "platebody",
+        "name": "Gold Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Gold Bar",
+        "itemType": "Gold Bar",
         "itemRequiredLevel": 1,
-        "itemValue": 50
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Iron Bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Iron Bar",
+        "itemType": "Iron Bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Emerald",
+        "requiredLevelToSmith": 6,
+        "value": 1,
+        "itemName": "Emerald",
+        "itemType": "Emerald",
+        "itemRequiredLevel": 6,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Gold Bar",
+        "itemType": "Gold Bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Iron Bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Iron Bar",
+        "itemType": "Iron Bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Iron Bar",
+        "requiredLevelToSmith": 5,
+        "value": 1,
+        "itemName": "Iron Bar",
+        "itemType": "Iron Bar",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze Bar",
+        "itemType": "Bronze Bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Bronze Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Bronze Bar",
+        "itemType": "Bronze Bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Gold Bar",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Gold Bar",
+        "itemType": "Gold Bar",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
       }
     },
     {
       "type": "miniRPG.Consumable",
       "data": {
-        "healAmount": 31,
+        "healAmount": 86,
         "attackBoost": 0,
         "defenseBoost": 0,
         "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Small HP Potion",
+        "itemType": "Small HP Potion",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 86,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Small HP Potion",
+        "itemType": "Small HP Potion",
+        "itemRequiredLevel": 1,
+        "itemValue": 10
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 260,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Beef",
+        "itemType": "Beef",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Cookable",
+      "data": {
+        "cookableName": "Raw Beef",
+        "cookableXP": 600,
+        "cookableLevelRequired": 15,
+        "chanceToCook": 0,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 374,
+            "attackBoost": 0,
+            "defenseBoost": 0,
+            "consumableValue": 0,
+            "potionRequiredLevel": 0,
+            "itemName": "Beef",
+            "itemType": "Beef",
+            "itemRequiredLevel": 1,
+            "itemValue": 30
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 1248,
+        "itemName": "Raw Beef",
+        "itemType": "Raw Beef",
+        "itemRequiredLevel": 15,
+        "itemValue": 5
+      }
+    },
+    {
+      "type": "miniRPG.Cookable",
+      "data": {
+        "cookableName": "Raw Chicken",
+        "cookableXP": 150,
+        "cookableLevelRequired": 5,
+        "chanceToCook": 75,
+        "newItem": {
+          "type": "miniRPG.Consumable",
+          "data": {
+            "healAmount": 249,
+            "attackBoost": 0,
+            "defenseBoost": 0,
+            "consumableValue": 0,
+            "potionRequiredLevel": 0,
+            "itemName": "Chicken",
+            "itemType": "Chicken",
+            "itemRequiredLevel": 1,
+            "itemValue": 20
+          }
+        },
+        "cookableValue": 5,
+        "userHealth": 1248,
+        "itemName": "Raw Chicken",
+        "itemType": "Raw Chicken",
+        "itemRequiredLevel": 5,
+        "itemValue": 5
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 62,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
         "itemName": "Potato",
         "itemType": "Potato",
         "itemRequiredLevel": 1,
@@ -222,56 +322,178 @@
       }
     },
     {
-      "type": "miniRPG.Armor",
+      "type": "miniRPG.Consumable",
       "data": {
-        "defenseBoost": 2,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze helmet",
-        "itemType": "helmet",
+        "healAmount": 785,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Large HP Potion",
+        "itemType": "Large HP Potion",
         "itemRequiredLevel": 1,
         "itemValue": 50
       }
     },
     {
-      "type": "miniRPG.Cookable",
+      "type": "miniRPG.Smeltable",
       "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 63,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 638,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
+        "name": "Ruby",
+        "requiredLevelToSmith": 12,
+        "value": 1,
+        "itemName": "Ruby",
+        "itemType": "Ruby",
+        "itemRequiredLevel": 12,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 3,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Bronze boots",
+        "itemType": "boots",
         "itemRequiredLevel": 1,
-        "itemValue": 5
+        "itemValue": 50
       }
     },
     {
       "type": "miniRPG.Consumable",
       "data": {
-        "healAmount": 63,
+        "healAmount": 78,
         "attackBoost": 0,
         "defenseBoost": 0,
         "consumableValue": 0,
-        "itemName": "Small HP Potion",
-        "itemType": "Small HP Potion",
+        "potionRequiredLevel": 0,
+        "itemName": "Potato",
+        "itemType": "Potato",
         "itemRequiredLevel": 1,
-        "itemValue": 10
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 471,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Beef",
+        "itemType": "Beef",
+        "itemRequiredLevel": 1,
+        "itemValue": 30
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 86,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 157,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 157,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 157,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 157,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Fish",
+        "itemType": "Fish",
+        "itemRequiredLevel": 1,
+        "itemValue": 15
+      }
+    },
+    {
+      "type": "miniRPG.Consumable",
+      "data": {
+        "healAmount": 78,
+        "attackBoost": 0,
+        "defenseBoost": 0,
+        "consumableValue": 0,
+        "potionRequiredLevel": 0,
+        "itemName": "Potato",
+        "itemType": "Potato",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Sapphire",
+        "requiredLevelToSmith": 1,
+        "value": 1,
+        "itemName": "Sapphire",
+        "itemType": "Sapphire",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ingredient",
+      "data": {
+        "ingredientName": "Blue Herb",
+        "ingredientType": "herb",
+        "ingredientRequiredLevel": 1,
+        "ingredientValue": 1,
+        "itemName": "Blue Herb",
+        "itemType": "herb",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
       }
     },
     {
@@ -292,14 +514,15 @@
         "cookableName": "Raw Fish",
         "cookableXP": 75,
         "cookableLevelRequired": 1,
-        "chanceToCook": 70,
+        "chanceToCook": 95,
         "newItem": {
           "type": "miniRPG.Consumable",
           "data": {
-            "healAmount": 63,
+            "healAmount": 199,
             "attackBoost": 0,
             "defenseBoost": 0,
             "consumableValue": 0,
+            "potionRequiredLevel": 0,
             "itemName": "Fish",
             "itemType": "Fish",
             "itemRequiredLevel": 1,
@@ -307,237 +530,7 @@
           }
         },
         "cookableValue": 5,
-        "userHealth": 638,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 31,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "itemName": "Potato",
-        "itemType": "Potato",
-        "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 95,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 951,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Armor",
-      "data": {
-        "defenseBoost": 2,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze shield",
-        "itemType": "shield",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 95,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 951,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 237,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "itemName": "Turkey Leg",
-        "itemType": "Turkey Leg",
-        "itemRequiredLevel": 1,
-        "itemValue": 25
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 95,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 951,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Ingredient",
-      "data": {
-        "ingredientName": "Blue Herb",
-        "ingredientType": "herb",
-        "ingredientRequiredLevel": 1,
-        "ingredientValue": 1,
-        "itemName": "Blue Herb",
-        "itemType": "herb",
-        "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 95,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 951,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 285,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "itemName": "Beef",
-        "itemType": "Beef",
-        "itemRequiredLevel": 1,
-        "itemValue": 30
-      }
-    },
-    {
-      "type": "miniRPG.Ingredient",
-      "data": {
-        "ingredientName": "White Syrum",
-        "ingredientType": "ingredient",
-        "ingredientRequiredLevel": 1,
-        "ingredientValue": 1,
-        "itemName": "White Syrum",
-        "itemType": "ingredient",
-        "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 47,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "itemName": "Potato",
-        "itemType": "Potato",
-        "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 95,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 951,
+        "userHealth": 1993,
         "itemName": "Raw Fish",
         "itemType": "Raw Fish",
         "itemRequiredLevel": 1,
@@ -550,14 +543,15 @@
         "cookableName": "Raw Fish",
         "cookableXP": 75,
         "cookableLevelRequired": 1,
-        "chanceToCook": 70,
+        "chanceToCook": 95,
         "newItem": {
           "type": "miniRPG.Consumable",
           "data": {
-            "healAmount": 95,
+            "healAmount": 199,
             "attackBoost": 0,
             "defenseBoost": 0,
             "consumableValue": 0,
+            "potionRequiredLevel": 0,
             "itemName": "Fish",
             "itemType": "Fish",
             "itemRequiredLevel": 1,
@@ -565,35 +559,7 @@
           }
         },
         "cookableValue": 5,
-        "userHealth": 951,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 95,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 951,
+        "userHealth": 1993,
         "itemName": "Raw Fish",
         "itemType": "Raw Fish",
         "itemRequiredLevel": 1,
@@ -603,125 +569,11 @@
     {
       "type": "miniRPG.Consumable",
       "data": {
-        "healAmount": 190,
+        "healAmount": 199,
         "attackBoost": 0,
         "defenseBoost": 0,
         "consumableValue": 0,
-        "itemName": "Chicken",
-        "itemType": "Chicken",
-        "itemRequiredLevel": 1,
-        "itemValue": 20
-      }
-    },
-    {
-      "type": "miniRPG.Armor",
-      "data": {
-        "defenseBoost": 2,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze platebody",
-        "itemType": "platebody",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Armor",
-      "data": {
-        "defenseBoost": 2,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze platebody",
-        "itemType": "platebody",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Armor",
-      "data": {
-        "defenseBoost": 2,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze platelegs",
-        "itemType": "platelegs",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 95,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 951,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 47,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "itemName": "Potato",
-        "itemType": "Potato",
-        "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 57,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "itemName": "Potato",
-        "itemType": "Potato",
-        "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Armor",
-      "data": {
-        "defenseBoost": 3,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze boots",
-        "itemType": "boots",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 114,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
+        "potionRequiredLevel": 0,
         "itemName": "Small HP Potion",
         "itemType": "Small HP Potion",
         "itemRequiredLevel": 1,
@@ -734,14 +586,15 @@
         "cookableName": "Raw Fish",
         "cookableXP": 75,
         "cookableLevelRequired": 1,
-        "chanceToCook": 70,
+        "chanceToCook": 95,
         "newItem": {
           "type": "miniRPG.Consumable",
           "data": {
-            "healAmount": 114,
+            "healAmount": 199,
             "attackBoost": 0,
             "defenseBoost": 0,
             "consumableValue": 0,
+            "potionRequiredLevel": 0,
             "itemName": "Fish",
             "itemType": "Fish",
             "itemRequiredLevel": 1,
@@ -749,76 +602,7 @@
           }
         },
         "cookableValue": 5,
-        "userHealth": 1143,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 114,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 1143,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Ingredient",
-      "data": {
-        "ingredientName": "White Herb",
-        "ingredientType": "herb",
-        "ingredientRequiredLevel": 1,
-        "ingredientValue": 1,
-        "itemName": "White Herb",
-        "itemType": "herb",
-        "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 114,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 1143,
+        "userHealth": 1993,
         "itemName": "Raw Fish",
         "itemType": "Raw Fish",
         "itemRequiredLevel": 1,
@@ -828,14 +612,15 @@
     {
       "type": "miniRPG.Consumable",
       "data": {
-        "healAmount": 342,
+        "healAmount": 398,
         "attackBoost": 0,
         "defenseBoost": 0,
         "consumableValue": 0,
-        "itemName": "Beef",
-        "itemType": "Beef",
+        "potionRequiredLevel": 0,
+        "itemName": "Chicken",
+        "itemType": "Chicken",
         "itemRequiredLevel": 1,
-        "itemValue": 30
+        "itemValue": 20
       }
     },
     {
@@ -844,14 +629,15 @@
         "cookableName": "Raw Fish",
         "cookableXP": 75,
         "cookableLevelRequired": 1,
-        "chanceToCook": 70,
+        "chanceToCook": 95,
         "newItem": {
           "type": "miniRPG.Consumable",
           "data": {
-            "healAmount": 114,
+            "healAmount": 199,
             "attackBoost": 0,
             "defenseBoost": 0,
             "consumableValue": 0,
+            "potionRequiredLevel": 0,
             "itemName": "Fish",
             "itemType": "Fish",
             "itemRequiredLevel": 1,
@@ -859,7 +645,7 @@
           }
         },
         "cookableValue": 5,
-        "userHealth": 1143,
+        "userHealth": 1993,
         "itemName": "Raw Fish",
         "itemType": "Raw Fish",
         "itemRequiredLevel": 1,
@@ -869,120 +655,15 @@
     {
       "type": "miniRPG.Consumable",
       "data": {
-        "healAmount": 57,
+        "healAmount": 199,
         "attackBoost": 0,
         "defenseBoost": 0,
         "consumableValue": 0,
-        "itemName": "Potato",
-        "itemType": "Potato",
+        "potionRequiredLevel": 0,
+        "itemName": "Small HP Potion",
+        "itemType": "Small HP Potion",
         "itemRequiredLevel": 1,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 114,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 1143,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 571,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "itemName": "Large HP Potion",
-        "itemType": "Large HP Potion",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Weapon",
-      "data": {
-        "attackBoost": 3,
-        "weaponRequiredLevel": 0,
-        "weaponValue": 0,
-        "itemName": "Bronze sword",
-        "itemType": "sword",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Consumable",
-      "data": {
-        "healAmount": 171,
-        "attackBoost": 0,
-        "defenseBoost": 0,
-        "consumableValue": 0,
-        "itemName": "Fish",
-        "itemType": "Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 15
-      }
-    },
-    {
-      "type": "miniRPG.Smeltable",
-      "data": {
-        "name": "Ruby",
-        "requiredLevelToSmith": 12,
-        "value": 1,
-        "itemName": "Ruby",
-        "itemType": "Ruby",
-        "itemRequiredLevel": 12,
-        "itemValue": 1
-      }
-    },
-    {
-      "type": "miniRPG.Cookable",
-      "data": {
-        "cookableName": "Raw Fish",
-        "cookableXP": 75,
-        "cookableLevelRequired": 1,
-        "chanceToCook": 70,
-        "newItem": {
-          "type": "miniRPG.Consumable",
-          "data": {
-            "healAmount": 114,
-            "attackBoost": 0,
-            "defenseBoost": 0,
-            "consumableValue": 0,
-            "itemName": "Fish",
-            "itemType": "Fish",
-            "itemRequiredLevel": 1,
-            "itemValue": 15
-          }
-        },
-        "cookableValue": 5,
-        "userHealth": 1143,
-        "itemName": "Raw Fish",
-        "itemType": "Raw Fish",
-        "itemRequiredLevel": 1,
-        "itemValue": 5
+        "itemValue": 10
       }
     },
     {
@@ -1007,32 +688,6 @@
         "ingredientValue": 50,
         "itemName": "Vial",
         "itemType": "vial",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Ingredient",
-      "data": {
-        "ingredientName": "Vial",
-        "ingredientType": "vial",
-        "ingredientRequiredLevel": 1,
-        "ingredientValue": 50,
-        "itemName": "Vial",
-        "itemType": "vial",
-        "itemRequiredLevel": 1,
-        "itemValue": 50
-      }
-    },
-    {
-      "type": "miniRPG.Ingredient",
-      "data": {
-        "ingredientName": "Red Syrum",
-        "ingredientType": "ingredient",
-        "ingredientRequiredLevel": 1,
-        "ingredientValue": 50,
-        "itemName": "Red Syrum",
-        "itemType": "ingredient",
         "itemRequiredLevel": 1,
         "itemValue": 50
       }
@@ -1066,13 +721,29 @@
   ],
   "equippedItems": [
     {
-      "type": "miniRPG.Armor",
+      "type": "miniRPG.Jewelry",
       "data": {
-        "defenseBoost": 2,
-        "armorRequiredLevel": 0,
-        "armorValue": 0,
-        "itemName": "Bronze shield",
-        "itemType": "shield",
+        "name": "Sapphire Necklace",
+        "hpBoost": 0,
+        "attackBoost": 0,
+        "defenseBoost": 1,
+        "value": 50,
+        "itemName": "Sapphire Necklace",
+        "itemType": "necklace",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Jewelry",
+      "data": {
+        "name": "Sapphire Ring",
+        "hpBoost": 0,
+        "attackBoost": 0,
+        "defenseBoost": 1,
+        "value": 50,
+        "itemName": "Sapphire Ring",
+        "itemType": "ring",
         "itemRequiredLevel": 1,
         "itemValue": 50
       }
@@ -1083,8 +754,8 @@
         "defenseBoost": 2,
         "armorRequiredLevel": 0,
         "armorValue": 0,
-        "itemName": "Bronze platebody",
-        "itemType": "platebody",
+        "itemName": "Bronze Platelegs",
+        "itemType": "platelegs",
         "itemRequiredLevel": 1,
         "itemValue": 50
       }
@@ -1097,6 +768,54 @@
         "weaponValue": 0,
         "itemName": "Bronze sword",
         "itemType": "sword",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 3,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Bronze shield",
+        "itemType": "shield",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 4,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Bronze boots",
+        "itemType": "boots",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 4,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Bronze helmet",
+        "itemType": "helmet",
+        "itemRequiredLevel": 1,
+        "itemValue": 50
+      }
+    },
+    {
+      "type": "miniRPG.Armor",
+      "data": {
+        "defenseBoost": 4,
+        "armorRequiredLevel": 0,
+        "armorValue": 0,
+        "itemName": "Bronze platebody",
+        "itemType": "platebody",
         "itemRequiredLevel": 1,
         "itemValue": 50
       }
@@ -1138,8 +857,164 @@
         124800,
         2147483647
       ],
-      "levelXp": 2442,
+      "levelXp": 4940,
       "levelName": "Combat",
+      "levelBeforeLevelingUp": 7
+    },
+    {
+      "xpList": [
+        0,
+        0,
+        200,
+        600,
+        1200,
+        2000,
+        3050,
+        4350,
+        5950,
+        7800,
+        9950,
+        12400,
+        15150,
+        18200,
+        21600,
+        25350,
+        29400,
+        33800,
+        38550,
+        43650,
+        49100,
+        54950,
+        61150,
+        67750,
+        74700,
+        82050,
+        89800,
+        97950,
+        106500,
+        115450,
+        124800,
+        2147483647
+      ],
+      "levelXp": 4970,
+      "levelName": "Mining",
+      "levelBeforeLevelingUp": 7
+    },
+    {
+      "xpList": [
+        0,
+        0,
+        200,
+        600,
+        1200,
+        2000,
+        3050,
+        4350,
+        5950,
+        7800,
+        9950,
+        12400,
+        15150,
+        18200,
+        21600,
+        25350,
+        29400,
+        33800,
+        38550,
+        43650,
+        49100,
+        54950,
+        61150,
+        67750,
+        74700,
+        82050,
+        89800,
+        97950,
+        106500,
+        115450,
+        124800,
+        2147483647
+      ],
+      "levelXp": 3615,
+      "levelName": "Smithing",
+      "levelBeforeLevelingUp": 6
+    },
+    {
+      "xpList": [
+        0,
+        0,
+        200,
+        600,
+        1200,
+        2000,
+        3050,
+        4350,
+        5950,
+        7800,
+        9950,
+        12400,
+        15150,
+        18200,
+        21600,
+        25350,
+        29400,
+        33800,
+        38550,
+        43650,
+        49100,
+        54950,
+        61150,
+        67750,
+        74700,
+        82050,
+        89800,
+        97950,
+        106500,
+        115450,
+        124800,
+        2147483647
+      ],
+      "levelXp": 3475,
+      "levelName": "Cooking",
+      "levelBeforeLevelingUp": 6
+    },
+    {
+      "xpList": [
+        0,
+        0,
+        200,
+        600,
+        1200,
+        2000,
+        3050,
+        4350,
+        5950,
+        7800,
+        9950,
+        12400,
+        15150,
+        18200,
+        21600,
+        25350,
+        29400,
+        33800,
+        38550,
+        43650,
+        49100,
+        54950,
+        61150,
+        67750,
+        74700,
+        82050,
+        89800,
+        97950,
+        106500,
+        115450,
+        124800,
+        2147483647
+      ],
+      "levelXp": 2980,
+      "levelName": "Fishing",
       "levelBeforeLevelingUp": 5
     },
     {
@@ -1177,165 +1052,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 0,
-      "levelName": "Mining",
-      "levelBeforeLevelingUp": 1
-    },
-    {
-      "xpList": [
-        0,
-        0,
-        200,
-        600,
-        1200,
-        2000,
-        3050,
-        4350,
-        5950,
-        7800,
-        9950,
-        12400,
-        15150,
-        18200,
-        21600,
-        25350,
-        29400,
-        33800,
-        38550,
-        43650,
-        49100,
-        54950,
-        61150,
-        67750,
-        74700,
-        82050,
-        89800,
-        97950,
-        106500,
-        115450,
-        124800,
-        2147483647
-      ],
-      "levelXp": 0,
-      "levelName": "Smithing",
-      "levelBeforeLevelingUp": 1
-    },
-    {
-      "xpList": [
-        0,
-        0,
-        200,
-        600,
-        1200,
-        2000,
-        3050,
-        4350,
-        5950,
-        7800,
-        9950,
-        12400,
-        15150,
-        18200,
-        21600,
-        25350,
-        29400,
-        33800,
-        38550,
-        43650,
-        49100,
-        54950,
-        61150,
-        67750,
-        74700,
-        82050,
-        89800,
-        97950,
-        106500,
-        115450,
-        124800,
-        2147483647
-      ],
-      "levelXp": 0,
-      "levelName": "Cooking",
-      "levelBeforeLevelingUp": 1
-    },
-    {
-      "xpList": [
-        0,
-        0,
-        200,
-        600,
-        1200,
-        2000,
-        3050,
-        4350,
-        5950,
-        7800,
-        9950,
-        12400,
-        15150,
-        18200,
-        21600,
-        25350,
-        29400,
-        33800,
-        38550,
-        43650,
-        49100,
-        54950,
-        61150,
-        67750,
-        74700,
-        82050,
-        89800,
-        97950,
-        106500,
-        115450,
-        124800,
-        2147483647
-      ],
-      "levelXp": 0,
-      "levelName": "Fishing",
-      "levelBeforeLevelingUp": 1
-    },
-    {
-      "xpList": [
-        0,
-        0,
-        200,
-        600,
-        1200,
-        2000,
-        3050,
-        4350,
-        5950,
-        7800,
-        9950,
-        12400,
-        15150,
-        18200,
-        21600,
-        25350,
-        29400,
-        33800,
-        38550,
-        43650,
-        49100,
-        54950,
-        61150,
-        67750,
-        74700,
-        82050,
-        89800,
-        97950,
-        106500,
-        115450,
-        124800,
-        2147483647
-      ],
-      "levelXp": 150,
+      "levelXp": 900,
       "levelName": "Herblore",
-      "levelBeforeLevelingUp": 1
+      "levelBeforeLevelingUp": 3
     }
   ],
   "bankedItemList": []
