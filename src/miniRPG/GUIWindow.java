@@ -136,11 +136,7 @@ public class GUIWindow extends Frame
         add(output);
         add(options);
     }       
-    // The entry main() method
-    public static void main(String[] args) {
-        // Invoke the constructor (to set up the GUI) by allocating an instance
-    	new GUIWindow();
-    }
+
     //ActionEvent handler 
     @Override
     public void actionPerformed(ActionEvent evt) {
