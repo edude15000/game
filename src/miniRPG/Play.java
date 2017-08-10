@@ -18,17 +18,21 @@ public class Play {
 
 	public static void main(String[] args) throws IOException {
 		sc = new Scanner(System.in);
-		user = startUser();
+		user = startUser("test", "Chicken Tender", false);
 		loopActions(user);
 		sc.close();
 	}
 
-	public static User startUser() {
+	public static User startUser(String userName, String userClass,
+			boolean hardcore) {
 		user = null;
 		try {
 			user = loadData();
 			if (user == null) {
 				user = new User(100, 100, 0, 10, 10, 10);
+				user.userClass = userClass;
+				user.userName = userName;
+				user.hardcoreMode = hardcore;
 				setUpUserInfo();
 			}
 		} catch (IOException e) {
@@ -46,56 +50,23 @@ public class Play {
 		if (user.getCurrentHealth() < 1) {
 			user.setCurrentHealth(user.getTotalHealth());
 		}
-		String choice = null;
-		while (choice == null || choice.isEmpty()) {
-			System.out.println("What is your name?");
-			choice = sc.nextLine();
-		}
-		user.userName = choice;
-		choice = null;
-		while (choice == null || choice.isEmpty()) {
-			System.out.println("Hardcore mode? (y/n)");
-			choice = sc.nextLine();
-		}
-		if (choice.toLowerCase().startsWith("y")) {
-			user.hardcoreMode = true;
-		} else {
-			user.hardcoreMode = false;
-		}
-		int choice2 = 0;
-		while (choice2 != 1 && choice2 != 2 && choice2 != 3 && choice2 != 4
-				&& choice2 != 5) {
-			System.out.println("What class do you want to be?");
-			System.out.println("1 Barbarian (+20 Attack, -15 HP, -5 Speed)");
-			System.out.println("2 Knight (+15 Defence, +20 HP, -5 Attack)");
-			System.out
-					.println("3 Thief (+10 Attack, +5% Gold from enemies, +5 Speed)");
-			System.out.println("4 Warrior (+10 Attack, +10 Defense)");
-			System.out.println("5 Chicken Tender (MYSTERY)");
-			choice2 = sc.nextInt();
-		}
-		if (choice2 == 1) {
-			user.userClass = "Barbarian";
+		if (user.userClass == "Barbarian") {
 			user.setAttack(user.getAttack() + 20);
 			user.setSpeed(user.getSpeed() - 5);
 			user.setTotalHealth(user.getTotalHealth() - 15);
 			user.setCurrentHealth(user.getTotalHealth());
-		} else if (choice2 == 2) {
-			user.userClass = "Knight";
+		} else if (user.userClass == "Knight") {
 			user.setAttack(user.getAttack() - 5);
 			user.setDefense(user.getDefense() + 15);
 			user.setTotalHealth(user.getTotalHealth() + 20);
 			user.setCurrentHealth(user.getTotalHealth());
-		} else if (choice2 == 3) {
-			user.userClass = "Thief";
+		} else if (user.userClass == "Thief") {
 			user.setAttack(user.getAttack() + 10);
 			user.setSpeed(user.getSpeed() + 5);
-		} else if (choice2 == 4) {
-			user.userClass = "Warrior";
+		} else if (user.userClass == "Warrior") {
 			user.setAttack(user.getAttack() + 10);
 			user.setDefense(user.getDefense() + 10);
-		} else if (choice2 == 5) {
-			user.userClass = "Chicken Tender";
+		} else if (user.userClass == "Chicken Tender") {
 			user.setAttack(new Random().nextInt(21) + 5);
 			user.setDefense(new Random().nextInt(21) + 5);
 			user.setTotalHealth(new Random().nextInt(151) + 50);
