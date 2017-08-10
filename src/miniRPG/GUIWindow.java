@@ -30,6 +30,8 @@ public class GUIWindow extends Frame
 	private Label miningXpLabel;
 	private Label smithingLabel;
 	private Label smithingXpLabel;
+	private Label herbloreXpLabel;
+	private Label herbloreLabel;
 	private Label combatLabel;
 	private Label combatXpLabel;
 
@@ -118,6 +120,10 @@ public class GUIWindow extends Frame
     	stats.add(smithingLabel);
     	smithingXpLabel = new Label ("Smithing XP:" + user.getLevelObject("Smithing").getXp()); 
     	exp.add(smithingXpLabel);
+    	herbloreLabel = new Label ("Herblore Lvl:" + user.getLevel("Herblore")); 
+    	stats.add(herbloreLabel);
+    	herbloreXpLabel = new Label ("Herblore XP:" + user.getLevelObject("Herblore").getXp()); 
+    	exp.add(herbloreXpLabel);
     	combatLabel = new Label ("Combat Lvl:" + user.getLevel("Combat")); 
     	stats.add(combatLabel);  
     	combatXpLabel = new Label ("Combat XP:" + user.getLevelObject("Combat").getXp());
@@ -163,7 +169,7 @@ public class GUIWindow extends Frame
         // "super" Frame adds "this" object as a WindowEvent listener.
         
         setTitle("miniRPG");  // "super" Frame sets its title
-        setSize(500, 250);    // "super" Frame sets its initial window size
+        setSize(600, 250);    // "super" Frame sets its initial window size
         
         setVisible(true); //"super" Frame shows
         
@@ -190,8 +196,24 @@ public class GUIWindow extends Frame
     		messages.validate();
     		fishingLabel.setText("Fishing Lvl:" + user.getLevel("Fishing")); 
         	fishingXpLabel.setText("Fishing XP:" + user.getLevelObject("Fishing").getXp()); 
-    		
     	}
+    	if(evt.getSource() == MiningSelectButton) {
+    		status = Mining.mining(user);
+    		messages.setText(status);
+    		messages.validate();
+    		miningLabel.setText("Mining Lvl:" + user.getLevel("Mining"));
+    		miningXpLabel.setText("Fishing XP:" + user.getLevelObject("Mining").getXp());
+    	}
+    	if(evt.getSource() == InventorySelectButton){
+    		inventoryWindow frame = new inventoryWindow(user);
+    		frame.setVisible(true);
+    	}
+    	
+    	
+    	if(evt.getSource() == QuitSelectButton){
+    		System.exit(0);
+    	}
+    	
     }
     
     /* WindowEvent handlers */

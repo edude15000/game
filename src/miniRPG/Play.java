@@ -40,6 +40,7 @@ public class Play {
 	}
 
 	public static void setUpUserInfo() {
+		sc = new Scanner(System.in);
 		String choice = null;
 		while (choice == null || choice.isEmpty()) {
 			System.out.println("What is your name?");
