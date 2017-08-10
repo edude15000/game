@@ -14,14 +14,9 @@ public class GUIWindow extends Frame
 	implements ActionListener, WindowListener {
     
 	//Create player
-	protected User user = Play.startUser("test", "Chicken Tender", false);
+	protected User user;
 	
 	// Declare Label components for home menu
-	private Label healthLabel;
-	private Label currHealthLabel;
-	private Label attackLabel;
-	private Label defenseLabel;
-	
 	private Label fishingLabel;
 	private Label fishingXpLabel; 
 	private Label cookingLabel;
@@ -30,10 +25,8 @@ public class GUIWindow extends Frame
 	private Label miningXpLabel;
 	private Label smithingLabel;
 	private Label smithingXpLabel;
-	private Label combatLabel;
-	private Label combatXpLabel;
-
-	private Label moneyLabel;
+	private Label herbloreXpLabel;
+	private Label herbloreLabel;
 
 	// Declare console output
 	private TextField messages;
@@ -48,39 +41,24 @@ public class GUIWindow extends Frame
 	private Button FishingSelectButton;
 	private Button MiningSelectButton;
 	private Button QuitSelectButton;
+	private Button combatStatsSelectButton;
 	
-	// Declare menu options for combat - preliminary
-	private TextField enemyCombatLevelEntry;
-	private Button confirmEnemyLevelButton;
-	private Button cancelBattleButton;
+	public void updateLevels() {
+		fishingLabel.setText(Integer.toString(user.getLevel("Fishing")));
+		fishingXpLabel.setText(Integer.toString(user.getLevelObject("Fishing").getXp()));
+		cookingLabel.setText(Integer.toString(user.getLevel("Cooking")));
+		cookingXpLabel.setText(Integer.toString(user.getLevelObject("Cooking").getXp()));
+		miningLabel.setText(Integer.toString(user.getLevel("Mining")));
+		miningXpLabel.setText(Integer.toString(user.getLevelObject("Mining").getXp()));
+		smithingLabel.setText(Integer.toString(user.getLevel("Smithing")));
+		smithingXpLabel.setText(Integer.toString(user.getLevelObject("Smithing").getXp()));
+		herbloreLabel.setText(Integer.toString(user.getLevel("Herblore")));
+		herbloreXpLabel.setText(Integer.toString(user.getLevelObject("Herblore").getXp()));
+	}
 	
-	// Declare menu UI for combat - in-combat
-	private Label enemyName;
-	private Label enemyHP;/*
- * 	
- *  private Label healthLabel; 		player health and total health
- *	private Label currHealthLabel; 	*/
-	
-	// Declare menu options for in-combat
-	private Button useItemButton;
-	private Button skipItemButton;
-	private Button runButton;
-	
-	// Declare menu options for inventory
-	private List inventoryList; //list of all inventory items
-	private Button cancelInventoryButton;
-	
-	// Declare menu options for equipped items 
-	private List equippedList; //list of all equipped items
-	private Button cancelEquipmentButton;
-	
-	// Declare menu options for hospital
-	private TextField healPurchaseAmountEntry;
-	private Button confirmHealPurchaseButton;
-	private Button cancelHospitalButton;
-
     // Constructor to setup the GUI components
-    public GUIWindow() {
+    public GUIWindow(String userName, String userClass) {
+    	user = Play.startUser(userName, userClass, false);
     	
     	setLayout(new FlowLayout());
 	    	// "super" Frame, which is a Container, sets its layout to FlowLayout to arrange
@@ -93,40 +71,36 @@ public class GUIWindow extends Frame
     	
     	
     	// Main menu elements
-    	healthLabel = new Label("Total HP:" + user.getLevel("Health"));  // construct the Label component
-        add(healthLabel); // "super" Frame container adds Label component
-        
-    	currHealthLabel = new Label ("Current HP:" + user.getCurrentHealth());
-    	status.add(currHealthLabel);
-    	attackLabel = new Label ("Attack Lvl:" + user.getAttack()); 
-    	status.add(attackLabel);
-    	defenseLabel = new Label ("Defense Lvl:" + user.getDefense()); 
-    	status.add(defenseLabel); 
-    	fishingLabel = new Label ("Fishing Lvl:" + user.getLevel("Fishing")); 
+    	fishingLabel = new Label ("Fishing Lvl:" + user.getLevel("Fishing")+"      "); 
     	stats.add(fishingLabel); 
-    	fishingXpLabel = new Label ("Fishing XP:" + user.getLevelObject("Fishing").getXp()); 
+    	fishingXpLabel = new Label ("Fishing XP:" + user.getLevelObject("Fishing").getXp()+"      "); 
     	exp.add(fishingXpLabel);
-    	cookingLabel = new Label ("Cooking Lvl:" + user.getLevel("Cooking")); 
+    	cookingLabel = new Label ("Cooking Lvl:" + user.getLevel("Cooking")+"      "); 
     	stats.add(cookingLabel); 
-    	cookingXpLabel = new Label ("Cooking XP:" + user.getLevelObject("Cooking").getXp()); 
+    	cookingXpLabel = new Label ("Cooking XP:" + user.getLevelObject("Cooking").getXp()+"      "); 
     	exp.add(cookingXpLabel);
-    	miningLabel = new Label ("Mining Lvl:" + user.getLevel("Mining")); 
+    	miningLabel = new Label ("Mining Lvl:" + user.getLevel("Mining")+"      "); 
     	stats.add(miningLabel);  
-    	miningXpLabel = new Label ("Mining XP:" + user.getLevelObject("Mining").getXp()); 
+    	miningXpLabel = new Label ("Mining XP:" + user.getLevelObject("Mining").getXp()+"      "); 
     	exp.add(miningXpLabel);
-    	smithingLabel = new Label ("Smithing Lvl:" + user.getLevel("Smithing")); 
+    	smithingLabel = new Label ("Smithing Lvl:" + user.getLevel("Smithing")+"      "); 
     	stats.add(smithingLabel);
-    	smithingXpLabel = new Label ("Smithing XP:" + user.getLevelObject("Smithing").getXp()); 
+    	smithingXpLabel = new Label ("Smithing XP:" + user.getLevelObject("Smithing").getXp()+"      "); 
     	exp.add(smithingXpLabel);
-    	combatLabel = new Label ("Combat Lvl:" + user.getLevel("Combat")); 
-    	stats.add(combatLabel);  
-    	combatXpLabel = new Label ("Combat XP:" + user.getLevelObject("Combat").getXp());
-    	exp.add(combatXpLabel);
-    	moneyLabel = new Label ("$" + user.getMoney());
-    	status.add(moneyLabel);  
+    	herbloreLabel = new Label ("Herblore Lvl:" + user.getLevel("Herblore")+"      "); 
+    	stats.add(herbloreLabel);
+    	herbloreXpLabel = new Label ("Herblore XP:"+ user.getLevelObject("Herblore").getXp()+"      "); 
+    	exp.add(herbloreXpLabel);
+
     	
     	//Console window
-    	messages = new TextField("Status updates go here...", 55); // construct the TextField component
+    	if(!user.userName.isEmpty()){ // if no name is entered, skip to else statement
+    		messages = new TextField("Welcome to miniRPG, "+user.userName+"!", 55); // construct the TextField component
+    	}
+    	else{
+    		messages = new TextField("Welcome to miniRPG! You didn't introduce yourself; I'll call you Bobbert.",55);
+    		user.userName = "Bobbert";
+    	}
         messages.setEditable(false);       // set to read-only
         output.add(messages);              // "super" Frame container adds TextField component
         
@@ -139,7 +113,9 @@ public class GUIWindow extends Frame
         FishingSelectButton = new Button("Fish");  
         MiningSelectButton = new Button("Mine");    
         QuitSelectButton  = new Button("Quit");
+        combatStatsSelectButton = new Button(user.userClass+" Stats");
         options.add(combatSelectButton);
+        options.add(combatStatsSelectButton);
         options.add(InventorySelectButton);
         options.add(EquippedSelectButton);
         options.add(ShopSelectButton);
@@ -147,8 +123,6 @@ public class GUIWindow extends Frame
         options.add(FishingSelectButton);
         options.add(MiningSelectButton);
         options.add(QuitSelectButton);
-        
-
         combatSelectButton.addActionListener(this);
         InventorySelectButton.addActionListener(this);
         EquippedSelectButton.addActionListener(this);
@@ -157,13 +131,14 @@ public class GUIWindow extends Frame
         FishingSelectButton.addActionListener(this);
         MiningSelectButton.addActionListener(this);
         QuitSelectButton.addActionListener(this);
+        combatStatsSelectButton.addActionListener(this);
         
         addWindowListener(this);
         // "super" Frame (source object) fires WindowEvent.
         // "super" Frame adds "this" object as a WindowEvent listener.
         
         setTitle("miniRPG");  // "super" Frame sets its title
-        setSize(500, 250);    // "super" Frame sets its initial window size
+        setSize(650, 200);    // "super" Frame sets its initial window size
         
         setVisible(true); //"super" Frame shows
         
@@ -172,15 +147,8 @@ public class GUIWindow extends Frame
         add(exp);
         add(output);
         add(options);
-    }    
+    }       
 
-    
-    // The entry main() method
-    public static void main(String[] args) {
-        // Invoke the constructor (to set up the GUI) by allocating an instance
-    	new GUIWindow();
-    }
-    
     //ActionEvent handler 
     @Override
     public void actionPerformed(ActionEvent evt) {
@@ -190,11 +158,40 @@ public class GUIWindow extends Frame
     		messages.validate();
     		fishingLabel.setText("Fishing Lvl:" + user.getLevel("Fishing")); 
         	fishingXpLabel.setText("Fishing XP:" + user.getLevelObject("Fishing").getXp()); 
-    		
+    	}
+    	if(evt.getSource() == MiningSelectButton) {
+    		status = Mining.mining(user);
+    		messages.setText(status);
+    		messages.validate();
+    		miningLabel.setText("Mining Lvl:" + user.getLevel("Mining"));
+    		miningXpLabel.setText("Mining XP:" + user.getLevelObject("Mining").getXp());
+    	}
+    	if(evt.getSource() == InventorySelectButton){
+    		inventoryWindow frame = new inventoryWindow(user);
+    		frame.setVisible(true);
+    	}
+    	if(evt.getSource() == combatStatsSelectButton){
+    		combatStatsWindow frame = new combatStatsWindow(user);
+    		frame.setVisible(true);
+    	}
+    	if(evt.getSource() == HospitalSelectButton){
+    		hospitalWindow frame = new hospitalWindow(user);
+    		frame.setVisible(true);
+    	}
+    	if(evt.getSource() == combatSelectButton){
+    		//TODO: Remove the following line and make real combat
+    		user.setCurrentHealth(user.getCurrentHealth()-5);
+    	}
+    	if(evt.getSource() == ShopSelectButton){
+    		//TODO: Remove the following line and make real shop
+    		user.setMoney(user.getMoney()+5);
+    	}
+    	if(evt.getSource() == QuitSelectButton){
+    		System.exit(0);
     	}
     }
-    
-    /* WindowEvent handlers */
+
+	/* WindowEvent handlers */
     // Called back upon clicking close-window button
     @Override
     public void windowClosing(WindowEvent evt) {
