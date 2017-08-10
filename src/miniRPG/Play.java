@@ -50,23 +50,23 @@ public class Play {
 		if (user.getCurrentHealth() < 1) {
 			user.setCurrentHealth(user.getTotalHealth());
 		}
-		if (user.userClass == "Barbarian") {
+		if (user.userClass.equalsIgnoreCase("Barbarian")) {
 			user.setAttack(user.getAttack() + 20);
 			user.setSpeed(user.getSpeed() - 5);
 			user.setTotalHealth(user.getTotalHealth() - 15);
 			user.setCurrentHealth(user.getTotalHealth());
-		} else if (user.userClass == "Knight") {
+		} else if (user.userClass.equalsIgnoreCase("Knight")) {
 			user.setAttack(user.getAttack() - 5);
 			user.setDefense(user.getDefense() + 15);
 			user.setTotalHealth(user.getTotalHealth() + 20);
 			user.setCurrentHealth(user.getTotalHealth());
-		} else if (user.userClass == "Thief") {
+		} else if (user.userClass.equalsIgnoreCase("Thief")) {
 			user.setAttack(user.getAttack() + 10);
 			user.setSpeed(user.getSpeed() + 5);
-		} else if (user.userClass == "Warrior") {
+		} else if (user.userClass.equalsIgnoreCase("Warrior")) {
 			user.setAttack(user.getAttack() + 10);
 			user.setDefense(user.getDefense() + 10);
-		} else if (user.userClass == "Chicken Tender") {
+		} else if (user.userClass.equalsIgnoreCase("Chicken Tender")) {
 			user.setAttack(new Random().nextInt(21) + 5);
 			user.setDefense(new Random().nextInt(21) + 5);
 			user.setTotalHealth(new Random().nextInt(151) + 50);
