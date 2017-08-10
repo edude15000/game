@@ -6,6 +6,11 @@ public class Consumable extends Item {
 	int attackBoost;
 	int defenseBoost;
 	int consumableValue;
+	String potionSize;
+	String potionType;
+	int potionRequiredLevel;
+	String herbColor;
+	String syrumColor;
 
 	public Consumable(String consumableName, int healAmount, String cosumableType, int consumableValue, int attackBoost,
 			int defenseBoost) {
