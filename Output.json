@@ -1431,7 +1431,596 @@
         "itemRequiredLevel": 12,
         "itemValue": 1
       }
-    }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Iron Ore",
+        "levelRequiredToSmith": 5,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Iron Bar",
+            "requiredLevelToSmith": 5,
+            "value": 1,
+            "itemName": "Iron Bar",
+            "itemType": "Iron Bar",
+            "itemRequiredLevel": 5,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 100,
+        "itemName": "Iron Ore",
+        "itemType": "Iron Ore",
+        "itemRequiredLevel": 5,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Bronze Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Bronze Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Bronze Bar",
+            "itemType": "Bronze Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 50,
+        "itemName": "Bronze Ore",
+        "itemType": "Bronze Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Rune Ore",
+        "levelRequiredToSmith": 25,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Rune Bar",
+            "requiredLevelToSmith": 25,
+            "value": 1,
+            "itemName": "Rune Bar",
+            "itemType": "Rune Bar",
+            "itemRequiredLevel": 25,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 1000,
+        "itemName": "Rune Ore",
+        "itemType": "Rune Ore",
+        "itemRequiredLevel": 25,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Smeltable",
+      "data": {
+        "name": "Emerald",
+        "requiredLevelToSmith": 6,
+        "value": 1,
+        "itemName": "Emerald",
+        "itemType": "Emerald",
+        "itemRequiredLevel": 6,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Adamantite Ore",
+        "levelRequiredToSmith": 20,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Adamantite Bar",
+            "requiredLevelToSmith": 20,
+            "value": 1,
+            "itemName": "Adamantite Bar",
+            "itemType": "Adamantite Bar",
+            "itemRequiredLevel": 20,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 750,
+        "itemName": "Adamantite Ore",
+        "itemType": "Adamantite Ore",
+        "itemRequiredLevel": 20,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Adamantite Ore",
+        "levelRequiredToSmith": 20,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Adamantite Bar",
+            "requiredLevelToSmith": 20,
+            "value": 1,
+            "itemName": "Adamantite Bar",
+            "itemType": "Adamantite Bar",
+            "itemRequiredLevel": 20,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 750,
+        "itemName": "Adamantite Ore",
+        "itemType": "Adamantite Ore",
+        "itemRequiredLevel": 20,
+        "itemValue": 1
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    {
+      "type": "miniRPG.Ore",
+      "data": {
+        "name": "Gold Ore",
+        "levelRequiredToSmith": 1,
+        "value": 0,
+        "newItem": {
+          "type": "miniRPG.Smeltable",
+          "data": {
+            "name": "Gold Bar",
+            "requiredLevelToSmith": 1,
+            "value": 1,
+            "itemName": "Gold Bar",
+            "itemType": "Gold Bar",
+            "itemRequiredLevel": 1,
+            "itemValue": 1
+          }
+        },
+        "smithXp": 75,
+        "itemName": "Gold Ore",
+        "itemType": "Gold Ore",
+        "itemRequiredLevel": 1,
+        "itemValue": 100
+      }
+    },
+    null,
+    null
   ],
   "equippedItems": [
     {
@@ -1596,9 +2185,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 5365,
+      "levelXp": 168410,
       "levelName": "Mining",
-      "levelBeforeLevelingUp": 7
+      "levelBeforeLevelingUp": 30
     },
     {
       "xpList": [
@@ -1635,9 +2224,9 @@
         124800,
         2147483647
       ],
-      "levelXp": 2090,
+      "levelXp": 201040,
       "levelName": "Smithing",
-      "levelBeforeLevelingUp": 5
+      "levelBeforeLevelingUp": 30
     },
     {
       "xpList": [

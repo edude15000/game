@@ -55,7 +55,7 @@ public class Mining {
 				}
 			} else if (user.getLevel("Mining") < 20) {
 				if (chance <= 15) {
-					user.itemList.add(new Ore("Mihtril Ore", 15, 1, 400));
+					user.itemList.add(new Ore("Mithril Ore", 15, 1, 400));
 					user.getLevelObject("Mining").gainXp(400);
 					result += " You mine mithril ore and gain 400 XP!";
 				} else if (chance <= 50) {
@@ -73,7 +73,7 @@ public class Mining {
 					user.getLevelObject("Mining").gainXp(750);
 					result += " You mine adamantite ore and gain 500 XP!";
 				} else if (chance <= 50) {
-					user.itemList.add(new Ore("Mihtril Ore", 15, 1, 400));
+					user.itemList.add(new Ore("Mithril Ore", 15, 1, 400));
 					user.getLevelObject("Mining").gainXp(400);
 					result += " You mine mithril ore and gain 400 XP!";
 				} else {
@@ -91,7 +91,7 @@ public class Mining {
 					user.getLevelObject("Mining").gainXp(750);
 					result += " You mine adamantite ore and gain 500 XP!";
 				} else {
-					user.itemList.add(new Ore("Mihtril Ore", 15, 1, 400));
+					user.itemList.add(new Ore("Mithril Ore", 15, 1, 400));
 					user.getLevelObject("Mining").gainXp(400);
 					result += " You mine mithril ore and gain 400 XP!";
 				}
