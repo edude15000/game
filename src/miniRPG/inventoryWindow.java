@@ -87,7 +87,6 @@ implements ActionListener, WindowListener {
 			this.dispose();
 		}
 		if(evt.getSource() == confirmInventoryButton){
-			System.out.println("button press");
 			consumeItem(this.user, this.selection);
 		}
 	}

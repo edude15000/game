@@ -14,7 +14,7 @@ public class GUIWindow extends Frame
 	implements ActionListener, WindowListener {
     
 	//Create player
-	protected User user = Play.startUser("test", "Chicken Tender", false);
+	protected User user;
 	
 	// Declare Label components for home menu
 	private Label healthLabel;
@@ -52,7 +52,8 @@ public class GUIWindow extends Frame
 	private Button combatStatsSelectButton;
 	
     // Constructor to setup the GUI components
-    public GUIWindow() {
+    public GUIWindow(String userName, String userClass) {
+    	user = Play.startUser(userName, userClass, false);
     	
     	setLayout(new FlowLayout());
 	    	// "super" Frame, which is a Container, sets its layout to FlowLayout to arrange
