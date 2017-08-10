@@ -18,8 +18,7 @@ public class User {
 	public ArrayList<Level> levelList = new ArrayList<>();
 	public ArrayList<Item> bankedItemList = new ArrayList<>();
 
-	public User(int totalHealth, int currentHealth, int money, int attack,
-			int defense, int speed) {
+	public User(int totalHealth, int currentHealth, int money, int attack, int defense, int speed) {
 		this.totalHealth = totalHealth;
 		this.currentHealth = currentHealth;
 		this.money = money;
@@ -32,6 +31,7 @@ public class User {
 		levelList.add(new Level(0, "Smithing", 1));
 		levelList.add(new Level(0, "Cooking", 1));
 		levelList.add(new Level(0, "Fishing", 1));
+		levelList.add(new Level(0, "Herblore", 1));
 		// Add as needed
 	}
 
@@ -40,8 +40,7 @@ public class User {
 		String name = item.itemName;
 		if (item instanceof Cookable) {
 			if (getLevel("Cooking") < ((Cookable) item).getRequiredLevel()) {
-				System.out.println("You need level " + item.itemRequiredLevel
-						+ " cooking to cook this item.");
+				System.out.println("You need level " + item.itemRequiredLevel + " cooking to cook this item.");
 				return;
 			}
 			ArrayList<Item> removeIndexes = new ArrayList<>();
@@ -52,8 +51,7 @@ public class User {
 					if (new Random().nextInt(100) + 1 <= item2.chanceToCook) {
 						addIndexes.add(item2.newItem);
 						getLevelObject("Cooking").gainXp(item2.cookableXP);
-						System.out.println("You successfully cook the "
-								+ item.itemName + ", giving you "
+						System.out.println("You successfully cook the " + item.itemName + ", giving you "
 								+ item2.cookableXP + " XP!");
 					} else {
 						System.out.println("You burn the " + item.itemName);
@@ -71,17 +69,13 @@ public class User {
 		} else if (item instanceof Consumable) {
 			heal(((Consumable) item).getHealAmount());
 			if (((Consumable) item).getHealAmount() > (getTotalHealth() - getCurrentHealth())) {
-				System.out.println("You consume the " + item.getName()
-						+ ", healing your HP fully!");
+				System.out.println("You consume the " + item.getName() + ", healing your HP fully!");
 			}
-			System.out.println("You consume the " + item.getName()
-					+ ", healing you by " + ((Consumable) item).healAmount
-					+ " HP!");
-		} else if (item instanceof Weapon || item instanceof Armor
-				|| item instanceof Jewelry) {
+			System.out.println("You consume the " + item.getName() + ", healing you by "
+					+ ((Consumable) item).healAmount + " HP!");
+		} else if (item instanceof Weapon || item instanceof Armor || item instanceof Jewelry) {
 			if (getLevel("Combat") < item.getRequiredLevel()) {
-				System.out.println("You need level " + item.itemRequiredLevel
-						+ " combat to equip this item.");
+				System.out.println("You need level " + item.itemRequiredLevel + " combat to equip this item.");
 				return;
 			}
 			String type = item.getType();
@@ -97,8 +91,7 @@ public class User {
 			equipBonus(item);
 		} else if (item instanceof Ore) {
 			if (getLevel("Smithing") < item.getRequiredLevel()) {
-				System.out.println("You need level " + item.itemRequiredLevel
-						+ " smithing to smith this item.");
+				System.out.println("You need level " + item.itemRequiredLevel + " smithing to smith this item.");
 				return;
 			}
 			ArrayList<Item> removeIndexes = new ArrayList<>();
@@ -110,13 +103,10 @@ public class User {
 					if (new Random().nextInt(100) + 1 > 50) {
 						addIndexes.add(bar);
 						getLevelObject("Smithing").gainXp(ore.smithXp);
-						System.out
-								.println("You successfully smelt the metal giving you "
-										+ ore.smithXp + " XP!");
+						System.out.println("You successfully smelt the metal giving you " + ore.smithXp + " XP!");
 					} else {
 						getLevelObject("Smithing").gainXp(30);
-						System.out
-								.println("You fail to smelt the bar, losing the ore.");
+						System.out.println("You fail to smelt the bar, losing the ore.");
 					}
 					removeIndexes.add(i);
 				}
@@ -131,6 +121,8 @@ public class User {
 		} else if (item instanceof Smeltable) {
 			Play.smeltList((Smeltable) item);
 			return;
+		} else if (item instanceof Ingredient) {
+			Play.potionList((Ingredient) item);
 		}
 		removeItem(spotInInventory);
 	}
@@ -253,21 +245,16 @@ public class User {
 
 	public void levelUp(Level l) {
 		if (l.levelName.equals("Combat")) {
-			setAttack(getAttack()
-					+ (int) Math.pow(getLevel("Combat"), 1.1)
-					+ (int) (new Random().nextDouble() * Math.pow(
-							getLevel("Combat"), 1.05)));
-			setDefense(getDefense()
-					+ (int) Math.pow(getLevel("Combat"), 1.0005)
-					+ (int) (new Random().nextDouble() * Math.pow(
-							getLevel("Combat"), 1.0005)));
+			setAttack(getAttack() + (int) Math.pow(getLevel("Combat"), 1.1)
+					+ (int) (new Random().nextDouble() * Math.pow(getLevel("Combat"), 1.05)));
+			setDefense(getDefense() + (int) Math.pow(getLevel("Combat"), 1.0005)
+					+ (int) (new Random().nextDouble() * Math.pow(getLevel("Combat"), 1.0005)));
 			setSpeed(getSpeed() + new Random().nextInt(10) + 5);
-			setTotalHealth((int) ((getTotalHealth() + 163) + ((new Random()
-					.nextInt(163) + 163) * (new Random().nextDouble()))));
+			setTotalHealth((int) ((getTotalHealth() + 163)
+					+ ((new Random().nextInt(163) + 163) * (new Random().nextDouble()))));
 			setCurrentHealth(getTotalHealth());
 		}
-		System.out.println("You have leveled up! You are now level "
-				+ l.getLevelFromXP(l.getXp()) + " " + l.getName());
+		System.out.println("You have leveled up! You are now level " + l.getLevelFromXP(l.getXp()) + " " + l.getName());
 	}
 
 	public int getSpeed() {
@@ -307,25 +294,16 @@ public class User {
 
 	public void displayStats() {
 		System.out.println();
-		System.out.println(userName.toUpperCase() + "\t"
-				+ userClass.toUpperCase());
-		System.out.println("Health: " + getCurrentHealth() + "/"
-				+ getTotalHealth() + "\tMoney: " + getMoney() + "\tAttack: "
-				+ getAttack() + "\tDefense: " + getDefense() + "\tSpeed: "
-				+ getSpeed());
+		System.out.println(userName.toUpperCase() + "\t" + userClass.toUpperCase());
+		System.out.println("Health: " + getCurrentHealth() + "/" + getTotalHealth() + "\tMoney: " + getMoney()
+				+ "\tAttack: " + getAttack() + "\tDefense: " + getDefense() + "\tSpeed: " + getSpeed());
 		for (Level level : this.levelList) {
-			System.out
-					.print(level.levelName
-							+ ": ("
-							+ level.getLevelFromXP(level.getXp())
-							+ ") "
-							+ level.getXp()
-							+ "/"
-							+ level.getXPFromLevel(level.getLevelFromXP(level
-									.getXp()) + 1) + "\t");
+			System.out.print(level.levelName + ": (" + level.getLevelFromXP(level.getXp()) + ") " + level.getXp() + "/"
+					+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1) + "\t");
 		}
 		System.out.println();
-		String sword = null, shield = null, platebody = null, platelegs = null, helmet = null, boots = null, ring = null, necklace = null;
+		String sword = null, shield = null, platebody = null, platelegs = null, helmet = null, boots = null,
+				ring = null, necklace = null;
 		for (Item i : equippedItems) {
 			if (i.itemType.equals("sword")) {
 				sword = i.itemName + " (+" + ((Weapon) i).attackBoost + ")";
@@ -341,31 +319,24 @@ public class User {
 				boots = i.itemName + " (+" + ((Armor) i).defenseBoost + ")";
 			} else if (i.itemType.toLowerCase().contains("ring")) {
 				if (i.itemName.toLowerCase().contains("sapphire")) {
-					ring = i.itemName + " (+" + ((Jewelry) i).defenseBoost
-							+ " DEF)";
+					ring = i.itemName + " (+" + ((Jewelry) i).defenseBoost + " DEF)";
 				} else if (i.itemName.toLowerCase().contains("emerald")) {
 					ring = i.itemName + " (+" + ((Jewelry) i).hpBoost + " HP)";
 				} else if (i.itemName.toLowerCase().contains("ruby")) {
-					ring = i.itemName + " (+" + ((Jewelry) i).attackBoost
-							+ " ATT)";
+					ring = i.itemName + " (+" + ((Jewelry) i).attackBoost + " ATT)";
 				} else {
-					ring = i.itemName + " (+" + ((Jewelry) i).attackBoost
-							+ " ATT, +" + ((Jewelry) i).defenseBoost
+					ring = i.itemName + " (+" + ((Jewelry) i).attackBoost + " ATT, +" + ((Jewelry) i).defenseBoost
 							+ " DEF, +" + ((Jewelry) i).hpBoost + " HP)";
 				}
 			} else if (i.itemType.toLowerCase().contains("necklace")) {
 				if (i.itemName.toLowerCase().contains("sapphire")) {
-					necklace = i.itemName + " (+" + ((Jewelry) i).defenseBoost
-							+ " DEF)";
+					necklace = i.itemName + " (+" + ((Jewelry) i).defenseBoost + " DEF)";
 				} else if (i.itemName.toLowerCase().contains("emerald")) {
-					necklace = i.itemName + " (+" + ((Jewelry) i).hpBoost
-							+ " HP)";
+					necklace = i.itemName + " (+" + ((Jewelry) i).hpBoost + " HP)";
 				} else if (i.itemName.toLowerCase().contains("ruby")) {
-					necklace = i.itemName + " (+" + ((Jewelry) i).attackBoost
-							+ " ATT)";
+					necklace = i.itemName + " (+" + ((Jewelry) i).attackBoost + " ATT)";
 				} else {
-					necklace = i.itemName + " (+" + ((Jewelry) i).attackBoost
-							+ " ATT, +" + ((Jewelry) i).defenseBoost
+					necklace = i.itemName + " (+" + ((Jewelry) i).attackBoost + " ATT, +" + ((Jewelry) i).defenseBoost
 							+ " DEF, +" + ((Jewelry) i).hpBoost + " HP)";
 				}
 			}
@@ -394,10 +365,8 @@ public class User {
 		if (necklace == null) {
 			necklace = "N/A";
 		}
-		System.out.println("Sword: " + sword + "\tShield: " + shield
-				+ "\tBoots: " + boots);
-		System.out.println("Helmet: " + helmet + "\tPlatebody: " + platebody
-				+ "\tPlatelegs: " + platelegs);
+		System.out.println("Sword: " + sword + "\tShield: " + shield + "\tBoots: " + boots);
+		System.out.println("Helmet: " + helmet + "\tPlatebody: " + platebody + "\tPlatelegs: " + platelegs);
 		System.out.println("Ring: " + ring + "\tNecklace: " + necklace);
 	}
 }
