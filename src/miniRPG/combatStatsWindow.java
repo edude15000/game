@@ -60,7 +60,7 @@ implements ActionListener, WindowListener {
 
 		/* Window Configurations!*/
 		setTitle("Combat Stats");
-		setSize(320, 160);		
+		setSize(258, 190);		
 		setVisible(true);// Inventory window shows
 		add(healthPanel);
 		add(stats);

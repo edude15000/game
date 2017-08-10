@@ -81,7 +81,7 @@ public class GUIWindow extends Frame
 
     	
     	//Console window
-    	if(!user.userName.isEmpty()){
+    	if(!user.userName.isEmpty()){ // if no name is entered, skip to else statement
     		messages = new TextField("Welcome to miniRPG, "+user.userName+"!", 55); // construct the TextField component
     	}
     	else{
@@ -160,6 +160,14 @@ public class GUIWindow extends Frame
     	if(evt.getSource() == combatStatsSelectButton){
     		combatStatsWindow frame = new combatStatsWindow(user);
     		frame.setVisible(true);
+    	}
+    	if(evt.getSource() == HospitalSelectButton){
+    		hospitalWindow frame = new hospitalWindow(user);
+    		frame.setVisible(true);
+    	}
+    	if(evt.getSource() == combatSelectButton){
+    		//TODO: Remove the following line and make real combat
+    		user.setCurrentHealth(user.getCurrentHealth()-5);
     	}
     	if(evt.getSource() == QuitSelectButton){
     		System.exit(0);
