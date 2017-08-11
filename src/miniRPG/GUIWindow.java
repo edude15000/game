@@ -20,10 +20,6 @@ import java.io.IOException;
 // A GUI program is written as a subclass of Frame - the top-level container
 // This subclass inherits all properties from Frame, e.g., title, icon, buttons, content-pane
 public class GUIWindow extends Frame implements ActionListener, WindowListener {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	// Create player
@@ -50,6 +46,12 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 	private Button MiningSelectButton;
 	private Button QuitSelectButton;
 	private Button combatStatsSelectButton;
+	
+	private SaveDialogue saveframe;
+	private inventoryWindow inventoryframe;
+	private hospitalWindow hospitalframe;
+	private combatStatsWindow statsframe;
+	
 
 	public void updateLevels() {
 		fishingLabel.setText(Integer.toString(user.getLevel("Fishing")));
@@ -172,16 +174,16 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 					+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
 		}
 		if (evt.getSource() == InventorySelectButton) {
-			inventoryWindow frame = new inventoryWindow(user);
-			frame.setVisible(true);
+			inventoryframe= new inventoryWindow(user);
+			inventoryframe.setVisible(true);
 		}
 		if (evt.getSource() == combatStatsSelectButton) {
-			combatStatsWindow frame = new combatStatsWindow(user);
-			frame.setVisible(true);
+			statsframe = new combatStatsWindow(user);
+			statsframe.setVisible(true);
 		}
 		if (evt.getSource() == HospitalSelectButton) {
-			hospitalWindow frame = new hospitalWindow(user);
-			frame.setVisible(true);
+			hospitalframe = new hospitalWindow(user);
+			hospitalframe.setVisible(true);
 		}
 		if (evt.getSource() == combatSelectButton) {
 			// TODO: Remove the following line and make real combat
@@ -205,7 +207,7 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 	// Called back upon clicking close-window button
 	@Override
 	public void windowClosing(WindowEvent evt) {
-		System.exit(0); // Terminate the program
+		saveframe = new SaveDialogue(user);
 	}
 
 	// Not Used, but need to provide an empty body to compile.
@@ -227,6 +229,22 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 
 	@Override
 	public void windowActivated(WindowEvent evt) {
+		try{
+			saveframe.dispose();
+		}
+		catch(NullPointerException e) {}
+		try{
+			hospitalframe.dispose();
+		}
+		catch(NullPointerException e) {}
+		try{
+			inventoryframe.dispose();
+		}
+		catch(NullPointerException e) {}
+		try{
+			statsframe.dispose();
+		}
+		catch(NullPointerException e) {}
 	}
 
 	@Override

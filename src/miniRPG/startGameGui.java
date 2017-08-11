@@ -71,7 +71,7 @@ public class startGameGui extends Frame implements ActionListener, WindowListene
 		cancelButton = new Button("Quit");
 		confirmButton = new Button("Start!");
 		
-		// Initialize hardcore setting to be false w/ selected checkbox
+		// Initialize hardcore
 		hardcoreMode = false;
 
 		// add listeners
