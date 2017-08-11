@@ -21,40 +21,37 @@ public class SaveDialogue extends Frame implements ActionListener, WindowListene
 	private Button noSaveButton;
 	private Button cancelButton;
 	
-	private Panel buttonPanel;
-	private Panel textPanel;
+	private Panel buttons;
 	
 	private User user;
 	
 	public SaveDialogue(User user) {
 		this.user = user;
 		
-		dialogueText = new Label("Save before exiting?");
+		dialogueText = new Label("                    Save before exiting?                    ");
 		saveButton   = new Button("Save");
 		noSaveButton = new Button("Don't Save");
 		cancelButton = new Button("Cancel");
 		saveButton.addActionListener(this);
 		noSaveButton.addActionListener(this);
 		cancelButton.addActionListener(this);
+
+		buttons = new Panel();
 		
-		buttonPanel = new Panel();
-		textPanel = new Panel();
-		
-		textPanel.add(dialogueText);
-		buttonPanel.add(saveButton);
-		buttonPanel.add(noSaveButton);
-		buttonPanel.add(cancelButton);
+		buttons.add(dialogueText);
+		buttons.add(saveButton);
+		buttons.add(noSaveButton);
+		buttons.add(cancelButton);
+		this.add(buttons);
 		
 		/* Window Setup */
 		addWindowListener(this);
 		// "super" Frame (source object) fires WindowEvent.
 		// "super" Frame adds "this" object as a WindowEvent listener.
 		setTitle("Save");
-		setSize(300, 100);
+		setSize(300, 110);
 		setVisible(true);
-
-		add(textPanel);
-		add(buttonPanel);
+		
 		
 	}
 	// ActionEvent handlers
