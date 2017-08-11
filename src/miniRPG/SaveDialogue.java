@@ -19,6 +19,7 @@ public class SaveDialogue extends Frame implements ActionListener, WindowListene
 	private Label dialogueText;
 	private Button saveButton;
 	private Button noSaveButton;
+	private Button cancelButton;
 	
 	private Panel buttonPanel;
 	private Panel textPanel;
@@ -28,11 +29,13 @@ public class SaveDialogue extends Frame implements ActionListener, WindowListene
 	public SaveDialogue(User user) {
 		this.user = user;
 		
-		dialogueText = new Label("Would you like to save before exiting?");
-		saveButton = new Button("Save");
+		dialogueText = new Label("Save before exiting?");
+		saveButton   = new Button("Save");
 		noSaveButton = new Button("Don't Save");
+		cancelButton = new Button("Cancel");
 		saveButton.addActionListener(this);
 		noSaveButton.addActionListener(this);
+		cancelButton.addActionListener(this);
 		
 		buttonPanel = new Panel();
 		textPanel = new Panel();
@@ -40,17 +43,19 @@ public class SaveDialogue extends Frame implements ActionListener, WindowListene
 		textPanel.add(dialogueText);
 		buttonPanel.add(saveButton);
 		buttonPanel.add(noSaveButton);
+		buttonPanel.add(cancelButton);
 		
 		/* Window Setup */
 		addWindowListener(this);
 		// "super" Frame (source object) fires WindowEvent.
 		// "super" Frame adds "this" object as a WindowEvent listener.
-		setTitle("Quit without saving?");
-		setSize(100, 50);
+		setTitle("Save");
+		setSize(300, 100);
 		setVisible(true);
 
 		add(textPanel);
 		add(buttonPanel);
+		
 	}
 	// ActionEvent handlers
 	@Override
@@ -59,20 +64,18 @@ public class SaveDialogue extends Frame implements ActionListener, WindowListene
 			try {
 				Play.saveData(user);
 			} catch (IOException e) {
+				System.out.println("ERR: No user found to save");
 				e.printStackTrace();
-				System.exit(0);
 			}
 			System.exit(0);
 		}
 		if(evt.getSource() == noSaveButton){
 			System.exit(0);
 		}
-	}
-	
-	
-	
-	
-	
+		if(evt.getSource() == cancelButton){
+			this.dispose();
+		}
+	}	
 	
 	/* WindowEvent handlers */
 	// Called back upon clicking close-window button

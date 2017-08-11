@@ -60,6 +60,7 @@ public class hospitalWindow extends Frame implements ActionListener, WindowListe
 
 		healClarify = new Label("The Hospital charges $1 to heal 1 HP.");
 		healQuestion = new Label("How much would you like to heal?");
+		healQuestion.setAlignment(Label.CENTER);
 		healAmount = new TextField("0", 5);
 		priceLabel = new Label("$" + user.getMoney());
 		closeButton = new Button("Leave Hospital");

@@ -133,7 +133,7 @@ public class startGameGui extends Frame implements ActionListener, WindowListene
 		if (user == null) {
 			new startGameGui();
 		} else {
-			GUIWindow frame = new GUIWindow(user.userName, user.userClass, user.hardcoreMode);
+			mainMenu frame = new mainMenu(user.userName, user.userClass, user.hardcoreMode);
 			frame.setVisible(true);
 		}
 	}
@@ -146,9 +146,9 @@ public class startGameGui extends Frame implements ActionListener, WindowListene
 		}
 		if (evt.getSource() == confirmButton) {
 			userName = nameEntry.getText();
-			GUIWindow frame;
+			mainMenu frame;
 			try {
-				frame = new GUIWindow(userName, userClass, hardcoreMode);
+				frame = new mainMenu(userName, userClass, hardcoreMode);
 				frame.setVisible(true);
 				this.setVisible(false);
 			} catch (IOException e) {

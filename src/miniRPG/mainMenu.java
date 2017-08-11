@@ -19,7 +19,7 @@ import java.io.IOException;
 
 // A GUI program is written as a subclass of Frame - the top-level container
 // This subclass inherits all properties from Frame, e.g., title, icon, buttons, content-pane
-public class GUIWindow extends Frame implements ActionListener, WindowListener {
+public class mainMenu extends Frame implements ActionListener, WindowListener {
 	private static final long serialVersionUID = 1L;
 
 	// Create player
@@ -62,7 +62,7 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 	}
 
 	// Constructor to setup the GUI components
-	public GUIWindow(String userName, String userClass, boolean hardcoreMode) throws IOException {
+	public mainMenu(String userName, String userClass, boolean hardcoreMode) throws IOException {
 		user = Play.startUser(userName, userClass, hardcoreMode);
 		Play.saveData(user);
 		setLayout(new FlowLayout());
@@ -194,12 +194,7 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 			user.setMoney(user.getMoney() + 5);
 		}
 		if (evt.getSource() == QuitSelectButton) {
-			try {
-				Play.saveData(user); // TODO : SAVE AFTER ACTION
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			System.exit(0);
+			saveframe = new SaveDialogue(user);
 		}
 	}
 
