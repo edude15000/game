@@ -2,11 +2,13 @@ package miniRPG;
 
 // Using Frame class in package java.awt
 import java.awt.Button;
+import java.awt.Checkbox;
 import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.Label;
 import java.awt.List;
 import java.awt.Panel;
+import java.awt.CheckboxGroup;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,11 +22,7 @@ import java.io.IOException;
 import javax.swing.ButtonGroup;
 import javax.swing.JRadioButton;
 
-public class startGameGui extends Frame implements ActionListener, WindowListener {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class startGameGui extends Frame implements ActionListener, WindowListener, ItemListener {
 	// UI Elements
 	private Label nameLabel;
 	private Label classLabel;
@@ -33,8 +31,9 @@ public class startGameGui extends Frame implements ActionListener, WindowListene
 	private Button cancelButton;
 	private Button confirmButton;
 	private TextField nameEntry;
-	JRadioButton noButton;
-	JRadioButton yesButton;
+	private CheckboxGroup checkGroup;
+	private Checkbox noButton;
+	private Checkbox yesButton;
 
 	// Selection var for classList
 	private String userClass;
@@ -54,22 +53,14 @@ public class startGameGui extends Frame implements ActionListener, WindowListene
 		nameEntry = new TextField("", 30);
 		classLabel = new Label("Select a class:");
 		classList = new List(7, false);
-		hardcoreModeLabel = new Label("Hardcore mode? (reset on death)");
+		hardcoreModeLabel = new Label("Hardcore mode? (Reset on death.)");
 
-		yesButton = new JRadioButton("Yes");
-		yesButton.setMnemonic(KeyEvent.VK_B);
-		yesButton.setActionCommand("Yes");
-		yesButton.setSelected(false);
-
-		noButton = new JRadioButton("No");
-		noButton.setMnemonic(KeyEvent.VK_B);
-		noButton.setActionCommand("No");
-		noButton.setSelected(true);
-
-		ButtonGroup group = new ButtonGroup();
-		group.add(noButton);
-		group.add(yesButton);
-
+		yesButton = new Checkbox("Yes", checkGroup, false);
+		noButton = new Checkbox("No", checkGroup, true);
+		yesButton.setCheckboxGroup(checkGroup);
+		noButton.setCheckboxGroup(checkGroup);
+		noButton.setEnabled(false);
+		
 		classList.add("Barbarian (+20 ATK; -15 HP, -5 SPD)");
 		classList.add("Knight (-5 ATK, +15 DEF; +20 HP)");
 		classList.add("Thief (+10 ATK; +5% GP Gain, +5 SPD)");
@@ -79,26 +70,16 @@ public class startGameGui extends Frame implements ActionListener, WindowListene
 		userClass = "Barbarian";
 		cancelButton = new Button("Quit");
 		confirmButton = new Button("Start!");
-
+		
+		// Initialize hardcore setting to be false w/ selected checkbox
 		hardcoreMode = false;
 
 		// add listeners
 		cancelButton.addActionListener(this);
 		confirmButton.addActionListener(this);
 		classList.addActionListener(this);
-		noButton.addActionListener(this);
-		yesButton.addActionListener(this);
-
-		noButton.addItemListener(new ItemListener() {
-			@Override
-			public void itemStateChanged(ItemEvent arg0) {
-				if (noButton.isSelected()) {
-					hardcoreMode = false;
-				} else {
-					hardcoreMode = true;
-				}
-			}
-		});
+		noButton.addItemListener(this);
+		yesButton.addItemListener(this);
 
 		// classList Listener definition
 		classList.addItemListener(new ItemListener() {
@@ -176,6 +157,22 @@ public class startGameGui extends Frame implements ActionListener, WindowListene
 
 		}
 	}
+	// Item event handlers
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		if(e.getItemSelectable() == yesButton){
+			hardcoreMode = true;
+			noButton.setState(false);
+			yesButton.setEnabled(false);
+			noButton.setEnabled(true);
+		}
+		else{
+			hardcoreMode = false;
+			yesButton.setState(false);
+			yesButton.setEnabled(true);
+			noButton.setEnabled(false);
+		}
+	}
 
 	/* WindowEvent handlers */
 	// Called back upon clicking close-window button
@@ -185,28 +182,10 @@ public class startGameGui extends Frame implements ActionListener, WindowListene
 	}
 
 	// Not Used, but need to provide an empty body to compile.
-	@Override
-	public void windowOpened(WindowEvent evt) {
-	}
-
-	@Override
-	public void windowClosed(WindowEvent evt) {
-	}
-
-	@Override
-	public void windowIconified(WindowEvent evt) {
-	}
-
-	@Override
-	public void windowDeiconified(WindowEvent evt) {
-	}
-
-	@Override
-	public void windowActivated(WindowEvent evt) {
-	}
-
-	@Override
-	public void windowDeactivated(WindowEvent evt) {
-	}
-
+	@Override public void windowOpened(WindowEvent evt) {}
+	@Override public void windowClosed(WindowEvent evt) {}
+	@Override public void windowIconified(WindowEvent evt) {}
+	@Override public void windowDeiconified(WindowEvent evt) {}
+	@Override public void windowActivated(WindowEvent evt) {}
+	@Override public void windowDeactivated(WindowEvent evt) {}
 }

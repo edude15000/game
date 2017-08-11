@@ -139,7 +139,7 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 		// "super" Frame adds "this" object as a WindowEvent listener.
 
 		setTitle("miniRPG"); // "super" Frame sets its title
-		setSize(650, 200); // "super" Frame sets its initial window size
+		setSize(590, 200); // "super" Frame sets its initial window size
 
 		setVisible(true); // "super" Frame shows
 

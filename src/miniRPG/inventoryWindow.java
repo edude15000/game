@@ -55,6 +55,7 @@ public class inventoryWindow extends Frame implements ActionListener, WindowList
 		// Establish button
 		cancelInventoryButton = new Button("Cancel");
 		confirmInventoryButton = new Button("Use");
+		confirmInventoryButton.setEnabled(false); // activates when item is selected
 		inventoryList = new java.awt.List(8);// init the list gui object to scroll, but only display 8 rows at a time
 
 		messages = new TextField("Select an item, then click \"Use\".", 30);
@@ -69,6 +70,7 @@ public class inventoryWindow extends Frame implements ActionListener, WindowList
 		inventoryList.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent ievt) {
 				selection = inventoryList.getSelectedIndex();
+				confirmInventoryButton.setEnabled(true);
 			}
 		});
 
@@ -104,6 +106,7 @@ public class inventoryWindow extends Frame implements ActionListener, WindowList
 		for (int i = 0; i < user.getItemList().size(); i++) {
 			inventoryList.add(user.getItemList().get(i).getName());
 		}
+		confirmInventoryButton.setEnabled(false);
 
 	}
 
