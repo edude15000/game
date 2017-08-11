@@ -53,12 +53,23 @@ public class mainMenu extends Frame implements ActionListener, WindowListener {
 	private combatStatsWindow statsframe;
 	
 
-	public void updateLevels() {
-		fishingLabel.setText(Integer.toString(user.getLevel("Fishing")));
-		cookingLabel.setText(Integer.toString(user.getLevel("Cooking")));
-		miningLabel.setText(Integer.toString(user.getLevel("Mining")));
-		smithingLabel.setText(Integer.toString(user.getLevel("Smithing")));
-		herbloreLabel.setText(Integer.toString(user.getLevel("Herblore")));
+	private void updateLevels() {
+		Level level = user.getLevelObject("Fishing");
+		fishingLabel.setText("Fishing: (" + level.getLevelFromXP(level.getXp()) + ") " + level.getXp() + "/"
+				+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
+		level = user.getLevelObject("Cooking");
+		cookingLabel.setText("Cooking: (" + level.getLevelFromXP(level.getXp()) + ") " + level.getXp() + "/"
+				+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
+		level = user.getLevelObject("Mining");
+		miningLabel.setText("Mining: (" + level.getLevelFromXP(level.getXp()) + ") " + level.getXp() + "/"
+				+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
+		level = user.getLevelObject("Smithing");
+		smithingLabel.setText("Smithing: (" + level.getLevelFromXP(level.getXp()) + ") " + level.getXp() + "/"
+				+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
+		level = user.getLevelObject("Herblore");
+		herbloreLabel.setText("Herblore: (" + level.getLevelFromXP(level.getXp()) + ") " + level.getXp() + "/"
+				+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
+		
 	}
 
 	// Constructor to setup the GUI components
@@ -240,6 +251,9 @@ public class mainMenu extends Frame implements ActionListener, WindowListener {
 			statsframe.dispose();
 		}
 		catch(NullPointerException e) {}
+		
+		/* Update XP and Levels! (XP can be gained from Inventory window.) */
+		this.updateLevels();
 	}
 
 	@Override
