@@ -14,7 +14,7 @@ public class GUIWindow extends Frame
 	implements ActionListener, WindowListener {
     
 	//Create player
-	protected User user = Play.startUser();
+	protected User user = Play.startUser("test", "Chicken Tender", false);
 	
 	// Declare Label components for home menu
 	private Label healthLabel;
