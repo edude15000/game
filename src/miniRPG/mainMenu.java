@@ -7,11 +7,9 @@ import java.awt.Frame;
 import java.awt.Label;
 import java.awt.Panel;
 import java.awt.TextField;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import java.awt.event.*;
 import java.io.IOException;
+import java.security.Key;
 
 /* 
  * The following code was based on a tutorial found at https://www3.ntu.edu.sg/home/ehchua/programming/java/j4a_gui.html
@@ -51,6 +49,7 @@ public class mainMenu extends Frame implements ActionListener, WindowListener {
 	private inventoryWindow inventoryframe;
 	private hospitalWindow hospitalframe;
 	private combatStatsWindow statsframe;
+	private deleteCharWindow deleteCharFrame;
 	
 
 	private void updateLevels() {
@@ -151,6 +150,7 @@ public class mainMenu extends Frame implements ActionListener, WindowListener {
 		// "super" Frame (source object) fires WindowEvent.
 		// "super" Frame adds "this" object as a WindowEvent listener.
 
+
 		setTitle("miniRPG"); // "super" Frame sets its title
 		setSize(590, 200); // "super" Frame sets its initial window size
 
@@ -217,22 +217,10 @@ public class mainMenu extends Frame implements ActionListener, WindowListener {
 	}
 
 	// Not Used, but need to provide an empty body to compile.
-	@Override
-	public void windowOpened(WindowEvent evt) {
-	}
-
-	@Override
-	public void windowClosed(WindowEvent evt) {
-	}
-
-	@Override
-	public void windowIconified(WindowEvent evt) {
-	}
-
-	@Override
-	public void windowDeiconified(WindowEvent evt) {
-	}
-
+	@Override	public void windowOpened(WindowEvent evt) {}
+	@Override	public void windowClosed(WindowEvent evt) {}
+	@Override	public void windowIconified(WindowEvent evt) {}
+	@Override	public void windowDeiconified(WindowEvent evt) {}
 	@Override
 	public void windowActivated(WindowEvent evt) {
 		try{
@@ -251,13 +239,15 @@ public class mainMenu extends Frame implements ActionListener, WindowListener {
 			statsframe.dispose();
 		}
 		catch(NullPointerException e) {}
+		try{
+			deleteCharFrame.dispose();
+		}
+		catch(NullPointerException e) {}
 		
 		/* Update XP and Levels! (XP can be gained from Inventory window.) */
 		this.updateLevels();
 	}
 
-	@Override
-	public void windowDeactivated(WindowEvent evt) {
-	}
+	@Override	public void windowDeactivated(WindowEvent evt) {}
 
 }

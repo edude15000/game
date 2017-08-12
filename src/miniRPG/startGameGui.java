@@ -14,13 +14,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.IOException;
-
-import javax.swing.ButtonGroup;
-import javax.swing.JRadioButton;
 
 public class startGameGui extends Frame implements ActionListener, WindowListener, ItemListener {
 	// UI Elements
