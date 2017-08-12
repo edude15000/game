@@ -13,7 +13,7 @@ import java.awt.event.WindowListener;
 
 import javax.swing.JProgressBar;
 
-public class combatStatsWindow extends Frame implements ActionListener, WindowListener {
+public class CombatStatsWindow extends Frame implements ActionListener, WindowListener {
 	/**
 	 * 
 	 */
@@ -30,7 +30,7 @@ public class combatStatsWindow extends Frame implements ActionListener, WindowLi
 	private User user;
 
 	// Constructor
-	public combatStatsWindow(User user) {
+	public CombatStatsWindow(User user) {
 
 		// pass in user for use with the items
 		this.user = user;

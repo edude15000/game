@@ -77,7 +77,8 @@ public class SaveDialogue extends Frame implements ActionListener, WindowListene
 	/* WindowEvent handlers */
 	// Called back upon clicking close-window button
 	@Override
-	public void windowClosing(WindowEvent evt) { //do nothing. pick an option, dammit.
+	public void windowClosing(WindowEvent evt) {
+		this.dispose();
 	}
 
 	// Not Used, but need to provide an empty body to compile.
