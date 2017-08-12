@@ -17,7 +17,7 @@ import java.security.Key;
 
 // A GUI program is written as a subclass of Frame - the top-level container
 // This subclass inherits all properties from Frame, e.g., title, icon, buttons, content-pane
-public class mainMenu extends Frame implements ActionListener, WindowListener {
+public class mainMenu extends Frame implements ActionListener, WindowListener, KeyListener {
 	private static final long serialVersionUID = 1L;
 
 	// Create player
@@ -150,6 +150,9 @@ public class mainMenu extends Frame implements ActionListener, WindowListener {
 		// "super" Frame (source object) fires WindowEvent.
 		// "super" Frame adds "this" object as a WindowEvent listener.
 
+		//Keylistner listens for the END key and will bring up the delete account prompt.
+		messages.addKeyListener(this);
+
 
 		setTitle("miniRPG"); // "super" Frame sets its title
 		setSize(590, 200); // "super" Frame sets its initial window size
@@ -215,6 +218,18 @@ public class mainMenu extends Frame implements ActionListener, WindowListener {
 	public void windowClosing(WindowEvent evt) {
 		saveframe = new SaveDialogue(user);
 	}
+
+	// KeyListener
+	public void keyPressed(KeyEvent e) {
+		System.out.println("Keypress");
+		if(e.getKeyCode() == KeyEvent.VK_END) {
+			System.out.println("END key");
+			deleteCharFrame = new deleteCharWindow(user);
+			deleteCharFrame.setVisible(true);
+		}
+	}
+	public void keyReleased(KeyEvent e) {}
+	public void keyTyped(KeyEvent e) {}
 
 	// Not Used, but need to provide an empty body to compile.
 	@Override	public void windowOpened(WindowEvent evt) {}
