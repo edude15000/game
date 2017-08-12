@@ -7,10 +7,7 @@ import java.awt.Frame;
 import java.awt.Label;
 import java.awt.Panel;
 import java.awt.TextField;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import java.awt.event.*;
 import java.io.IOException;
 
 /* 
@@ -19,11 +16,7 @@ import java.io.IOException;
 
 // A GUI program is written as a subclass of Frame - the top-level container
 // This subclass inherits all properties from Frame, e.g., title, icon, buttons, content-pane
-public class GUIWindow extends Frame implements ActionListener, WindowListener {
-
-	/**
-	 * 
-	 */
+public class MainMenu extends Frame implements ActionListener, WindowListener, KeyListener {
 	private static final long serialVersionUID = 1L;
 
 	// Create player
@@ -50,17 +43,36 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 	private Button MiningSelectButton;
 	private Button QuitSelectButton;
 	private Button combatStatsSelectButton;
+	
+	private SaveDialogue saveframe;
+	private InventoryWindow inventoryframe;
+	private HospitalWindow hospitalframe;
+	private CombatStatsWindow statsframe;
+	private DeleteCharWindow deleteCharFrame;
+	private EquippedItemsWindow equippedItemsFrame;
+	
 
-	public void updateLevels() {
-		fishingLabel.setText(Integer.toString(user.getLevel("Fishing")));
-		cookingLabel.setText(Integer.toString(user.getLevel("Cooking")));
-		miningLabel.setText(Integer.toString(user.getLevel("Mining")));
-		smithingLabel.setText(Integer.toString(user.getLevel("Smithing")));
-		herbloreLabel.setText(Integer.toString(user.getLevel("Herblore")));
+	private void updateLevels() {
+		Level level = user.getLevelObject("Fishing");
+		fishingLabel.setText("Fishing: (" + level.getLevelFromXP(level.getXp()) + ") " + level.getXp() + "/"
+				+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
+		level = user.getLevelObject("Cooking");
+		cookingLabel.setText("Cooking: (" + level.getLevelFromXP(level.getXp()) + ") " + level.getXp() + "/"
+				+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
+		level = user.getLevelObject("Mining");
+		miningLabel.setText("Mining: (" + level.getLevelFromXP(level.getXp()) + ") " + level.getXp() + "/"
+				+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
+		level = user.getLevelObject("Smithing");
+		smithingLabel.setText("Smithing: (" + level.getLevelFromXP(level.getXp()) + ") " + level.getXp() + "/"
+				+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
+		level = user.getLevelObject("Herblore");
+		herbloreLabel.setText("Herblore: (" + level.getLevelFromXP(level.getXp()) + ") " + level.getXp() + "/"
+				+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
+		
 	}
 
 	// Constructor to setup the GUI components
-	public GUIWindow(String userName, String userClass, boolean hardcoreMode) throws IOException {
+	public MainMenu(String userName, String userClass, boolean hardcoreMode) throws IOException {
 		user = Play.startUser(userName, userClass, hardcoreMode);
 		Play.saveData(user);
 		setLayout(new FlowLayout());
@@ -138,14 +150,18 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 		// "super" Frame (source object) fires WindowEvent.
 		// "super" Frame adds "this" object as a WindowEvent listener.
 
+		// Keylistener listens for the END key and will bring up the delete account prompt.
+		messages.addKeyListener(this);
+
+
 		setTitle("miniRPG"); // "super" Frame sets its title
-		setSize(650, 200); // "super" Frame sets its initial window size
+		setSize(590, 200); // "super" Frame sets its initial window size
 
 		setVisible(true); // "super" Frame shows
 
 		add(status);
 		add(stats);
-		add(stats2); // TODO : PRINT ON NEW LINE
+		add(stats2);
 		add(exp);
 		add(output);
 		add(options);
@@ -172,16 +188,16 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 					+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
 		}
 		if (evt.getSource() == InventorySelectButton) {
-			inventoryWindow frame = new inventoryWindow(user);
-			frame.setVisible(true);
+			inventoryframe= new InventoryWindow(user);
+			inventoryframe.setVisible(true);
 		}
 		if (evt.getSource() == combatStatsSelectButton) {
-			combatStatsWindow frame = new combatStatsWindow(user);
-			frame.setVisible(true);
+			statsframe = new CombatStatsWindow(user);
+			statsframe.setVisible(true);
 		}
 		if (evt.getSource() == HospitalSelectButton) {
-			hospitalWindow frame = new hospitalWindow(user);
-			frame.setVisible(true);
+			hospitalframe = new HospitalWindow(user);
+			hospitalframe.setVisible(true);
 		}
 		if (evt.getSource() == combatSelectButton) {
 			// TODO: Remove the following line and make real combat
@@ -192,12 +208,10 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 			user.setMoney(user.getMoney() + 5);
 		}
 		if (evt.getSource() == QuitSelectButton) {
-			try {
-				Play.saveData(user); // TODO : SAVE AFTER ACTION
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			System.exit(0);
+			saveframe = new SaveDialogue(user);
+		}
+		if (evt.getSource() == EquippedSelectButton) {
+			equippedItemsFrame = new EquippedItemsWindow(user);
 		}
 	}
 
@@ -205,32 +219,57 @@ public class GUIWindow extends Frame implements ActionListener, WindowListener {
 	// Called back upon clicking close-window button
 	@Override
 	public void windowClosing(WindowEvent evt) {
-		System.exit(0); // Terminate the program
+		saveframe = new SaveDialogue(user);
 	}
+
+	// KeyListener
+	public void keyPressed(KeyEvent e) {
+		System.out.println("Keypress");
+		if(e.getKeyCode() == KeyEvent.VK_END) {
+			System.out.println("END key");
+			deleteCharFrame = new DeleteCharWindow(user);
+			deleteCharFrame.setVisible(true);
+		}
+	}
+	public void keyReleased(KeyEvent e) {}
+	public void keyTyped(KeyEvent e) {}
 
 	// Not Used, but need to provide an empty body to compile.
-	@Override
-	public void windowOpened(WindowEvent evt) {
-	}
-
-	@Override
-	public void windowClosed(WindowEvent evt) {
-	}
-
-	@Override
-	public void windowIconified(WindowEvent evt) {
-	}
-
-	@Override
-	public void windowDeiconified(WindowEvent evt) {
-	}
-
+	@Override	public void windowOpened(WindowEvent evt) {}
+	@Override	public void windowClosed(WindowEvent evt) {}
+	@Override	public void windowIconified(WindowEvent evt) {}
+	@Override	public void windowDeiconified(WindowEvent evt) {}
 	@Override
 	public void windowActivated(WindowEvent evt) {
+		try{
+			saveframe.dispose();
+		}
+		catch(NullPointerException e) {}
+		try{
+			hospitalframe.dispose();
+		}
+		catch(NullPointerException e) {}
+		try{
+			inventoryframe.dispose();
+		}
+		catch(NullPointerException e) {}
+		try{
+			statsframe.dispose();
+		}
+		catch(NullPointerException e) {}
+		try{
+			deleteCharFrame.dispose();
+		}
+		catch(NullPointerException e) {}
+		try{
+			equippedItemsFrame.dispose();
+		}
+		catch (NullPointerException e) {}
+
+		/* Update XP and Levels! (XP can be gained from Inventory window.) */
+		this.updateLevels();
 	}
 
-	@Override
-	public void windowDeactivated(WindowEvent evt) {
-	}
+	@Override	public void windowDeactivated(WindowEvent evt) {}
 
 }
