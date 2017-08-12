@@ -18,7 +18,7 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.IOException;
 
-public class startGameGui extends Frame implements ActionListener, WindowListener, ItemListener {
+public class StartGameGui extends Frame implements ActionListener, WindowListener, ItemListener {
 	// UI Elements
 	private Label nameLabel;
 	private Label classLabel;
@@ -36,7 +36,7 @@ public class startGameGui extends Frame implements ActionListener, WindowListene
 	private String userName;
 	private boolean hardcoreMode;
 
-	public startGameGui() {
+	public StartGameGui() {
 		setLayout(new FlowLayout());
 
 		Panel name = new Panel();
@@ -127,9 +127,9 @@ public class startGameGui extends Frame implements ActionListener, WindowListene
 		// Invoke the constructor (to set up the GUI) by allocating an instance
 		User user = Play.loadData();
 		if (user == null) {
-			new startGameGui();
+			new StartGameGui();
 		} else {
-			mainMenu frame = new mainMenu(user.userName, user.userClass, user.hardcoreMode);
+			MainMenu frame = new MainMenu(user.userName, user.userClass, user.hardcoreMode);
 			frame.setVisible(true);
 		}
 	}
@@ -142,9 +142,9 @@ public class startGameGui extends Frame implements ActionListener, WindowListene
 		}
 		if (evt.getSource() == confirmButton) {
 			userName = nameEntry.getText();
-			mainMenu frame;
+			MainMenu frame;
 			try {
-				frame = new mainMenu(userName, userClass, hardcoreMode);
+				frame = new MainMenu(userName, userClass, hardcoreMode);
 				frame.setVisible(true);
 				this.setVisible(false);
 			} catch (IOException e) {

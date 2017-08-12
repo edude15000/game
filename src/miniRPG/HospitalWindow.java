@@ -14,7 +14,7 @@ import java.awt.event.WindowListener;
 
 import javax.swing.JProgressBar;
 
-public class hospitalWindow extends Frame implements ActionListener, WindowListener {
+public class HospitalWindow extends Frame implements ActionListener, WindowListener {
 	/**
 	 * 
 	 */
@@ -33,7 +33,7 @@ public class hospitalWindow extends Frame implements ActionListener, WindowListe
 	private User user;
 
 	// Constructor
-	public hospitalWindow(User user) {
+	public HospitalWindow(User user) {
 		this.user = user;
 
 		// attempt to dissuade the player from opening multiple windows -- if they want

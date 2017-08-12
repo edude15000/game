@@ -9,7 +9,6 @@ import java.awt.Panel;
 import java.awt.TextField;
 import java.awt.event.*;
 import java.io.IOException;
-import java.security.Key;
 
 /* 
  * The following code was based on a tutorial found at https://www3.ntu.edu.sg/home/ehchua/programming/java/j4a_gui.html
@@ -17,7 +16,7 @@ import java.security.Key;
 
 // A GUI program is written as a subclass of Frame - the top-level container
 // This subclass inherits all properties from Frame, e.g., title, icon, buttons, content-pane
-public class mainMenu extends Frame implements ActionListener, WindowListener, KeyListener {
+public class MainMenu extends Frame implements ActionListener, WindowListener, KeyListener {
 	private static final long serialVersionUID = 1L;
 
 	// Create player
@@ -46,10 +45,11 @@ public class mainMenu extends Frame implements ActionListener, WindowListener, K
 	private Button combatStatsSelectButton;
 	
 	private SaveDialogue saveframe;
-	private inventoryWindow inventoryframe;
-	private hospitalWindow hospitalframe;
-	private combatStatsWindow statsframe;
-	private deleteCharWindow deleteCharFrame;
+	private InventoryWindow inventoryframe;
+	private HospitalWindow hospitalframe;
+	private CombatStatsWindow statsframe;
+	private DeleteCharWindow deleteCharFrame;
+	private EquippedItemsWindow equippedItemsFrame;
 	
 
 	private void updateLevels() {
@@ -72,7 +72,7 @@ public class mainMenu extends Frame implements ActionListener, WindowListener, K
 	}
 
 	// Constructor to setup the GUI components
-	public mainMenu(String userName, String userClass, boolean hardcoreMode) throws IOException {
+	public MainMenu(String userName, String userClass, boolean hardcoreMode) throws IOException {
 		user = Play.startUser(userName, userClass, hardcoreMode);
 		Play.saveData(user);
 		setLayout(new FlowLayout());
@@ -150,7 +150,7 @@ public class mainMenu extends Frame implements ActionListener, WindowListener, K
 		// "super" Frame (source object) fires WindowEvent.
 		// "super" Frame adds "this" object as a WindowEvent listener.
 
-		//Keylistner listens for the END key and will bring up the delete account prompt.
+		// Keylistener listens for the END key and will bring up the delete account prompt.
 		messages.addKeyListener(this);
 
 
@@ -161,7 +161,7 @@ public class mainMenu extends Frame implements ActionListener, WindowListener, K
 
 		add(status);
 		add(stats);
-		add(stats2); // TODO : PRINT ON NEW LINE
+		add(stats2);
 		add(exp);
 		add(output);
 		add(options);
@@ -188,15 +188,15 @@ public class mainMenu extends Frame implements ActionListener, WindowListener, K
 					+ level.getXPFromLevel(level.getLevelFromXP(level.getXp()) + 1));
 		}
 		if (evt.getSource() == InventorySelectButton) {
-			inventoryframe= new inventoryWindow(user);
+			inventoryframe= new InventoryWindow(user);
 			inventoryframe.setVisible(true);
 		}
 		if (evt.getSource() == combatStatsSelectButton) {
-			statsframe = new combatStatsWindow(user);
+			statsframe = new CombatStatsWindow(user);
 			statsframe.setVisible(true);
 		}
 		if (evt.getSource() == HospitalSelectButton) {
-			hospitalframe = new hospitalWindow(user);
+			hospitalframe = new HospitalWindow(user);
 			hospitalframe.setVisible(true);
 		}
 		if (evt.getSource() == combatSelectButton) {
@@ -209,6 +209,9 @@ public class mainMenu extends Frame implements ActionListener, WindowListener, K
 		}
 		if (evt.getSource() == QuitSelectButton) {
 			saveframe = new SaveDialogue(user);
+		}
+		if (evt.getSource() == EquippedSelectButton) {
+			equippedItemsFrame = new EquippedItemsWindow(user);
 		}
 	}
 
@@ -224,7 +227,7 @@ public class mainMenu extends Frame implements ActionListener, WindowListener, K
 		System.out.println("Keypress");
 		if(e.getKeyCode() == KeyEvent.VK_END) {
 			System.out.println("END key");
-			deleteCharFrame = new deleteCharWindow(user);
+			deleteCharFrame = new DeleteCharWindow(user);
 			deleteCharFrame.setVisible(true);
 		}
 	}
@@ -258,7 +261,11 @@ public class mainMenu extends Frame implements ActionListener, WindowListener, K
 			deleteCharFrame.dispose();
 		}
 		catch(NullPointerException e) {}
-		
+		try{
+			equippedItemsFrame.dispose();
+		}
+		catch (NullPointerException e) {}
+
 		/* Update XP and Levels! (XP can be gained from Inventory window.) */
 		this.updateLevels();
 	}

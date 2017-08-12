@@ -12,7 +12,7 @@ import java.awt.Frame;
 import java.awt.Label;
 import java.awt.Panel;
 
-public class deleteCharWindow extends Frame implements ActionListener, WindowListener {
+public class DeleteCharWindow extends Frame implements ActionListener, WindowListener {
     private Label dialogueText;
     private Label dialogueTextBottom;
     private Button discardButton;
@@ -22,7 +22,7 @@ public class deleteCharWindow extends Frame implements ActionListener, WindowLis
 
     private User user;
 
-    public deleteCharWindow(User user) {
+    public DeleteCharWindow(User user) {
         this.user = user;
 
         dialogueText = new Label("YOU ARE ATTEMPTING TO DELETE YOUR ACCOUNT.");

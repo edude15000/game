@@ -15,7 +15,7 @@ import java.awt.event.ItemListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class inventoryWindow extends Frame implements ActionListener, WindowListener {
+public class InventoryWindow extends Frame implements ActionListener, WindowListener {
 	/**
 	 * 
 	 */
@@ -32,13 +32,9 @@ public class inventoryWindow extends Frame implements ActionListener, WindowList
 	private User user;
 
 	// Constructor
-	public inventoryWindow(User user) {
+	public InventoryWindow(User user) {
 		// pass in user for use with the items
 		this.user = user;
-
-		// attempt to dissuade the player from opening multiple inventories -- if they
-		// want multiple, they can still get them, but they won't want them. Hopefully.
-		this.setAlwaysOnTop(true);
 
 		setLayout(new FlowLayout());
 		// "super" Frame, which is a Container, sets its layout to FlowLayout to
@@ -53,7 +49,7 @@ public class inventoryWindow extends Frame implements ActionListener, WindowList
 
 		// Define elements
 		// Establish button
-		cancelInventoryButton = new Button("Cancel");
+		cancelInventoryButton = new Button("Close");
 		confirmInventoryButton = new Button("Use");
 		confirmInventoryButton.setEnabled(false); // activates when item is selected
 		inventoryList = new java.awt.List(8);// init the list gui object to scroll, but only display 8 rows at a time
