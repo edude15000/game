@@ -2,10 +2,13 @@ package miniRPG;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -24,7 +27,8 @@ public class Play {
 		sc.close();
 	}
 
-	public static User startUser(String userName, String userClass, boolean hardcore) {
+	public static User startUser(String userName, String userClass,
+			boolean hardcore) {
 
 		user = null;
 		try {
@@ -738,7 +742,7 @@ public class Play {
 			user.displayStats();
 			System.out.println("What would you like to do?");
 			System.out
-					.println("Combat (c)\tInventory (i)\tEquipped Items (e)\tShop (s)\tHospital (h)\tFishing (f)\tMining (m)\tQuit (q)\tDelete User (d)");
+					.println("Combat (c)\tEatAll (z)\tInventory (i)\tEquipped Items (e)\tShop (s)\tHospital (h)\tFishing (f)\tMining (m)\tQuit (q)\tDelete User (d)");
 			choice = sc.next();
 			if (choice == null) {
 				choice = sc.nextLine().toLowerCase();
@@ -763,6 +767,8 @@ public class Play {
 				equippedItems();
 			} else if (choice.startsWith("m")) {
 				System.out.println(Mining.mining(user));
+			} else if (choice.startsWith("z")) {
+				eatAll();
 			} else if (choice.startsWith("q")) {
 				saveData(user);
 				System.exit(0);
@@ -781,6 +787,38 @@ public class Play {
 			user.checkForLevelUp();
 			saveData(user);
 		}
+	}
+
+	public static void eatAll() {
+		List<Consumable> list = getListOfFood();
+		for (Consumable c : list) {
+			System.out.println(c.getHealAmount());
+		}
+		while (user.getCurrentHealth() < user.getTotalHealth()
+				&& !list.isEmpty()) {
+			if (user.getCurrentHealth() + list.get(0).getHealAmount() > user
+					.getTotalHealth()) {
+				return;
+			}
+			user.heal(list.get(0).getHealAmount());
+			user.itemList.remove(list.get(0));
+			list.remove(0);
+		}
+	}
+
+	public static List<Consumable> getListOfFood() {
+		List<Consumable> list = new ArrayList<>();
+		for (Item i : user.itemList) {
+			if (i instanceof Consumable) {
+				list.add((Consumable) i);
+			}
+		}
+		Collections.sort(list, new Comparator<Consumable>() {
+			public int compare(Consumable o1, Consumable o2) {
+				return o1.getHealAmount() - o2.getHealAmount();
+			}
+		});
+		return list;
 	}
 
 	public static int getNumberOfItemByName(String name) {
