@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class User {
+	public String statusMessage = "";
 	public int totalHealth;
 	public int currentHealth;
 	public String userName;

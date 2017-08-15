@@ -29,7 +29,6 @@ public class Play {
 
 	public static User startUser(String userName, String userClass,
 			boolean hardcore) {
-
 		user = null;
 		try {
 			user = loadData();
@@ -119,37 +118,37 @@ public class Play {
 					.println("1 Lvl 1 Sapphire Ring (1 gold bar, 1 sapphire)");
 			System.out
 					.println("2 Lvl 3 Sapphire Necklace (2 gold bars, 1 sapphire)");
-			item1 = new Jewelry("Sapphire Ring", 0, 0,
-					(int) (user.getDefense() * .05), 50, "ring");
+			item1 = new Jewelry("Sapphire Ring", 0, 0, (int) (Math.ceil(user
+					.getDefense() * .05)), 50, "ring");
 			item2 = new Jewelry("Sapphire Necklace", 0, 0,
-					(int) (user.getDefense() * .05), 50, "necklace");
+					(int) (Math.ceil(user.getDefense() * .05)), 50, "necklace");
 		} else if (item.itemName.toLowerCase().contains("emerald")) {
 			System.out.println("1 Lvl 6 Emerald Ring (1 gold bar, 1 emerald)");
 			System.out
 					.println("2 Lvl 9 Emerald Necklace (2 gold bars, 1 emerald)");
-			item1 = new Jewelry("Emerald Ring",
-					(int) (user.getTotalHealth() * .05), 0, 0, 50, "ring");
-			item2 = new Jewelry("Emerald Necklace",
-					(int) (user.getTotalHealth() * .05), 0, 0, 50, "necklace");
+			item1 = new Jewelry("Emerald Ring", (int) (Math.ceil(user
+					.getTotalHealth() * .05)), 0, 0, 50, "ring");
+			item2 = new Jewelry("Emerald Necklace", (int) (Math.ceil(user
+					.getTotalHealth() * .05)), 0, 0, 50, "necklace");
 		} else if (item.itemName.toLowerCase().contains("ruby")) {
 			System.out.println("1 Lvl 12 Ruby Ring (1 gold bar, 1 ruby)");
 			System.out.println("2 Lvl 15 Ruby Necklace (2 gold bars, 1 ruby)");
-			item1 = new Jewelry("Ruby Ring", 0, (int) (user.getAttack() * .05),
-					0, 50, "ring");
-			item2 = new Jewelry("Ruby Necklace", 0,
-					(int) (user.getAttack() * .05), 0, 50, "necklace");
+			item1 = new Jewelry("Ruby Ring", 0, (int) (Math.ceil(user
+					.getAttack() * .05)), 0, 50, "ring");
+			item2 = new Jewelry("Ruby Necklace", 0, (int) (Math.ceil(user
+					.getAttack() * .05)), 0, 50, "necklace");
 		} else if (item.itemName.toLowerCase().contains("diamond")) {
 			System.out.println("1 Lvl 18 Diamond Ring (1 gold bar, 1 diamond)");
 			System.out
 					.println("2 Lvl 21 Diamond Necklace (2 gold bars, 1 diamond)");
-			item1 = new Jewelry("Diamond Ring",
-					(int) (user.getTotalHealth() * .03),
-					(int) (user.getAttack() * .03),
-					(int) (user.getDefense() * .03), 50, "ring");
-			item2 = new Jewelry("Diamond Necklace",
-					(int) (user.getTotalHealth() * .03),
-					(int) (user.getAttack() * .03),
-					(int) (user.getDefense() * .03), 50, "necklace");
+			item1 = new Jewelry("Diamond Ring", (int) (Math.ceil(user
+					.getTotalHealth() * .03)), (int) (Math.ceil(user
+					.getAttack() * .03)),
+					(int) (Math.ceil(user.getDefense() * .03)), 50, "ring");
+			item2 = new Jewelry("Diamond Necklace", (int) (Math.ceil(user
+					.getTotalHealth() * .03)), (int) (Math.ceil(user
+					.getAttack() * .03)),
+					(int) (Math.ceil(user.getDefense() * .03)), 50, "necklace");
 		} else if (item.itemName.toLowerCase().contains("bronze")) {
 			System.out.println("1 Lvl 1 Bronze Boots (3 bronze bars)");
 			System.out.println("2 Lvl 1 Bronze Helmet (3 bronze bars)");
@@ -196,7 +195,7 @@ public class Play {
 			System.out.println("5 Lvl 10 Steel Platebody (5 steel bars)");
 			System.out.println("6 Lvl 10 Steel Platelegs (5 steel bars)");
 			item1 = new Armor("Steel Boots",
-					(int) Math.ceil(user.getDefense() * .05), "boots", 10, 200);
+					(int) Math.ceil(user.getDefense() * .15), "boots", 10, 200);
 			item2 = new Armor("Steel Helmet",
 					(int) Math.ceil(user.getDefense() * .15), "helmet", 10, 200);
 			item3 = new Armor("Steel Shield",
@@ -438,7 +437,6 @@ public class Play {
 			user.itemList.remove(getItemByName(type + " Bar"));
 			user.itemList.add(i);
 			System.out.println("You successfully craft " + type + " Boots!");
-
 			user.getLevelObject("Smithing").gainXp(getRightXP(type));
 			return true;
 		} else if (i.itemName.toLowerCase().contains("helmet")
@@ -924,7 +922,7 @@ public class Play {
 	public static List<Consumable> getListOfFood() {
 		List<Consumable> list = new ArrayList<>();
 		for (Item i : user.itemList) {
-			if (i instanceof Consumable) {
+			if (i instanceof Consumable && ((Consumable) i).herbColor == null) {
 				list.add((Consumable) i);
 			}
 		}
@@ -987,7 +985,7 @@ public class Play {
 				System.out.println("You have no items!\n");
 				return;
 			}
-			int count = 0;
+			int count = 1;
 			System.out.println("Item list:");
 			for (Item i : user.itemList) {
 				System.out.println(count + "\t" + i.getName() + "\tWORTH: "
@@ -998,18 +996,18 @@ public class Play {
 					.print("Type a number to select item or a letter to cancel:");
 			try {
 				int choice2 = sc.nextInt();
-				sellItem(user.itemList.get(choice2));
+				sellItem(user.itemList.get(choice2 - 1));
 			} catch (Exception e) {
 			}
 		} else if (choice.toLowerCase().startsWith("b")) {
-			System.out.println("1	Vial\t\t\t50 Gold");
-			System.out.println("2	Red Syrum\t\t50 Gold");
-			System.out.println("3	Blue Syrum\t\t100 Gold");
-			System.out.println("4	Green Syrum\t\t200 Gold");
-			System.out.println("5	White Syrum\t\t500 Gold");
-			System.out.println("6	Small HP Potion\t\t100 Gold");
-			System.out.println("7	Medium HP Potion\t250 Gold");
-			System.out.println("8	Large HP Potion\t\t500 Gold");
+			System.out.println("1	Vial\t\t\t100 Gold");
+			System.out.println("2	Red Syrum\t\t100 Gold");
+			System.out.println("3	Blue Syrum\t\t250 Gold");
+			System.out.println("4	Green Syrum\t\t500 Gold");
+			System.out.println("5	White Syrum\t\t1000 Gold");
+			System.out.println("6	Small HP Potion\t\t250 Gold");
+			System.out.println("7	Medium HP Potion\t500 Gold");
+			System.out.println("8	Large HP Potion\t\t750 Gold");
 			Item i = null;
 			int choice2 = 0;
 			try {
@@ -1018,27 +1016,27 @@ public class Play {
 				return;
 			}
 			if (choice2 == 1) {
-				i = new Ingredient("Vial", "vial", 1, 50);
+				i = new Ingredient("Vial", "vial", 1, 100);
 			} else if (choice2 == 2) {
-				i = new Ingredient("Red Syrum", "ingredient", 1, 50);
+				i = new Ingredient("Red Syrum", "ingredient", 1, 100);
 			} else if (choice2 == 3) {
-				i = new Ingredient("Blue Syrum", "ingredient", 1, 100);
+				i = new Ingredient("Blue Syrum", "ingredient", 1, 250);
 			} else if (choice2 == 4) {
-				i = new Ingredient("Green Syrum", "ingredient", 1, 200);
+				i = new Ingredient("Green Syrum", "ingredient", 1, 500);
 			} else if (choice2 == 5) {
-				i = new Ingredient("White Syrum", "ingredient", 1, 250);
+				i = new Ingredient("White Syrum", "ingredient", 1, 1000);
 			} else if (choice2 == 6) {
 				i = new Consumable("Small Potion",
 						((int) (user.getTotalHealth() * .1)), "consumable",
-						100, 0, 0);
+						250, 0, 0);
 			} else if (choice2 == 7) {
 				i = new Consumable("Medium Potion",
 						((int) (user.getTotalHealth() * .25)), "consumable",
-						250, 0, 0);
+						500, 0, 0);
 			} else if (choice2 == 8) {
 				i = new Consumable("Large Potion",
 						((int) (user.getTotalHealth() * .5)), "consumable",
-						500, 0, 0);
+						750, 0, 0);
 			}
 			System.out.println("How many do you want to buy?");
 			choice2 = 0;
@@ -1328,20 +1326,20 @@ public class Play {
 	}
 
 	public static boolean runAway(int userLevel, int enemyLevel) {
-		if (userLevel + 3 > enemyLevel) {
+		if (userLevel > enemyLevel + 3) {
 			return true;
 		}
-		if (userLevel + 2 > enemyLevel) {
-			return new Random().nextInt(100) + 1 < 95;
-		}
-		if (userLevel + 1 > enemyLevel) {
+		if (userLevel > enemyLevel + 2) {
 			return new Random().nextInt(100) + 1 < 90;
 		}
+		if (userLevel > enemyLevel + 1) {
+			return new Random().nextInt(100) + 1 < 80;
+		}
 		if (userLevel == enemyLevel) {
-			return new Random().nextInt(100) + 1 < 85;
+			return new Random().nextInt(100) + 1 < 70;
 		}
 		if (userLevel + 1 < enemyLevel) {
-			return new Random().nextInt(100) + 1 < 75;
+			return new Random().nextInt(100) + 1 < 60;
 		}
 		if (userLevel + 2 < enemyLevel) {
 			return new Random().nextInt(100) + 1 < 50;
