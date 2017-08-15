@@ -742,7 +742,7 @@ public class Play {
 			user.displayStats();
 			System.out.println("What would you like to do?");
 			System.out
-					.println("Combat (c)\tEatAll (z)\tInventory (i)\tEquipped Items (e)\tShop (s)\tHospital (h)\tFishing (f)\tMining (m)\tQuit (q)\tDelete User (d)");
+					.println("Combat (c)\tEat All (z)\tInventory (i)\tEquipped Items (e)\tShop (s)\tHospital (h)\tFishing (f)\tMining (m)\tQuit (q)\tDelete User (d)");
 			choice = sc.next();
 			if (choice == null) {
 				choice = sc.nextLine().toLowerCase();
@@ -842,7 +842,7 @@ public class Play {
 			System.out.println("You have no equipped items!\n");
 			return;
 		}
-		int count = 0;
+		int count = 1;
 		System.out.println("Equipped item list:");
 		for (Item i : user.equippedItems) {
 			if (i instanceof Armor) {
@@ -862,6 +862,7 @@ public class Play {
 		System.out.print("Type a number to remove item or a letter to cancel:");
 		try {
 			int choice = sc.nextInt();
+			choice -= 1;
 			user.removeEquippedItem(choice);
 			System.out.println("You remove the "
 					+ user.equippedItems.get(choice));
@@ -984,7 +985,7 @@ public class Play {
 			System.out.println("You have no items!\n");
 			return;
 		}
-		int count = 0;
+		int count = 1;
 		System.out.println("Item list:");
 		for (Item i : user.itemList) {
 			if (i instanceof Cookable
@@ -1066,7 +1067,7 @@ public class Play {
 		System.out.print("Type a number to select item or a letter to cancel:");
 		try {
 			int choice = sc.nextInt();
-			user.useItem(choice);
+			user.useItem(choice - 1);
 		} catch (Exception e) {
 		}
 	}
