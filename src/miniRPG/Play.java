@@ -738,16 +738,20 @@ public class Play {
 
 	public static void loopActions(User user) throws IOException {
 		while (true) {
+			sc = new Scanner(System.in);
 			String choice = null;
 			user.displayStats();
 			System.out.println("What would you like to do?");
 			System.out
-					.println("Combat (c)\tEat All (z)\tInventory (i)\tEquipped Items (e)\tShop (s)\tHospital (h)\tFishing (f)\tMining (m)\tQuit (q)\tDelete User (d)");
+					.println("Journal (j)\tCombat (c)\tEat All (z)\tInventory (i)\tEquipped Items (e)\tShop (s)"
+							+ "\tHospital (h)\tFishing (f)\tMining (m)\tQuit (q)\tDelete User (d)");
 			choice = sc.next();
 			if (choice == null) {
 				choice = sc.nextLine().toLowerCase();
 			}
-			if (choice.startsWith("c")) {
+			if (choice.startsWith("j")) {
+				journal();
+			} else if (choice.startsWith("c")) {
 				System.out
 						.println("What level enemy do you want to fight? (Type 0 to exit): ");
 				String level = sc.next();
@@ -786,6 +790,111 @@ public class Play {
 			}
 			user.checkForLevelUp();
 			saveData(user);
+		}
+	}
+
+	public static void journal() {
+		System.out.println("1	Level Guide");
+		System.out.println("Select option:");
+		int choice = 0;
+		try {
+			choice = sc.nextInt();
+		} catch (Exception e) {
+			return;
+		}
+		if (choice == 1) {
+			levelGuide();
+		}
+	}
+
+	public static void levelGuide() {
+		System.out.println("1	Combat");
+		System.out.println("2	Fishing");
+		System.out.println("3	Cooking");
+		System.out.println("4	Mining");
+		System.out.println("5	Smelting");
+		System.out.println("6	Herblore");
+		System.out.println("Select option:");
+		int choice = 0;
+		try {
+			choice = sc.nextInt();
+		} catch (Exception e) {
+			return;
+		}
+		if (choice == 1) {
+			System.out.println("Lvl COMBAT:");
+			System.out.println("Lvl 1	Equip All Jewelry");
+			System.out.println("Lvl 1	Equip Bronze Weapons + Armor");
+			System.out.println("Lvl 5	Equip Iron Weapons + Armor");
+			System.out.println("Lvl 10	Equip Steel Weapons + Armor");
+			System.out.println("Lvl 15	Equip Mithril Weapons + Armor");
+			System.out.println("Lvl 20	Equip Adamantite Weapons + Armor");
+			System.out.println("Lvl 25	Equip Rune Weapons + Armor");
+		} else if (choice == 2) {
+			System.out.println("Lvl FISHING:");
+			System.out.println("Lvl 1	Catch Shrimp");
+			System.out.println("Lvl 5	Catch Fish");
+			System.out.println("Lvl 10	Catch Lobster");
+			System.out.println("Lvl 15	Catch Swordfish");
+			System.out.println("Lvl 20	Catch Coin Crate");
+			System.out.println("Lvl 25	Catch Shark");
+		} else if (choice == 3) {
+			System.out.println("Lvl COOKING:");
+			System.out.println("Lvl 1	Cook Shrimp");
+			System.out.println("Lvl 5	Cook Fish");
+			System.out.println("Lvl 10	Cook Lobster");
+			System.out.println("Lvl 15	Cook Swordfish");
+			System.out.println("Lvl 20	Cook Shark");
+		} else if (choice == 4) {
+			System.out.println("Lvl MINING:");
+			System.out.println("Lvl 1	Mine All Gems");
+			System.out.println("Lvl 1	Mine Gold Ore");
+			System.out.println("Lvl 1	Mine Bronze Ore");
+			System.out.println("Lvl 5	Mine Iron Ore");
+			System.out.println("Lvl 10	Mine Steel Ore");
+			System.out.println("Lvl 15	Mine Mithril Ore");
+			System.out.println("Lvl 20	Mine Adamantite Ore");
+			System.out.println("Lvl 25	Mine Rune Ore");
+		} else if (choice == 5) {
+			System.out.println("Lvl SMITHING:");
+			System.out.println("Lvl 1	Smith Gold Bar");
+			System.out.println("Lvl 1	Smith Bronze Bar");
+			System.out.println("Lvl 1	Smith Sapphire Ring");
+			System.out.println("Lvl 3	Smith Sapphire Necklace");
+			System.out.println("Lvl 5	Smith Iron Bar");
+			System.out.println("Lvl 6	Smith Emerald Ring");
+			System.out.println("Lvl 9	Smith Emerald Necklace");
+			System.out.println("Lvl 10	Smith Steel Bar");
+			System.out.println("Lvl 12	Smith Ruby Ring");
+			System.out.println("Lvl 15	Smith Ruby Necklace");
+			System.out.println("Lvl 15	Smith Mithril Bar");
+			System.out.println("Lvl 18	Smith Diamond Ring");
+			System.out.println("Lvl 20	Smith Adamantite Bar");
+			System.out.println("Lvl 21	Smith Diamond Necklace");
+			System.out.println("Lvl 25	Smith Rune Bar");
+		} else if (choice == 6) {
+			System.out.println("Lvl 1	Small HP Potion");
+			System.out.println("Lvl 2	Small Defence Potion");
+			System.out.println("Lvl 4	Small Attack Potion");
+			System.out.println("Lvl 8	Small Super Potion");
+			System.out.println("Lvl 8	Medium HP Potion");
+			System.out.println("Lvl 10	Medium Defence Potion");
+			System.out.println("Lvl 12	Medium Attack Potion");
+			System.out.println("Lvl 16	Medium Super Potion");
+			System.out.println("Lvl 17	Large Defence Potion");
+			System.out.println("Lvl 19	Large Attack Potion");
+			System.out.println("Lvl 20	Large HP Potion");
+			System.out.println("Lvl 23	Giant Defence Potion");
+			System.out.println("Lvl 24	Large Super Potion");
+			System.out.println("Lvl 25	Large Attack Potion");
+			System.out.println("Lvl 26	Giant HP Potion");
+			System.out.println("Lvl 29	Giant Super Potion");
+		}
+		System.out.println();
+		System.out.println("Press anything to return...");
+		String choice2 = null;
+		while (choice2 == null) {
+			choice2 = sc.next();
 		}
 	}
 
@@ -899,11 +1008,15 @@ public class Play {
 			System.out.println("4	Green Syrum\t\t200 Gold");
 			System.out.println("5	White Syrum\t\t500 Gold");
 			System.out.println("6	Small HP Potion\t\t100 Gold");
-			System.out.println("7	Medium HP Potion\t\t250 Gold");
+			System.out.println("7	Medium HP Potion\t250 Gold");
 			System.out.println("8	Large HP Potion\t\t500 Gold");
 			Item i = null;
 			int choice2 = 0;
-			choice2 = sc.nextInt();
+			try {
+				choice2 = sc.nextInt();
+			} catch (Exception e) {
+				return;
+			}
 			if (choice2 == 1) {
 				i = new Ingredient("Vial", "vial", 1, 50);
 			} else if (choice2 == 2) {
@@ -929,15 +1042,19 @@ public class Play {
 			}
 			System.out.println("How many do you want to buy?");
 			choice2 = 0;
-			choice2 = sc.nextInt();
-			if (user.getMoney() < i.getItemValue() * choice2) {
-				System.out
-						.println("You do not have enough money to purchase this item!");
+			try {
+				choice2 = sc.nextInt();
+				if (user.getMoney() < i.getItemValue() * choice2) {
+					System.out
+							.println("You do not have enough money to purchase this item!");
+					return;
+				}
+				for (int j = 0; j < choice2; j++) {
+					user.setMoney(user.getMoney() - (i.getItemValue()));
+					user.itemList.add(i);
+				}
+			} catch (Exception e) {
 				return;
-			}
-			for (int j = 0; j < choice2; j++) {
-				user.setMoney(user.getMoney() - (i.getItemValue()));
-				user.itemList.add(i);
 			}
 		}
 	}
@@ -1231,8 +1348,9 @@ public class Play {
 		}
 		if (userLevel + 3 < enemyLevel) {
 			return new Random().nextInt(100) + 1 < 30;
-		} else
+		} else {
 			return new Random().nextInt(100) + 1 < 20;
+		}
 	}
 
 	public static int damage(int attackerAtt, int defenderDef) {
