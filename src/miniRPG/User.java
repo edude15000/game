@@ -132,7 +132,7 @@ public class User {
 						addIndexes.add(bar);
 						getLevelObject("Smithing").gainXp(ore.smithXp);
 						System.out
-								.println("You successfully smelt the metal giving you "
+								.println("You successfully smelt the metal, giving you "
 										+ ore.smithXp + " XP!");
 					} else {
 						getLevelObject("Smithing").gainXp(30);

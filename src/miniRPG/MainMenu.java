@@ -155,7 +155,7 @@ public class MainMenu extends Frame implements ActionListener, WindowListener, K
 
 
 		setTitle("miniRPG"); // "super" Frame sets its title
-		setSize(590, 200); // "super" Frame sets its initial window size
+		setSize(620, 200); // "super" Frame sets its initial window size
 
 		setVisible(true); // "super" Frame shows
 

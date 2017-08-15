@@ -791,18 +791,24 @@ public class Play {
 
 	public static void eatAll() {
 		List<Consumable> list = getListOfFood();
-		for (Consumable c : list) {
-			System.out.println(c.getHealAmount());
-		}
+		String result = "";
 		while (user.getCurrentHealth() < user.getTotalHealth()
 				&& !list.isEmpty()) {
 			if (user.getCurrentHealth() + list.get(0).getHealAmount() > user
 					.getTotalHealth()) {
-				return;
+				break;
 			}
 			user.heal(list.get(0).getHealAmount());
+			result += list.get(0).itemName + ", ";
 			user.itemList.remove(list.get(0));
 			list.remove(0);
+		}
+		if (result.isEmpty()) {
+			System.out
+					.println("You either don't have any useful food or are close to full HP already.");
+		} else {
+			result = result.trim().substring(0, result.length() - 2);
+			System.out.println("You eat... " + result + "!");
 		}
 	}
 
